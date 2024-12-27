@@ -50,7 +50,7 @@
     /* ============ LOGO SECTION ============ */
     header {
       text-align: center;
-      padding: 3rem 0 2rem;
+      padding: 3.5rem 0 .5rem;
     }
     .logo {
       width: 200px;
@@ -76,7 +76,7 @@
       padding: 1rem;
       background-color: #FFFFFF;
       border-radius: 6px;
-      margin: 0 auto 2rem; /* bottom spacing before next section */
+      margin: 0 auto .1rem; /* Changed from 2rem to 1.5rem */
     }
     /* Remove final paragraph’s bottom margin in each section */
     section p:last-child {
@@ -88,52 +88,55 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin: 0.075rem 0;
-      padding: 0.075rem 0;
+      margin: 0.5rem 0;
+      padding: 0;
+      line-height: 1.5;
     }
-    /* Hover effect that darkens text only (no transform) */
-    .menu-item:hover h3,
-    .menu-item:hover span {
-      color: #000;
+
+    .menu-item h3 {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
     }
 
     /* For sub-items that need to be visually indented */
-    .indent {
-      margin-left: 1rem;
-      padding-left: 1rem;
+    .menu-item.indent {
+      margin: 0.5rem 0;
+      padding-left: 2rem;
+      line-height: 1.5;
     }
 
-    /* Tasting-experience overrides */
-    .tasting-experience .menu-item {
-      margin: 0;
-      padding: 0; 
-      line-height: 1.2; /* Slightly tighter line-height for these lines */
-    }
-    .tasting-experience h3 {
-      margin-bottom: 0.5rem; 
-    }
-    .tasting-experience p.indent {
-      margin: 0 0 0.15rem 1rem; 
-      max-width: calc(100% - 3rem);
-      line-height: 1.2; 
-    }
+    /* Remove all other tasting-experience related spacing rules */
 
     /* ============ COFFEE ITEMS ============ */
     .coffee-item {
-      margin-bottom: 0.75rem;
-      padding: 0.3rem 0;
-      position: relative;
+      margin: 0.35rem 0;
+      padding: 0.2rem 0;
+    }
+    .coffee-item:first-child {
+      margin-top: 0;
     }
     .coffee-item:last-child {
       margin-bottom: 0;
     }
     .coffee-item h3 {
+      margin-bottom: 0.01rem;
+      line-height: 1.75;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: normal;
       font-size: 11pt;
-      margin-bottom: 0.1rem;
     }
     .coffee-item small {
       font-size: 10pt;
-      color: #666;
+      color: #777;
+      line-height: 1;
+      display: block;
+    }
+    .coffee-item h3 span:last-child {
+      color: #777;
+      font-size: 11pt;
     }
 
     /* ============ LISTS & LINKS ============ */
@@ -141,6 +144,7 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
+      text-align: center;
     }
     li {
       margin: 0.15rem 0;
@@ -180,18 +184,14 @@
       width: 60px;
       height: 60px;
       display: block;
-      margin: 2rem auto;
-      transition: transform 0.4s ease;
-      transform: scale(1);
+      margin: 2.25rem auto;
     }
-    /* By default, no transform on hover (per code requirement) */
-    img[alt="Sun Icon"]:hover {
-      transform: none;
-    }
-    /* When the observer triggers, add .visible for scale(1) with a slow transition */
-    img[alt="Sun Icon"].visible {
-      transform: scale(1);
-      transition: transform 1s ease;
+
+    /* ============ TASTING EXPERIENCE INDENT ============ */
+    .tasting-experience .menu-item.indent {
+      line-height: 0.8;
+      margin: 0;
+      padding: 0 0 0 2rem;
     }
   </style>
 </head>
@@ -222,15 +222,11 @@
           <h3>Espresso</h3>
           <span>5</span>
         </div>
-
         <!-- Tasting experience -->
         <div class="tasting-experience">
           <div class="menu-item">
-            <h3>Tasting experience</h3>
+            <h3>Try 4 black coffees & 1 full drink</h3>
           </div>
-          <p class="indent">
-            4 single origin black coffees<br>+ 1 full-sized drink
-          </p>
           <div class="menu-item indent">
             <h3>For one</h3>
             <span>15</span>
@@ -252,31 +248,52 @@
       <!-- Coffee items -->
       <p>Our single origin coffee menu has these naturally occurring flavor notes:</p>
       <div class="coffee-item">
-        <h3>Dark &amp; smoky ~ Colombia</h3>
+        <h3>
+          <span>Dark & smoky</span>
+          <span>Colombia</span>
+        </h3>
         <small>roasted in-house</small>
       </div>
       <div class="coffee-item">
-        <h3>Peanut butter ~ Brazil</h3>
+        <h3>
+          <span>Peanut butter</span>
+          <span>Brazil</span>
+        </h3>
         <small>roasted in-house</small>
       </div>
       <div class="coffee-item">
-        <h3>Light &amp; fruity ~ Ethiopia</h3>
+        <h3>
+          <span>Light & fruity</span>
+          <span>Ethiopia</span>
+        </h3>
         <small>roasted in-house</small>
       </div>
       <div class="coffee-item">
-        <h3>Peach ~ Colombia</h3>
+        <h3>
+          <span>Peach</span>
+          <span>Colombia</span>
+        </h3>
         <small>diego bermudez estate</small>
       </div>
       <div class="coffee-item">
-        <h3>Apple spice ~ Colombia</h3>
+        <h3>
+          <span>Apple spice</span>
+          <span>Colombia</span>
+        </h3>
         <small>diego bermudez estate</small>
       </div>
       <div class="coffee-item">
-        <h3>Strawberry ~ Honduras</h3>
+        <h3>
+          <span>Strawberry</span>
+          <span>Honduras</span>
+        </h3>
         <small>roger dominguez estate</small>
       </div>
       <div class="coffee-item">
-        <h3>Decaf ~ Mexico</h3>
+        <h3>
+          <span>Decaf</span>
+          <span>Mexico</span>
+        </h3>
         <small>roasted in-house</small>
       </div>
 
