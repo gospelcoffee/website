@@ -329,19 +329,5 @@
       alt="Sun Icon"
     >
   </div>
-
-  <!-- Intersection Observer script (same functionality) -->
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.5 });
-
-    const sunIcon = document.querySelector('img[alt="Sun Icon"]');
-    observer.observe(sunIcon);
-  </script>
 </body>
 </html>
