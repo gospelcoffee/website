@@ -50,7 +50,7 @@
     /* ============ LOGO SECTION ============ */
     header {
       text-align: center;
-      padding: 3.5rem 0 .5rem;
+      padding: 3rem 0 .5rem;
     }
     .logo {
       width: 200px;
@@ -109,15 +109,16 @@
     /* Remove all other tasting-experience related spacing rules */
 
     /* ============ COFFEE ITEMS ============ */
+    section p {
+      margin-bottom: 0.35rem;  /* Match coffee-item spacing */
+    }
+
     .coffee-item {
       margin: 0.35rem 0;
       padding: 0.2rem 0;
     }
-    .coffee-item:first-child {
-      margin-top: 0;
-    }
     .coffee-item:last-child {
-      margin-bottom: 0;
+      margin-bottom: 2rem;  /* Space after coffee list */
     }
     .coffee-item h3 {
       margin-bottom: 0.01rem;
@@ -145,6 +146,7 @@
       padding: 0;
       margin: 0;
       text-align: center;
+      padding-top: 2rem;  /* Added padding before the opening hours */
     }
     li {
       margin: 0.15rem 0;
@@ -181,10 +183,10 @@
 
     /* ============ SUN ICON ============ */
     img[alt="Sun Icon"] {
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
       display: block;
-      margin: 2.25rem auto;
+      margin: 1.5rem auto 2.25rem;
     }
 
     /* ============ TASTING EXPERIENCE INDENT ============ */
@@ -192,6 +194,11 @@
       line-height: 0.8;
       margin: 0;
       padding: 0 0 0 2rem;
+    }
+
+    /* ============ SECTION SPACING ============ */
+    .main-menu {
+      margin-bottom: 2rem;  /* Space after menu section */
     }
   </style>
 </head>
@@ -222,10 +229,14 @@
           <h3>Espresso</h3>
           <span>5</span>
         </div>
+        <div class="menu-item">
+          <h3>Pour-over</h3>
+          <span>10</span>
+        </div>
         <!-- Tasting experience -->
         <div class="tasting-experience">
           <div class="menu-item">
-            <h3>Try 4 black coffees & 1 full drink</h3>
+            <h3>Pour-over flight & 1 full drink</h3>
           </div>
           <div class="menu-item indent">
             <h3>For one</h3>
@@ -239,14 +250,12 @@
 
         <!-- Additional drinks line -->
         <div class="menu-item">
-          <p>Also: chai tea, cappuccino, flat white, cortado, cold brew, hot chocolate, teas</p>
+          <p>Also: cappuccino, flat white, cortado, cold brew, hot chocolate, chai</p>
         </div>
       </div>
 
-      <hr>
-
       <!-- Coffee items -->
-      <p>Our single origin coffee menu has these naturally occurring flavor notes:</p>
+      <p>We source coffee beans with distinct, naturally occurring flavor notes. Pick a bean and we'll brew your coffee with it.</p>
       <div class="coffee-item">
         <h3>
           <span>Dark & smoky</span>
@@ -297,19 +306,16 @@
         <small>roasted in-house</small>
       </div>
 
-      <hr>
-
       <!-- Footer info -->
       <ul>
         <li>6:30am - 1:30pm</li>
         <li><a href="mailto:support@valocoffee.com">support@valocoffee.com</a></li>
-        <li><a href="tel:+19289106087">928-910-6087</a></li>
-        <li>
+        <li><a href="tel:+19289106087">928-910-6087</a>  &nbsp | &nbsp 
           <a
             href="https://maps.app.goo.gl/BHweLz91EeAwYa32A"
             target="_blank"
             rel="noopener"
-          >
+          > 
             Directions
           </a>
         </li>
