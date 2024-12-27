@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="./assets/images/sun-icon-black-clear.png">
   <title>Valo Coffee</title>
+  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     rel="stylesheet"
   >
   <style>
+    /* ============ GLOBAL RESET & SMOOTH FONTS ============ */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -27,27 +29,28 @@
       min-height: 100vh;
     }
 
+    /* ============ HEADINGS & PARAGRAPHS ============ */
     h1, h2, h3, h4, h5, h6 {
       font-weight: normal;
-      margin: 0;
       font-size: 11pt;
       letter-spacing: 0.02em;
+      margin: 0; /* Already reset above, but for clarity */
     }
-
     p {
       margin-bottom: 1rem;
     }
 
-    /* Subtle fade & slide for hr if used */
+    /* ============ HORIZONTAL RULE ============ */
     hr {
       border: none;
       border-top: 1px solid #ccc;
       margin: 2rem 0;
     }
 
+    /* ============ LOGO SECTION ============ */
     header {
       text-align: center;
-      padding: 3rem 0 2rem 0;
+      padding: 3rem 0 2rem;
     }
     .logo {
       width: 200px;
@@ -58,61 +61,71 @@
       transform: scale(1.02) translateY(-1px);
     }
 
+    /* ============ COLUMN CONTAINER ============ */
+    .column-container {
+      background: #FFFFFF;
+      max-width: 320px;     /* keeps the column narrower */
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: 0 1rem 1rem; 
+    }
+
+    /* ============ SECTION WRAPPER ============ */
     section {
       width: 100%;
       padding: 1rem;
       background-color: #FFFFFF;
       border-radius: 6px;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 2rem; /* bottom spacing before next section */
     }
-
-    section > :last-child {
+    /* Remove final paragraph’s bottom margin in each section */
+    section p:last-child {
       margin-bottom: 0;
     }
 
-    /* ==== MENU ITEM (NO SCALE ON HOVER) ==== */
+    /* ============ MENU & TASTING EXPERIENCE ============ */
     .menu-item {
-      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin: 0.15rem 0;
-      padding: 0.15rem 0;
-      transition: color 0.3s ease;
+      margin: 0.075rem 0;
+      padding: 0.075rem 0;
     }
+    /* Hover effect that darkens text only (no transform) */
     .menu-item:hover h3,
     .menu-item:hover span {
       color: #000;
     }
 
+    /* For sub-items that need to be visually indented */
     .indent {
       margin-left: 1rem;
-    }
-
-    .tasting-experience {
-      margin-top: 0;
-    }
-    .tasting-experience h3 {
-      margin-bottom: 0.5rem; /* Space under the heading */
-    }
-
-    .tasting-experience p.indent {
-      margin: 0.15rem 0 0.3rem 1rem;
-    }
-
-    .menu-item.indent {
-      margin: 0;
-      padding: 0;
       padding-left: 1rem;
     }
 
+    /* Tasting-experience overrides */
+    .tasting-experience .menu-item {
+      margin: 0;
+      padding: 0; 
+      line-height: 1.2; /* Slightly tighter line-height for these lines */
+    }
+    .tasting-experience h3 {
+      margin-bottom: 0.5rem; 
+    }
+    .tasting-experience p.indent {
+      margin: 0 0 0.15rem 1rem; 
+      max-width: calc(100% - 3rem);
+      line-height: 1.2; 
+    }
+
+    /* ============ COFFEE ITEMS ============ */
     .coffee-item {
-      position: relative;
       margin-bottom: 0.75rem;
       padding: 0.3rem 0;
+      position: relative;
     }
     .coffee-item:last-child {
-      margin-bottom: 0; 
+      margin-bottom: 0;
     }
     .coffee-item h3 {
       font-size: 11pt;
@@ -123,6 +136,7 @@
       color: #666;
     }
 
+    /* ============ LISTS & LINKS ============ */
     ul {
       list-style-type: none;
       padding: 0;
@@ -155,11 +169,13 @@
       transform: scaleX(1);
     }
 
+    /* ============ TEXT SELECTION ============ */
     ::selection {
       background: #ffe58a;
       color: #222;
     }
 
+    /* ============ SUN ICON ============ */
     img[alt="Sun Icon"] {
       width: 60px;
       height: 60px;
@@ -168,33 +184,20 @@
       transition: transform 0.4s ease;
       transform: scale(1);
     }
-
+    /* By default, no transform on hover (per code requirement) */
     img[alt="Sun Icon"]:hover {
       transform: none;
     }
-
+    /* When the observer triggers, add .visible for scale(1) with a slow transition */
     img[alt="Sun Icon"].visible {
       transform: scale(1);
       transition: transform 1s ease;
     }
-
-    section p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Add white column container */
-    .column-container {
-      background: #FFFFFF;
-      max-width: 320px;
-      margin: 0 auto;
-      min-height: 100vh;
-      padding: 0 1rem 1rem; 
-    }
-
   </style>
 </head>
 <body>
   <div class="column-container">
+    <!-- LOGO HEADER -->
     <header>
       <img
         class="logo"
@@ -203,8 +206,10 @@
       >
     </header>
 
+    <!-- MAIN CONTENT SECTION -->
     <section>
       <div class="main-menu">
+        <!-- Basic menu items -->
         <div class="menu-item">
           <h3>Latte</h3>
           <span>7</span>
@@ -218,12 +223,13 @@
           <span>5</span>
         </div>
 
+        <!-- Tasting experience -->
         <div class="tasting-experience">
           <div class="menu-item">
             <h3>Tasting experience</h3>
           </div>
           <p class="indent">
-            4 small cups, each of a unique black coffee &amp; 1 full-sized drink per person
+            4 single origin black coffees<br>+ 1 full-sized drink
           </p>
           <div class="menu-item indent">
             <h3>For one</h3>
@@ -235,6 +241,7 @@
           </div>
         </div>
 
+        <!-- Additional drinks line -->
         <div class="menu-item">
           <p>Also: chai tea, cappuccino, flat white, cortado, cold brew, hot chocolate, teas</p>
         </div>
@@ -242,6 +249,7 @@
 
       <hr>
 
+      <!-- Coffee items -->
       <p>Our single origin coffee menu has these naturally occurring flavor notes:</p>
       <div class="coffee-item">
         <h3>Dark &amp; smoky ~ Colombia</h3>
@@ -274,6 +282,7 @@
 
       <hr>
 
+      <!-- Footer info -->
       <ul>
         <li>6:30am - 1:30pm</li>
         <li><a href="mailto:support@valocoffee.com">support@valocoffee.com</a></li>
@@ -290,12 +299,14 @@
       </ul>
     </section>
 
+    <!-- Sun Icon -->
     <img
       src="./assets/images/sun-icon-black-clear.png"
       alt="Sun Icon"
     >
   </div>
 
+  <!-- Intersection Observer script (same functionality) -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -303,9 +314,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.5
-    });
+    }, { threshold: 0.5 });
 
     const sunIcon = document.querySelector('img[alt="Sun Icon"]');
     observer.observe(sunIcon);
