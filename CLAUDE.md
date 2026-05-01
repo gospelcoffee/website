@@ -197,8 +197,8 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Homepage sections (in order)
 
 1. **Header** — logo, simple nav (Locations, Menu, Philosophy, Get directions). No pills, no oversized header.
-2. **Hero** — headline + supporting copy + two actions (View locations, View menu). One excellent image if available. Calm, no overlays, no banners.
-3. **Today at Valo** — independent open/closed + today's hours for both Curbside and Resort. Each location has its own directions action.
+2. **Hero** — headline + supporting copy + two actions (View locations, View menu). Featured image: coffee_look (desktop/mobile responsive). Calm, no overlays, no banners.
+3. **Today at Valo** — independent open/closed + today's hours for both Curbside and Resort. Each location has directions and menu actions.
 4. **Coffee philosophy preview** — "A simpler menu. A better cup."
 5. **Menu preview** — show the decision path (drink → bean), no rankings, no defaults.
 6. **Two ways to visit** — short positioning lines + "Choose your location" action.
@@ -206,7 +206,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Locations page
 
 - Headline: "Two ways to visit Valo."
-- Curbside section: address, status, "Drive up and stay in your car. We take your order and bring your coffee to you." Positioning line: "High-quality coffee at drive-through speed."
+- Curbside section: address, status, "Drive up, we'll take your order and bring your drink to you. The best coffee, at drive through speeds." Positioning line: "High-quality coffee at drive-through speed."
 - Resort section: address, status, "Come inside the Prescott Resort, choose your coffee, and enjoy the view of Prescott." Positioning line: "The Valo tasting experience lives here."
 - Directions: clean address + directions button + arrival instructions + minimal line illustration. No embedded Google Map as primary visual. Directions button can open Google Maps in a new tab.
 
@@ -270,7 +270,7 @@ Each page: unique title, meta description, clear H1, clean heading hierarchy, re
 
 ## 9. Locations (factual)
 
-**Valo Curbside** — 300 Heather Heights, Prescott, AZ. Drive up, stay in your car, coffee comes to you.
+**Valo Curbside** — 300 Heather Heights, Prescott, AZ. Drive up, we'll take your order and bring your drink to you.
 
 **Valo Resort** — 1500 AZ-69, Prescott, AZ. Inside the Prescott Resort. Sit-down, view of Prescott, tasting experience lives here.
 
@@ -293,7 +293,7 @@ Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix
    apple spice                   colombia
    decaf                         mexico
 
-also
+not coffee
    butterfly lemonade            7
    matcha latte                  7
    ube latte                     7
