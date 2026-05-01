@@ -207,7 +207,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 
 - Headline: "Two ways to visit Valo."
 - Curbside section: address, status, "Drive up, we'll take your order and bring your drink to you. The best coffee, at drive through speeds." Positioning line: "High-quality coffee at drive-through speed."
-- Resort section: address, status, "Come inside the Prescott Resort, choose your coffee, and enjoy the view of Prescott." Positioning line: "The Valo tasting experience lives here."
+- Resort section: address, status, "Valo is inside the Prescott Resort, located in the lobby." Positioning line: "The Valo tasting experience lives here."
 - Directions: clean address + directions button + arrival instructions + minimal line illustration. No embedded Google Map as primary visual. Directions button can open Google Maps in a new tab.
 
 ### Menu page
