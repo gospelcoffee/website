@@ -1,0 +1,50 @@
+{
+  "locations": [
+    {
+      "id": "curbside",
+      "name": "Valo Curbside",
+      "shortName": "Curbside",
+      "addressLine1": "300 Heather Heights",
+      "addressLine2": "Prescott, Arizona",
+      "addressFull": "300 Heather Heights, Prescott, AZ",
+      "phone": "+1-928-910-6087",
+      "phoneDisplay": "928-910-6087",
+      "timezone": "America/Phoenix",
+      "directionsUrl": "https://maps.app.goo.gl/pQiKMV2w1YkQii3p9",
+      "positioning": "High-quality coffee at drive-through speed.",
+      "blurb": "Drive up, stay in your car, and we bring your coffee to you.",
+      "hours": [
+        { "day": "Monday", "open": "07:00", "close": "18:00" },
+        { "day": "Tuesday", "open": "07:00", "close": "18:00" },
+        { "day": "Wednesday", "open": "07:00", "close": "18:00" },
+        { "day": "Thursday", "open": "07:00", "close": "18:00" },
+        { "day": "Friday", "open": "07:00", "close": "18:00" },
+        { "day": "Saturday", "open": "07:00", "close": "18:00" },
+        { "day": "Sunday", "open": "07:00", "close": "18:00" }
+      ]
+    },
+    {
+      "id": "resort",
+      "name": "Valo Resort",
+      "shortName": "Resort",
+      "addressLine1": "1500 AZ-69",
+      "addressLine2": "Prescott, Arizona",
+      "addressFull": "1500 AZ-69, Prescott, AZ",
+      "phone": "+1-928-910-6087",
+      "phoneDisplay": "928-910-6087",
+      "timezone": "America/Phoenix",
+      "directionsUrl": "https://maps.app.goo.gl/BHweLz91EeAwYa32A",
+      "positioning": "The Valo tasting experience lives here.",
+      "blurb": "Sit down, enjoy the view of Prescott, and explore the coffees we're serving.",
+      "hours": [
+        { "day": "Monday", "open": null, "close": null },
+        { "day": "Tuesday", "open": null, "close": null },
+        { "day": "Wednesday", "open": "07:00", "close": "10:00" },
+        { "day": "Thursday", "open": "07:00", "close": "10:00" },
+        { "day": "Friday", "open": "07:00", "close": "10:00" },
+        { "day": "Saturday", "open": "07:00", "close": "14:00" },
+        { "day": "Sunday", "open": "07:00", "close": "14:00" }
+      ]
+    }
+  ]
+}
