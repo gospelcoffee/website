@@ -105,17 +105,26 @@
   <main id="main">
 
     <!-- Hero -->
-    <section class="hero">
-      <div class="container stack-md">
-        <h1 class="hero-headline">
-          The best coffee in Arizona.
-          <span>Chosen by flavor. Made with precision.</span>
-        </h1>
-        <p class="hero-sub">Choose your drink. Choose your bean. We make the cup around the coffee you want to taste.</p>
-        <div class="button-row">
-          <a class="button" href="locations.html">View locations</a>
-          <a class="button button-secondary" href="menu.html">View menu</a>
+    <section class="hero home-hero">
+      <div class="container home-hero-grid">
+        <div class="stack-md">
+          <h1 class="hero-headline">
+            The best coffee in Arizona.
+            <span>Chosen by flavor. Made with precision.</span>
+          </h1>
+          <p class="hero-sub">Choose your drink. Choose your bean. We make the cup around the coffee you want to taste.</p>
+          <div class="button-row">
+            <a class="button" href="locations.html">View locations</a>
+            <a class="button button-secondary" href="menu.html">View menu</a>
+          </div>
         </div>
+        <figure class="hero-media">
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
+            <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
+            <img src="assets/images/coffee_look.jpg" alt="Espresso and milk poured into a Valo coffee cup." loading="eager" decoding="async" fetchpriority="high" />
+          </picture>
+        </figure>
       </div>
     </section>
 
