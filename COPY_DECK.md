@@ -200,8 +200,9 @@ How to use
 - H1 line 2: Valo asks you to choose coffee.
 
 ### Warm section
-- Body line 1: The natural flavor of the bean should shape the drink. That is why our menu starts with simple drinks and then lets you choose the bean by the flavor you want in the cup.
-- Body line 2: We use precise recipes, carefully selected coffees, and constant tasting to make each cup consistent and personal.
+- Body line 1: The bean's natural flavor leads the drink. Nothing is added to the coffee to create the notes you taste.
+- Body line 2: We start with simple drinks, then let you choose the bean by the flavor it naturally brings to the cup.
+- Body line 3: We hold every ingredient to the same standard: pure, simple, carefully selected, and always coffee first.
 
 ### Three principles
 - Section heading: Coffee first
