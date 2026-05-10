@@ -194,8 +194,8 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Homepage sections (in order)
 
 1. **Header** — logo, simple nav (Locations, Menu, Philosophy, Get directions). No pills, no oversized header.
-2. **Hero** — headline + two actions (View locations, View menu). No supporting subline — let the photo carry the warmth. Featured image: coffee_look (desktop/mobile responsive). Calm, no overlays, no banners.
-3. **Today at Valo** — independent open/closed + today's hours for both Curbside and Resort. Each location has directions and menu actions.
+2. **Hero** — headline + two actions. "View locations" scrolls to `#today` on the same page (does not navigate to /locations.html); "View menu" goes to /menu.html. No supporting subline — let the photo carry the warmth. Featured image: coffee_look (desktop/mobile responsive). Calm, no overlays, no banners.
+3. **Today at Valo** — anchor target `#today`. This section is the visitor's complete answer for "can I visit, and how do I get there?" Includes for each location: independent open/closed status, today's hours, street address, short positioning blurb, directions button, and menu button. The /locations.html page still exists but the home page must stand on its own.
 4. **Coffee philosophy preview** — "A simpler menu. A better cup." One quiet line + link to /philosophy. Do not try to explain the philosophy here.
 5. **Menu preview** — show the menu structure (drink + bean), no rankings, no defaults, no heavy instructional heading.
 

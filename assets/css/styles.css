@@ -49,7 +49,14 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+[id] { scroll-margin-top: var(--space-6); }
 
 body {
   margin: 0;
@@ -403,6 +410,14 @@ p {
   font-size: var(--text-sm);
   color: var(--color-ink-quiet);
   letter-spacing: 0.02em;
+}
+
+.today-address {
+  font-style: normal;
+  font-size: var(--text-sm);
+  color: var(--color-ink-quiet);
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
 .today-blurb {

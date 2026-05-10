@@ -43,16 +43,20 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ### Hero
 - Headline: The best coffee in Arizona.
 - No supporting subline. The photo carries the warmth.
-- Primary CTA: View locations
+- Primary CTA: View locations (scrolls to #today on the same page, does not navigate)
 - Secondary CTA: View menu
 
 ### Today at Valo
 - Section eyebrow: Today at Valo
+- Section anchor: #today (the hero "View locations" button scrolls here)
+- Goal: this section gives a visitor everything they need to make the visit - status, hours, address, brief positioning, directions.
 
 #### Card: Valo Curbside
 - Location label: Valo Curbside
 - Status headline fallback: Open daily
 - Status meta fallback: 7 AM to 6 PM
+- Address line 1: 300 Heather Heights
+- Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you. The best coffee at drive-through speed.
 - Primary CTA: Get directions
 - Secondary CTA: View menu
@@ -61,7 +65,9 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Location label: Valo Resort
 - Status headline fallback: Open Wed-Sun
 - Status meta fallback: Wed-Fri, 7-10 AM · Sat-Sun, 7 AM-2 PM
-- Body: Inside the Prescott Resort, sit down with a view of Prescott and explore the coffees we are serving.
+- Address line 1: 1500 AZ-69
+- Address line 2: Prescott, Arizona · Inside the Prescott Resort
+- Body: Sit down with a view of Prescott and explore the coffees we are serving. The Valo tasting experience lives here.
 - Primary CTA: Get directions
 - Secondary CTA: View menu
 
