@@ -174,7 +174,7 @@ How to use
 - Body line 1: Choose one tasting flight.
 - Body line 2: Coffee tasting experience: Four coffees as pour-overs in a flight, then any full-size drink from the menu.
 - Body line 3: Not coffee tasting flight: Any four not coffee lattes in a flight, then any full-size drink from the menu.
-- Body line 4: Valo Resort only. Allow 20-25 minutes.
+- Body line 4: Valo Resort only. Allow 30-40 minutes.
 
 ### Coffee beans note
 - Headline: Coffee beans
