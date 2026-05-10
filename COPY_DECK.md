@@ -14,8 +14,11 @@ How to use
 
 ### Core message
 - Primary claim: The best coffee in Arizona.
-- Support: Chosen by flavor. Made with precision.
-- Choice line: Choose your drink. Choose your bean.
+- Choice line (menu page only): Choose your drink. Choose your bean.
+- Retired (do not reintroduce on home): Chosen by flavor. Made with precision.
+- Retired (do not reintroduce on home): We make the cup around the coffee you want to taste.
+
+The home page stays light. It does not try to explain the philosophy — it grounds the visitor in who Valo is, where Valo is, when Valo is open, and what is on the menu. The philosophy page is where the deeper why lives.
 
 ### Location naming standard
 - Preferred labels: Valo Curbside, Valo Resort
@@ -29,7 +32,7 @@ How to use
 - Page title: Valo Coffee | The Best Coffee in Arizona
 - Meta description: Valo Coffee serves the best coffee in Arizona through a simple menu, precise recipes, and two ways to visit: Curbside and Resort.
 - OG title: Valo Coffee | The Best Coffee in Arizona
-- OG description: Choose your drink. Choose your bean. Two ways to visit: Curbside and Resort.
+- OG description: Valo Coffee in Prescott, Arizona. Two locations: Curbside and Resort.
 
 ### Header / Navigation
 - Nav item: Locations
@@ -38,9 +41,8 @@ How to use
 - Nav item: Get directions
 
 ### Hero
-- Headline line 1: The best coffee in Arizona.
-- Headline line 2: Chosen by flavor. Made with precision.
-- Supporting body: Choose your drink. Choose your bean. We make the cup around the coffee you want to taste.
+- Headline: The best coffee in Arizona.
+- No supporting subline. The photo carries the warmth.
 - Primary CTA: View locations
 - Secondary CTA: View menu
 
@@ -67,33 +69,16 @@ How to use
 - Section eyebrow: Our approach
 - Headline line 1: A simpler menu.
 - Headline line 2: A better cup.
-- Body line 1: Most coffee shops ask you to choose flavors. Valo asks you to choose coffee.
-- Body line 2: Start with a drink. Then choose the bean by the flavor you want in the cup.
+- Body: Every flavor on our menu is naturally in the bean. Nothing added - before or after the roast.
 - Link CTA: Read our philosophy
 
 ### Menu preview
 - Section eyebrow: The menu
-- Headline: Choose your drink. Choose your bean. Or choose from our other beverages.
+- Headline: Two drinks. Six beans.
 - Step label: 1. Choose your drink
 - Step label: 2. Choose a coffee bean
-- Support note: We discover coffee beans that have distinct, naturally occurring flavor notes. Pick a bean and we brew your coffee with it.
+- Support note: Each bean is named for the flavor it naturally carries.
 - CTA: View full menu
-
-### Two ways to visit
-- Section eyebrow: Two ways to visit
-- Section headline: Pick the visit you want.
-
-#### Card: Valo Curbside
-- Eyebrow: Valo Curbside
-- Headline: High-quality coffee at drive-through speed.
-- Body: Drive up, stay in your car, and we bring your coffee to you.
-
-#### Card: Valo Resort
-- Eyebrow: Valo Resort
-- Headline: A sit-down coffee experience with a view of Prescott.
-- Body: Valo Resort is inside the Prescott Resort lobby. Choose your coffee and enjoy the view.
-
-- Section CTA: Choose your location
 
 ### Footer
 - Location heading: Valo Curbside

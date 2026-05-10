@@ -74,14 +74,11 @@ The site must remain understandable if JavaScript fails.
 
 ```text
 The best coffee in Arizona.
-Chosen by flavor. Made with precision.
 ```
 
-Supporting:
+The homepage stays light. It does not try to explain the philosophy — it grounds the visitor in who Valo is, where Valo is, when Valo is open, and what's on the menu. Context-heavy phrases like "Chosen by flavor. Made with precision." or "We make the cup around the coffee you want to taste." are retired as required supporting copy because they raise questions a first-time visitor can't answer on the home page.
 
-```text
-Choose your drink. Choose your bean. We make the cup around the coffee you want to taste.
-```
+Supporting phrases like "Choose your drink. Choose your bean." remain available on the **menu page**, where the structure of the menu provides the context. The **philosophy page** is where the deeper "why" lives, and visitors reach it by clicking through.
 
 ### Voice
 
@@ -197,11 +194,10 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Homepage sections (in order)
 
 1. **Header** — logo, simple nav (Locations, Menu, Philosophy, Get directions). No pills, no oversized header.
-2. **Hero** — headline + supporting copy + two actions (View locations, View menu). Featured image: coffee_look (desktop/mobile responsive). Calm, no overlays, no banners.
+2. **Hero** — headline + two actions (View locations, View menu). No supporting subline — let the photo carry the warmth. Featured image: coffee_look (desktop/mobile responsive). Calm, no overlays, no banners.
 3. **Today at Valo** — independent open/closed + today's hours for both Curbside and Resort. Each location has directions and menu actions.
-4. **Coffee philosophy preview** — "A simpler menu. A better cup."
-5. **Menu preview** — show the decision path (drink → bean), no rankings, no defaults.
-6. **Two ways to visit** — short positioning lines + "Choose your location" action.
+4. **Coffee philosophy preview** — "A simpler menu. A better cup." One quiet line + link to /philosophy. Do not try to explain the philosophy here.
+5. **Menu preview** — show the menu structure (drink + bean), no rankings, no defaults, no heavy instructional heading.
 
 ### Locations page
 
