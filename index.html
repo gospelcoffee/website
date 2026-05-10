@@ -106,25 +106,20 @@
 
     <!-- Hero -->
     <section class="hero home-hero">
-      <div class="container home-hero-grid">
-        <div class="stack-md">
-          <h1 class="hero-headline">The best coffee in Arizona.</h1>
-          <div class="button-row">
-            <a class="button" href="#today">View locations</a>
-            <a class="button button-secondary" href="menu.html">View menu</a>
-          </div>
+      <picture class="hero-media">
+        <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
+        <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
+        <img src="assets/images/coffee_look.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+      </picture>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1 class="hero-headline">The best coffee in Arizona.</h1>
+        <div class="button-row">
+          <a class="button" href="#today">View locations</a>
+          <a class="button button-secondary" href="#menu">View menu</a>
         </div>
-        <figure class="hero-media">
-          <picture>
-            <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
-            <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
-            <img src="assets/images/coffee_look.jpg" alt="Espresso and milk poured into a Valo coffee cup." loading="eager" decoding="async" fetchpriority="high" />
-          </picture>
-        </figure>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- Today at Valo -->
     <section class="section" id="today">
@@ -169,20 +164,8 @@
 
     <hr class="divider" />
 
-    <!-- Coffee philosophy preview -->
-    <section class="section section-warm">
-      <div class="container-narrow stack-md">
-        <span class="eyebrow">Our approach</span>
-        <h2 class="headline">A simpler menu.<br />A better cup.</h2>
-        <p class="lede">Every flavor on our menu is naturally in the bean. Nothing added &mdash; before or after the roast.</p>
-        <div class="button-row">
-          <a class="text-link" href="philosophy.html">Read our philosophy</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Menu preview -->
-    <section class="section">
+    <section class="section" id="menu">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">The menu</span>
@@ -214,6 +197,18 @@
 
         <div class="button-row" style="margin-top: var(--space-7)">
           <a class="button button-secondary" href="menu.html">View full menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee philosophy preview -->
+    <section class="section section-warm">
+      <div class="container-narrow stack-md">
+        <span class="eyebrow">Our approach</span>
+        <h2 class="headline">A simpler menu.<br />A better cup.</h2>
+        <p class="lede">Every flavor on our menu is naturally in the bean. Nothing added &mdash; before or after the roast.</p>
+        <div class="button-row">
+          <a class="text-link" href="philosophy.html">Read our philosophy</a>
         </div>
       </div>
     </section>

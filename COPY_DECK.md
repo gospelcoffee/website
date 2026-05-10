@@ -41,10 +41,11 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Nav item: Get directions
 
 ### Hero
+- Layout: full-width banner. Featured image covers the section edge-to-edge with a dark gradient overlay so the headline and buttons read with strong contrast.
 - Headline: The best coffee in Arizona.
-- No supporting subline. The photo carries the warmth.
+- No supporting subline. The image and overlay carry the atmosphere.
 - Primary CTA: View locations (scrolls to #today on the same page, does not navigate)
-- Secondary CTA: View menu
+- Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 
 ### Today at Valo
 - Section eyebrow: Today at Valo
@@ -71,20 +72,22 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Primary CTA: Get directions
 - Secondary CTA: View menu
 
+### Menu preview
+- Section eyebrow: The menu
+- Section anchor: #menu (the hero "View menu" button scrolls here)
+- Headline: Two drinks. Six beans.
+- Step label: 1. Choose your drink
+- Step label: 2. Choose a coffee bean
+- Support note: Each bean is named for the flavor it naturally carries.
+- CTA: View full menu (this CTA still goes to /menu.html for the complete card)
+
 ### Coffee philosophy preview
+- Position: last section on the home page, before the footer.
 - Section eyebrow: Our approach
 - Headline line 1: A simpler menu.
 - Headline line 2: A better cup.
 - Body: Every flavor on our menu is naturally in the bean. Nothing added - before or after the roast.
 - Link CTA: Read our philosophy
-
-### Menu preview
-- Section eyebrow: The menu
-- Headline: Two drinks. Six beans.
-- Step label: 1. Choose your drink
-- Step label: 2. Choose a coffee bean
-- Support note: Each bean is named for the flavor it naturally carries.
-- CTA: View full menu
 
 ### Footer
 - Location heading: Valo Curbside
