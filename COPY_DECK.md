@@ -24,6 +24,11 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Preferred labels: Valo Curbside, Valo Resort
 - Supporting context for Resort: inside the Prescott Resort
 
+### Menu scope rule (important)
+- Never claim drink scope. Copy must not say "two drinks", "only two coffees", or anything that implies the printed coffee list is the limit.
+- Latte and black coffee are our two most popular coffee drinks. We can make any specialty espresso drink to order - cortado, cappuccino, flat white, and more.
+- When the coffee list appears in marketing copy, pair it with language like "Our most popular. Ask for any specialty drink." or similar.
+
 ---
 
 ## Home Page (`/index.html`)
@@ -75,11 +80,25 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ### Menu preview
 - Section eyebrow: The menu
 - Section anchor: #menu (the hero "View menu" button scrolls here)
-- Headline: Two drinks. Six beans.
-- Step label: 1. Choose your drink
-- Step label: 2. Choose a coffee bean
+- No headline. The eyebrow plus the menu groups speak for themselves. Never claim drink scope ("two drinks", "six beans", etc.) - see global copy rules.
+
+#### Group: Coffee (left column, top)
+- Group label: Coffee
+- Item: latte - 7
+- Item: black coffee - 5
+- Support note: Our most popular. Ask for any specialty drink - cortado, cappuccino, flat white, and more.
+
+#### Group: Not coffee (left column, below Coffee)
+- Group label: Not coffee
+- Items (in order): butterfly lemonade 7, matcha latte 7, ube latte 7, golden latte 7, chai latte 7, hot cocoa 5, hot tea 5
+
+#### Group: Beans (right column)
+- Group label: Beans
+- Items (in order): dark & smoky / colombia, peanut butter / brazil, peach / colombia, strawberry / honduras, apple spice / colombia, decaf / mexico
 - Support note: Each bean is named for the flavor it naturally carries.
-- CTA: View full menu (this CTA still goes to /menu.html for the complete card)
+
+#### Bottom CTA
+- CTA: View full menu (still navigates out to /menu.html for the complete card)
 
 ### Coffee philosophy preview
 - Position: last section on the home page, before the footer.

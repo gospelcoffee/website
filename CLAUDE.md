@@ -89,6 +89,7 @@ Valo should NOT feel: busy, generic, trendy, gimmicky, colorful, app-like, over-
 ### Copy rules
 
 - **Be binary and direct.** No "maybe," "sort of," "one of the," "kind of," "could be," "a coffee experience for some people."
+- **Never claim drink scope.** Latte and black coffee are the two coffees we list because they're our most popular — they are not the totality. We can make any espresso drink to order (cortado, cappuccino, flat white, and more). Copy must never say "two drinks", "only two coffees", or anything that implies the printed list is the limit.
 - **Do not soften strong claims.** "Some of the best coffee in Prescott" → "The best coffee in Arizona." "A quality-focused beverage experience" → "Coffee chosen by flavor and made with precision."
 - **"Best coffee" language is allowed.** There is no rule against it. Use with restraint and confidence — don't force it everywhere, don't avoid it.
 - **Treat reviews as one Valo signal.** Reputation language refers to Valo as one brand, not separate reputations for Curbside vs Resort.
@@ -196,7 +197,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 1. **Header** — logo, simple nav (Locations, Menu, Philosophy, Get directions). No pills, no oversized header.
 2. **Hero** — full-width banner. The featured image (coffee_look, desktop/mobile responsive) covers the section edge-to-edge. A restrained dark gradient overlay sits on top so the headline and buttons read with strong contrast. Desktop: gradient is darker on the left where text sits, fading toward the image on the right. Mobile: text sits near the bottom with a darker bottom-up gradient. Content is headline + two actions only — both keep the visitor on the home page: "View locations" scrolls to `#today`, "View menu" scrolls to `#menu`. The /locations.html and /menu.html pages still exist, but the home page hero never sends them elsewhere. No supporting subline. Premium and quiet — never a marketing-template feel.
 3. **Today at Valo** — anchor target `#today`. This section is the visitor's complete answer for "can I visit, and how do I get there?" Includes for each location: independent open/closed status, today's hours, street address, short positioning blurb, directions button, and menu button. The /locations.html page still exists but the home page must stand on its own.
-4. **Menu preview** — anchor target `#menu`. Show the menu structure (drink + bean), no rankings, no defaults, no heavy instructional heading. A "View full menu" link still goes out to /menu.html for the complete card (tasting feature, beans note).
+4. **Menu preview** — anchor target `#menu`. Three labeled groups: **Coffee** (latte, black coffee), **Not coffee** (the other beverages), **Beans** (the six beans with origins). No rankings, no defaults, no heavy instructional heading. Never claim scope ("two drinks", "six beans" etc.) — the printed coffee list is just our two most popular; any espresso drink (cortado, cappuccino, flat white, etc.) can be made to order. A short note under Coffee makes this explicit. A "View full menu" link still goes out to /menu.html for the complete card (tasting feature, beans note).
 5. **Coffee philosophy preview** — last section on the home page. "A simpler menu. A better cup." One quiet line + link to /philosophy. Do not try to explain the philosophy here — the goal is to invite a click, not to teach.
 
 ### Locations page
@@ -304,6 +305,8 @@ VALO RESORT FEATURE
 ```
 
 Bean ordering is fixed — do not re-rank. No defaults. No "recommended."
+
+The printed list above mirrors the paper menu. It is not the limit of what we make. **Latte and black coffee are our two most popular coffee drinks; we can prepare any specialty espresso drink to order — cortado, cappuccino, flat white, and more.** This must be communicated wherever the coffee list appears in marketing copy, but the printed/digital menu stays simple. See the copy rules in section 3.
 
 ---
 
