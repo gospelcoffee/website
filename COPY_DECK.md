@@ -73,7 +73,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Location label: Valo Curbside
 - Status headline fallback: Open daily
 - Status meta fallback: 7 AM – 6 PM
-- Address line 1: 300 Heather Heights
+- Address line 1: 1500 Heather Heights
 - Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you. The best coffee at drive-through speed.
 - Primary CTA: Get directions
@@ -123,7 +123,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Footer
 - Location heading: Valo Curbside
-- Address: 300 Heather Heights, Prescott, AZ
+- Address: 1500 Heather Heights, Prescott, AZ
 - Hours line: Daily, 7 AM – 6 PM
 - Link CTA: Get directions
 
@@ -157,7 +157,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Positioning line: High-quality coffee at drive-through speed.
 - Status headline fallback: Open daily
 - Status meta fallback: 7 AM – 6 PM
-- Address line 1: 300 Heather Heights
+- Address line 1: 1500 Heather Heights
 - Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you.
 - CTA: Get directions
