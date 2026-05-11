@@ -97,7 +97,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Group label: Coffee
 - Item: latte - 7
 - Item: black coffee - 5
-- Support note: Our most popular. Ask for any specialty drink - cortado, cappuccino, flat white, and more.
+- No support note on the home page. The previous "Ask for any specialty drink" line was removed because it cluttered the menu. The home page preview shows the most popular two; visitors who want the full picture click "View full menu" or speak with a barista. Do not reintroduce a specialty-drink disclaimer here.
 
 #### Group: Not coffee (left column, below Coffee)
 - Group label: Not coffee
