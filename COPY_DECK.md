@@ -106,7 +106,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 #### Group: Beans (right column)
 - Group label: Beans
 - Items (in order): dark & smoky / colombia, peanut butter / brazil, peach / colombia, strawberry / honduras, apple spice / colombia, decaf / mexico
-- Support note: Each bean is named for the flavor it naturally carries.
+- Support note: Each tasting note listed here is naturally occurring in the bean. We've never added anything to the coffee beans.
+- The deeper explanation (roasting, sourcing, why this matters) lives on the philosophy page. Do not over-explain here.
 
 #### Bottom CTA
 - CTA: View full menu (still navigates out to /menu.html for the complete card)
