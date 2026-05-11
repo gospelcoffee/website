@@ -185,9 +185,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Meta description: The Valo Coffee menu. Choose your drink. Choose your bean. Or choose from our other beverages.
 
 ### Menu intro
-- Eyebrow: Menu
-- H1: Menu
-- Lede: Choose your drink. Choose your bean. Or choose from our other beverages.
+- Header: a single small "Menu" label, rendered as `<h1 class="eyebrow">Menu</h1>` so the page keeps a semantic h1 for SEO/a11y while looking like a quiet eyebrow. No huge display headline.
+- No lede. The previous "Choose your drink. Choose your bean. Or choose from our other beverages." line was removed because it cluttered the page. The menu card itself is the page's content.
 
 ### Core menu card
 - Step label: 1. Choose your drink
