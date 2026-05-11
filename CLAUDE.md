@@ -134,7 +134,7 @@ Correct:
 VALO CURBSIDE
 
 Open now
-Today, 6:30 AM to 6:00 PM
+Today, 6:30 AM – 6:00 PM
 
 Drive up, stay in your car, and we bring your coffee to you.
 ```
@@ -232,7 +232,9 @@ Required states:
 - Opens today at 6:30 AM
 - Opens tomorrow at 6:30 AM
 - Closes at 6:00 PM
-- Today, 6:30 AM to 6:00 PM
+- Today, 6:30 AM &ndash; 6:00 PM
+
+Hour-range format: always show AM/PM on **both** sides of the range, separated by an en-dash with spaces. Use `7 AM &ndash; 6 PM`, not `7&ndash;6 PM`, not `7 AM to 6 PM`. When minutes are `:00`, omit them (`7 AM`, not `7:00 AM`).
 
 ### v1: static JSON
 Hours live in `data/locations.json`. JS reads it client-side and renders status text.

@@ -30,6 +30,11 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Latte and black coffee are our two most popular coffee drinks. We can make any specialty espresso drink to order - cortado, cappuccino, flat white, and more.
 - When the coffee list appears in marketing copy, pair it with language like "Our most popular. Ask for any specialty drink." or similar.
 
+### Hours format
+- Always show AM/PM on both sides of a time range, separated by an en-dash with spaces: "7 AM – 6 PM", not "7–6 PM", not "7 AM to 6 PM".
+- Omit minutes when they are :00 ("7 AM", not "7:00 AM"). Show minutes only when non-zero ("6:30 AM").
+- Day-range abbreviations (Wed–Fri, Sat–Sun) keep their en-dash without spaces. Hour ranges use spaces.
+
 ---
 
 ## Home Page (`/index.html`)
@@ -61,7 +66,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 #### Card: Valo Curbside
 - Location label: Valo Curbside
 - Status headline fallback: Open daily
-- Status meta fallback: 7 AM to 6 PM
+- Status meta fallback: 7 AM – 6 PM
 - Address line 1: 300 Heather Heights
 - Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you. The best coffee at drive-through speed.
@@ -71,7 +76,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 #### Card: Valo (inside the Prescott Resort)
 - Location label: Valo (never "Valo Resort")
 - Status headline fallback: Open Wed-Sun
-- Status meta fallback: Wed-Fri, 7-10 AM · Sat-Sun, 7 AM-2 PM
+- Status meta fallback: Wed-Fri, 7 AM – 10 AM · Sat-Sun, 7 AM – 2 PM
 - Address line 1: 1500 AZ-69
 - Address line 2: Prescott, Arizona · Inside the Prescott Resort
 - Body: Sit down with a view of Prescott and explore the coffees we are serving. The Valo tasting experience lives here.
@@ -111,14 +116,14 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ### Footer
 - Location heading: Valo Curbside
 - Address: 300 Heather Heights, Prescott, AZ
-- Hours line: Daily, 7 AM - 6 PM
+- Hours line: Daily, 7 AM – 6 PM
 - Link CTA: Get directions
 
 - Location heading: Valo (never "Valo Resort")
 - Address: 1500 AZ-69, Prescott, AZ
 - Location context line: Inside the Prescott Resort
-- Hours line 1: Wed-Fri, 7-10 AM
-- Hours line 2: Sat-Sun, 7 AM - 2 PM
+- Hours line 1: Wed-Fri, 7 AM – 10 AM
+- Hours line 2: Sat-Sun, 7 AM – 2 PM
 - Link CTA: Get directions
 
 - Contact label: Contact
@@ -143,7 +148,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - H2: Drive up. Stay in your car.
 - Positioning line: High-quality coffee at drive-through speed.
 - Status headline fallback: Open daily
-- Status meta fallback: 7 AM to 6 PM
+- Status meta fallback: 7 AM – 6 PM
 - Address line 1: 300 Heather Heights
 - Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you.
@@ -154,7 +159,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - H2: Inside the Prescott Resort lobby.
 - Positioning line: The Valo tasting experience lives here.
 - Status headline fallback: Open Wed-Sun
-- Status meta fallback: Wed-Fri, 7-10 AM · Sat-Sun, 7 AM-2 PM
+- Status meta fallback: Wed-Fri, 7 AM – 10 AM · Sat-Sun, 7 AM – 2 PM
 - Address line 1: 1500 AZ-69
 - Address line 2: Prescott, Arizona
 - Body: Sit down inside the Prescott Resort and explore the coffees we are serving.

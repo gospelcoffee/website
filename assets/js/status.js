@@ -22,7 +22,7 @@
     const [h, m] = hhmm.split(":").map(Number);
     const period = h >= 12 ? "PM" : "AM";
     const h12 = h % 12 === 0 ? 12 : h % 12;
-    return m === 0 ? `${h12}:${pad(m)} ${period}` : `${h12}:${pad(m)} ${period}`;
+    return m === 0 ? `${h12} ${period}` : `${h12}:${pad(m)} ${period}`;
   }
 
   function nowInTz(tz) {
@@ -69,7 +69,7 @@
         return {
           open: true,
           headline: "Open now",
-          meta: `Today, ${formatTime(today.open)} to ${formatTime(today.close)}`,
+          meta: `Today, ${formatTime(today.open)} – ${formatTime(today.close)}`,
         };
       }
       if (nowMin < openMin) {
