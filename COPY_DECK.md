@@ -63,8 +63,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Primary CTA: View locations (scrolls to #today on the same page, does not navigate)
 - Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate) (scrolls to #menu on the same page, does not navigate)
 
-### Today at Valo
-- Section eyebrow: Today at Valo
+### Visit Valo
+- Section eyebrow: Visit Valo
 - Section anchor: #today (the hero "View locations" button scrolls here)
 - Goal: this section gives a visitor everything they need to make the visit - status, hours, address, brief positioning, directions.
 
