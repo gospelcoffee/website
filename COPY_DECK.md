@@ -51,10 +51,11 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - OG description: Valo Coffee in Prescott, Arizona. Two locations: Curbside and Resort.
 
 ### Header / Navigation
-- Nav item: Locations
-- Nav item: Menu
-- Nav item: Philosophy
-- Nav item: Get directions
+- Nav item: Locations (on home page scrolls to #today; on other pages navigates to locations.html)
+- Nav item: Menu (on home page scrolls to #menu; on other pages navigates to menu.html)
+- Nav item: Philosophy (on home page scrolls to #philosophy; on other pages navigates to philosophy.html)
+- Nav item: Get directions (on home page scrolls to #today; on other pages navigates to locations.html)
+- Dual-mode rule: on the home page every nav link stays on the page. Visitors reach the deeper pages via section CTAs (View full menu, Get directions on each location card, Read our philosophy).
 
 ### Hero
 - Layout: full-width banner. Featured image covers the section edge-to-edge with a dark gradient overlay so the headline and buttons read with strong contrast.
