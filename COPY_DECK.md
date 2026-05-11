@@ -47,7 +47,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Hero
 - Layout: full-width banner. Featured image covers the section edge-to-edge with a dark gradient overlay so the headline and buttons read with strong contrast.
-- Headline: The best coffee in Arizona.
+- Headline: The best coffee in Arizona (no trailing period - headline, not sentence)
 - No supporting subline. The image and overlay carry the atmosphere.
 - Primary CTA: View locations (scrolls to #today on the same page, does not navigate)
 - Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
