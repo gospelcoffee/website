@@ -50,7 +50,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Headline: The best coffee in Arizona (no trailing period - headline, not sentence)
 - No supporting subline. The image and overlay carry the atmosphere.
 - Primary CTA: View locations (scrolls to #today on the same page, does not navigate)
-- Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
+- Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate) (scrolls to #menu on the same page, does not navigate)
 
 ### Today at Valo
 - Section eyebrow: Today at Valo
@@ -65,7 +65,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you. The best coffee at drive-through speed.
 - Primary CTA: Get directions
-- Secondary CTA: View menu
+- Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 
 #### Card: Valo Resort
 - Location label: Valo Resort
@@ -75,7 +75,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Address line 2: Prescott, Arizona · Inside the Prescott Resort
 - Body: Sit down with a view of Prescott and explore the coffees we are serving. The Valo tasting experience lives here.
 - Primary CTA: Get directions
-- Secondary CTA: View menu
+- Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 
 ### Menu preview
 - Section eyebrow: The menu
