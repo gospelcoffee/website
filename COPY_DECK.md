@@ -182,17 +182,26 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Metadata
 - Page title: Menu | Valo Coffee
-- Meta description: The Valo Coffee menu. Choose your drink. Choose your bean. Or choose from our other beverages.
+- Meta description: The Valo Coffee menu. Pick a drink, temp, milk, and bean. Plus our not coffee menu.
 
 ### Menu intro
 - Header: a single small "Menu" label, rendered as `<h1 class="eyebrow">Menu</h1>` so the page keeps a semantic h1 for SEO/a11y while looking like a quiet eyebrow. No huge display headline.
 - No lede. The previous "Choose your drink. Choose your bean. Or choose from our other beverages." line was removed because it cluttered the page. The menu card itself is the page's content.
 
-### Core menu card
-- Step label: 1. Choose your drink
-- Step label: 2. Choose a coffee bean
-- Support note: We discover coffee beans that have distinct, naturally occurring flavor notes. Pick a bean and we brew your coffee with it.
-- Section label: Not coffee
+### Core menu card (paper-style)
+- Layout mirrors the paper menu on desktop (≥900px): six numbered steps in a horizontal row.
+- Mobile (<900px) is intentionally simplified — step numbers are hidden, and steps 2 (temp) and 3 (milk) are removed entirely. Mobile flow: pick a drink → pick a bean → optional (with add-ins and sweetener side-by-side as two columns) → not coffee. Step labels render slightly larger for legibility.
+- The "not coffee" section sits below everything on both viewports.
+- Bold weight = standard option; regular weight = secondary/accommodation option.
+- Steps 5 and 6 sit under an "optional" italic label with a thin horizontal rule below it.
+- Step 1: pick a drink — latte (7) bold, coffee (5) bold
+- Step 2: pick a temp — hot bold, iced bold, extra hot regular, kids' temp regular
+- Step 3: pick a milk — whole bold, oat bold, half & half regular
+- Step 4: pick a bean — all bold (dark & smoky, peanut butter, peach, strawberry, apple spice, decaf), origins as regular-weight meta (colombia, brazil, colombia, honduras, colombia, mexico)
+- Step 5 (optional): pick add-ins — vanilla, mocha, caramel (all regular)
+- Step 6 (optional): pick a sweetener — sugar, brown sugar, honey, maple, splenda | stevia (all regular)
+- Voice rule: every step label leads with a verb. Never just a noun like "bean" or "temp" — too ambiguous, no directive. "pick a [noun]" is the pattern.
+- Not coffee section below: cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7, golden latte 7, Jamaica 7, butterfly lemonade 7, hibiscus yuzu 7 (item names regular, prices bold)
 
 ### Inside Prescott Resort feature
 - Step label: Inside Prescott Resort (never "Valo Resort feature")

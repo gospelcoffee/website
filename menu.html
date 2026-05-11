@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu | Valo Coffee</title>
-  <meta name="description" content="The Valo Coffee menu. Choose your drink. Choose your bean. Or choose from our other beverages." />
+  <meta name="description" content="The Valo Coffee menu. Pick a drink, temp, milk, and bean. Plus our not coffee menu." />
   <link rel="canonical" href="https://valocoffee.com/menu.html" />
   <link rel="icon" type="image/png" href="assets/images/sun-icon-black-clear.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -37,40 +37,86 @@
     </section>
 
     <section class="section-tight">
-      <div class="container-narrow">
-        <article class="menu-card menu-card-warm">
+      <div class="container">
+        <article class="menu-card menu-card-warm paper-menu-card">
 
-          <div class="menu-section">
-            <p class="menu-step">1. Choose your drink</p>
-            <ul class="menu-list">
-              <li class="menu-row"><span class="label">latte</span><span class="meta meta-strong">7</span></li>
-              <li class="menu-row"><span class="label">black coffee</span><span class="meta meta-strong">5</span></li>
-            </ul>
+          <div class="paper-menu">
+            <div class="paper-menu-step paper-step-1">
+              <p class="paper-menu-num"><span class="paper-menu-num-prefix">1. </span>pick a drink</p>
+              <ul class="menu-list">
+                <li class="menu-row"><strong class="label">latte</strong><span class="meta meta-strong">7</span></li>
+                <li class="menu-row"><strong class="label">coffee</strong><span class="meta meta-strong">5</span></li>
+              </ul>
+            </div>
+
+            <div class="paper-menu-step paper-step-2">
+              <p class="paper-menu-num"><span class="paper-menu-num-prefix">2. </span>pick a temp</p>
+              <ul class="menu-list">
+                <li class="menu-row"><strong class="label">hot</strong></li>
+                <li class="menu-row"><strong class="label">iced</strong></li>
+                <li class="menu-row"><span class="label">extra hot</span></li>
+                <li class="menu-row"><span class="label">kids&rsquo; temp</span></li>
+              </ul>
+            </div>
+
+            <div class="paper-menu-step paper-step-3">
+              <p class="paper-menu-num"><span class="paper-menu-num-prefix">3. </span>pick a milk</p>
+              <ul class="menu-list">
+                <li class="menu-row"><strong class="label">whole</strong></li>
+                <li class="menu-row"><strong class="label">oat</strong></li>
+                <li class="menu-row"><span class="label">half &amp; half</span></li>
+              </ul>
+            </div>
+
+            <div class="paper-menu-step paper-step-4">
+              <p class="paper-menu-num"><span class="paper-menu-num-prefix">4. </span>pick a bean</p>
+              <ul class="menu-list">
+                <li class="menu-row"><strong class="label">dark &amp; smoky</strong><span class="meta">colombia</span></li>
+                <li class="menu-row"><strong class="label">peanut butter</strong><span class="meta">brazil</span></li>
+                <li class="menu-row"><strong class="label">peach</strong><span class="meta">colombia</span></li>
+                <li class="menu-row"><strong class="label">strawberry</strong><span class="meta">honduras</span></li>
+                <li class="menu-row"><strong class="label">apple spice</strong><span class="meta">colombia</span></li>
+                <li class="menu-row"><strong class="label">decaf</strong><span class="meta">mexico</span></li>
+              </ul>
+            </div>
+
+            <div class="paper-menu-optional">
+              <p class="paper-menu-optional-label">optional</p>
+              <div class="paper-menu-optional-cols">
+                <div class="paper-menu-step paper-step-5">
+                  <p class="paper-menu-num"><span class="paper-menu-num-prefix">5. </span>pick add-ins</p>
+                  <ul class="menu-list">
+                    <li class="menu-row"><span class="label">vanilla</span></li>
+                    <li class="menu-row"><span class="label">mocha</span></li>
+                    <li class="menu-row"><span class="label">caramel</span></li>
+                  </ul>
+                </div>
+
+                <div class="paper-menu-step paper-step-6">
+                  <p class="paper-menu-num"><span class="paper-menu-num-prefix">6. </span>pick a sweetener</p>
+                  <ul class="menu-list">
+                    <li class="menu-row"><span class="label">sugar</span></li>
+                    <li class="menu-row"><span class="label">brown sugar</span></li>
+                    <li class="menu-row"><span class="label">honey</span></li>
+                    <li class="menu-row"><span class="label">maple</span></li>
+                    <li class="menu-row"><span class="label">splenda | stevia</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="menu-section">
-            <p class="menu-step">2. Choose a coffee bean</p>
+          <div class="paper-menu-not-coffee">
+            <p class="paper-menu-num">not coffee</p>
             <ul class="menu-list">
-              <li class="menu-row"><span class="label">dark &amp; smoky</span><span class="meta">colombia</span></li>
-              <li class="menu-row"><span class="label">peanut butter</span><span class="meta">brazil</span></li>
-              <li class="menu-row"><span class="label">peach</span><span class="meta">colombia</span></li>
-              <li class="menu-row"><span class="label">strawberry</span><span class="meta">honduras</span></li>
-              <li class="menu-row"><span class="label">apple spice</span><span class="meta">colombia</span></li>
-              <li class="menu-row"><span class="label">decaf</span><span class="meta">mexico</span></li>
-            </ul>
-            <p class="menu-note" style="margin-top: var(--space-4)">We discover coffee beans that have distinct, naturally occurring flavor notes. Pick a bean and we&rsquo;ll brew your coffee with it.</p>
-          </div>
-
-          <div class="menu-section">
-            <p class="menu-step">Not coffee</p>
-            <ul class="menu-list">
-              <li class="menu-row"><span class="label">butterfly lemonade</span><span class="meta meta-strong">7</span></li>
+              <li class="menu-row"><span class="label">cocoa latte</span><span class="meta meta-strong">5</span></li>
+              <li class="menu-row"><span class="label">chai latte</span><span class="meta meta-strong">7</span></li>
               <li class="menu-row"><span class="label">matcha latte</span><span class="meta meta-strong">7</span></li>
               <li class="menu-row"><span class="label">ube latte</span><span class="meta meta-strong">7</span></li>
               <li class="menu-row"><span class="label">golden latte</span><span class="meta meta-strong">7</span></li>
-              <li class="menu-row"><span class="label">chai latte</span><span class="meta meta-strong">7</span></li>
-              <li class="menu-row"><span class="label">hot cocoa</span><span class="meta meta-strong">5</span></li>
-              <li class="menu-row"><span class="label">hot tea</span><span class="meta meta-strong">5</span></li>
+              <li class="menu-row"><span class="label">Jamaica</span><span class="meta meta-strong">7</span></li>
+              <li class="menu-row"><span class="label">butterfly lemonade</span><span class="meta meta-strong">7</span></li>
+              <li class="menu-row"><span class="label">hibiscus yuzu</span><span class="meta meta-strong">7</span></li>
             </ul>
           </div>
 

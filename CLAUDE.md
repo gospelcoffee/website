@@ -283,36 +283,49 @@ Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix
 
 ## 10. Menu (canonical)
 
-```text
-1. choose your drink
-   latte                         7
-   black coffee                  5
+The paper menu is laid out in six numbered steps across one horizontal row, with a "not coffee" section beneath. Steps 5 and 6 sit under an "optional" divider. Within each step, **bold** items are the standard options and regular-weight items are secondary/accommodation options.
 
-2. choose a coffee bean
-   dark & smoky                  colombia
-   peanut butter                 brazil
-   peach                         colombia
-   strawberry                    honduras
-   apple spice                   colombia
-   decaf                         mexico
+```text
+1. pick a drink              2. pick a temp 3. pick a milk   4. pick a bean                     optional ─────────────
+   latte                7       hot            whole            dark & smoky    colombia        5. pick add-ins    6. pick a sweetener
+   coffee               5       iced           oat              peanut butter   brazil             vanilla            sugar
+                                extra hot      half & half      peach           colombia           mocha              brown sugar
+                                kids' temp                      strawberry      honduras           caramel            honey
+                                                                apple spice     colombia                              maple
+                                                                decaf           mexico                                splenda | stevia
 
 not coffee
-   butterfly lemonade            7
-   matcha latte                  7
-   ube latte                     7
-   golden latte                  7
-   chai latte                    7
-   hot cocoa                     5
-   hot tea                       5
+   cocoa latte                  5
+   chai latte                   7
+   matcha latte                 7
+   ube latte                    7
+   golden latte                 7
+   Jamaica                      7
+   butterfly lemonade           7
+   hibiscus yuzu                7
 
-VALO RESORT FEATURE
-   tasting experience            19
+Feature (inside the Prescott Resort)
+   tasting experience           19
    A guided tasting of the coffees we're serving.
 ```
 
 Bean ordering is fixed — do not re-rank. No defaults. No "recommended."
 
-The printed list above mirrors the paper menu. It is not the limit of what we make. **Latte and black coffee are our two most popular coffee drinks; we can prepare any specialty espresso drink to order — cortado, cappuccino, flat white, and more.** This must be communicated wherever the coffee list appears in marketing copy, but the printed/digital menu stays simple. See the copy rules in section 3.
+Weight conventions (mirrored on the digital menu):
+- Step 1 latte/coffee: bold.
+- Step 2: hot/iced bold; extra hot/kids' temp regular.
+- Step 3: whole/oat bold; half & half regular.
+- Step 4 beans: all bold; origin shown in regular weight as a meta value.
+- Steps 5 & 6 (optional): all regular weight.
+- Not coffee items: regular weight; prices in bold.
+
+The printed list above mirrors the paper menu. It is not the limit of what we make. **Latte and coffee are our two most popular coffee drinks; we can prepare any specialty espresso drink to order — cortado, cappuccino, flat white, and more.** This must be communicated wherever the coffee list appears in marketing copy, but the printed/digital menu stays simple. See the copy rules in section 3.
+
+Layout rule for the digital menu page (`/menu.html`):
+- **Desktop (≥900px):** the six steps render as a horizontal row, mirroring the paper menu. All steps and step numbers are visible.
+- **Mobile (<900px):** the layout is simplified for scannability — **step numbers are hidden**, and **steps 2 (temp) and 3 (milk) are hidden entirely**. Mobile flow: pick a drink → pick a bean → optional → (pick add-ins | pick a sweetener as two side-by-side columns) → not coffee. Add-ins and sweetener stay side-by-side on mobile because they're short lists that scan faster as a pair than stacked. Step labels are slightly larger and more legible than on desktop. The "not coffee" section always sits below at full width.
+- **Voice rule for step labels:** every step label leads with a verb ("pick a drink", "pick a bean", "pick a sweetener"). Never just the noun ("bean", "temp") — it's too ambiguous and lacks a directive. The paper menu only had "pick a drink" on step 1, but on the digital menu we apply "pick" universally for clarity.
+- The home page menu preview is intentionally simpler (coffee + beans only) and does not mirror either layout — see section 5 item 4.
 
 ---
 
