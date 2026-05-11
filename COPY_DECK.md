@@ -104,8 +104,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ### Coffee philosophy preview
 - Position: last section on the home page, before the footer.
 - Section eyebrow: Our approach
-- Headline line 1: A simpler menu.
-- Headline line 2: A better cup.
+- Headline: A simpler menu (no trailing period - headline, not sentence)
 - Body: Every flavor on our menu is naturally in the bean. Nothing added - before or after the roast.
 - Link CTA: Read our philosophy
 
