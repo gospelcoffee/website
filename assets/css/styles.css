@@ -726,6 +726,28 @@ p {
   }
 }
 
+/* ---------- Resort tasting card (paper-style, exclusive to the resort) ---------- */
+.resort-tasting-card .resort-tasting-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  margin-bottom: var(--space-3);
+}
+
+.resort-tasting-card p {
+  max-width: 60ch;
+  color: var(--color-ink-soft);
+}
+
+.resort-tasting-card p strong {
+  color: var(--color-ink);
+}
+
+.resort-tasting-card .paper-menu-num {
+  color: var(--color-ink);
+}
+
 /* ---------- Resort feature ---------- */
 .resort-feature {
   border-top: 1px solid var(--color-ink);

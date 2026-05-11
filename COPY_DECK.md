@@ -202,13 +202,14 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Voice rule: every step label leads with a verb. Never just a noun like "bean" — too ambiguous, no directive. "pick a [noun]" is the pattern.
 - Not coffee section below: cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7, golden latte 7, Jamaica 7, butterfly lemonade 7, hibiscus yuzu 7 (item names regular, prices bold)
 
-### Inside Prescott Resort feature
-- Step label: Inside Prescott Resort (never "Valo Resort feature")
-- Headline: Tasting experiences - 19
-- Body line 1: choose your experience
-- Body line 2: Coffee tasting experience: four coffees of your choice served as a pour-over flight, then any full-size drink from the menu.
-- Body line 3: Not coffee tasting experience: Any four drinks from the not coffee menu lattes served in a sample flight, then any full-size drink from the menu.
-- Body line 4: Available inside the Prescott Resort only.
+### Tasting experience card (paper-style, exclusive to the Prescott Resort location)
+- Visual: same warm-paper menu card as the main menu, so the tasting experience reads as an extension of the menu, not a separate marketing block. Lives in its own `.menu-card.menu-card-warm.paper-menu-card.resort-tasting-card` article right beneath the main menu card.
+- Top eyebrow: "inside the Prescott Resort only · 19" (italic, lowercase; the price 19 is rendered with the same `.meta meta-strong` styling as menu prices)
+- Headline: "tasting experience" (lowercase, medium weight, slightly larger than body)
+- Intro line: choose your experience
+- Body line 1: Coffee tasting experience: four coffees of your choice served as a pour-over flight, then any full-size drink from the menu.
+- Body line 2: Not coffee tasting experience: Any four drinks from the not coffee menu lattes served in a sample flight, then any full-size drink from the menu.
+- Do not add a redundant "Available inside the Prescott Resort only" line at the bottom — the top eyebrow already communicates this.
 
 ### Coffee beans note
 - Headline: Coffee beans
