@@ -92,16 +92,13 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Section eyebrow: The menu
 - Section anchor: #menu (the hero "View menu" button scrolls here)
 - No headline. The eyebrow plus the menu groups speak for themselves. Never claim drink scope ("two drinks", "six beans", etc.) - see global copy rules.
+- Coffee-only preview: only Coffee and Beans appear here. Not coffee, the tasting feature, and the beans note all live on /menu.html. The home page menu is intentionally coffee-centric to keep the page focused.
 
-#### Group: Coffee (left column, top)
+#### Group: Coffee (left column)
 - Group label: Coffee
 - Item: latte - 7
 - Item: black coffee - 5
 - No support note on the home page. The previous "Ask for any specialty drink" line was removed because it cluttered the menu. The home page preview shows the most popular two; visitors who want the full picture click "View full menu" or speak with a barista. Do not reintroduce a specialty-drink disclaimer here.
-
-#### Group: Not coffee (left column, below Coffee)
-- Group label: Not coffee
-- Items (in order): butterfly lemonade 7, matcha latte 7, ube latte 7, golden latte 7, chai latte 7, hot cocoa 5, hot tea 5
 
 #### Group: Beans (right column)
 - Group label: Beans
