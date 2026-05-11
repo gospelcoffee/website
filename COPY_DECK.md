@@ -207,7 +207,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Headline: Tasting experiences - 19
 - Body line 1: choose your experience
 - Body line 2: Coffee tasting experience: four coffees of your choice served as a pour-over flight, then any full-size drink from the menu.
-- Body line 3: Not coffee tasting flight: Any four drinks from the not coffee menu lattes served in a sample flight, then any full-size drink from the menu.
+- Body line 3: Not coffee tasting experience: Any four drinks from the not coffee menu lattes served in a sample flight, then any full-size drink from the menu.
 - Body line 4: Available inside the Prescott Resort only.
 
 ### Coffee beans note
