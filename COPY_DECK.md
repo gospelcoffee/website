@@ -91,6 +91,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ### Menu preview
 - Section eyebrow: The menu
 - Section anchor: #menu (the hero "View menu" button scrolls here)
+- Background: warm paper (section-warm), so the menu reads like a menu page and provides a visual split between the white sections above and below. No dividers needed around it.
 - No headline. The eyebrow plus the menu groups speak for themselves. Never claim drink scope ("two drinks", "six beans", etc.) - see global copy rules.
 - Coffee-only preview: only Coffee and Beans appear here. Not coffee, the tasting feature, and the beans note all live on /menu.html. The home page menu is intentionally coffee-centric to keep the page focused.
 
