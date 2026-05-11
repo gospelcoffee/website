@@ -84,7 +84,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Status meta fallback: Wed-Fri, 7 AM – 10 AM · Sat-Sun, 7 AM – 2 PM
 - Address line 1: 1500 AZ-69
 - Address line 2: Prescott, Arizona · Inside the Prescott Resort
-- Body: Sit down with a view of Prescott and explore the coffees we are serving. The Valo tasting experience lives here.
+- Body: Sit down, take in the view of Prescott, and try our coffees. The Valo tasting experience lives here.
+- Length convention: Visit Valo card blurbs are sized to roughly match each other (about 100 characters). Curbside is the reference length; this card should land between 98-102 chars to feel visually uniform.
 - Primary CTA: Get directions
 - Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 
