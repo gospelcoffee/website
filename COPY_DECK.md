@@ -4,7 +4,7 @@ Use this file as the single working draft for brand copy updates.
 
 How to use
 - Edit copy in this file first.
-- Keep location references explicit: Valo Curbside or Valo Resort.
+- Keep location references explicit: Valo Curbside (drive-up) or Valo at the Prescott Resort (sit-down). Never write "Valo Resort" together as a title.
 - Use inside the Prescott Resort as supporting context when needed.
 - After edits are approved, copy updates into page files and publish.
 
@@ -21,8 +21,9 @@ How to use
 The home page stays light. It does not try to explain the philosophy — it grounds the visitor in who Valo is, where Valo is, when Valo is open, and what is on the menu. The philosophy page is where the deeper why lives.
 
 ### Location naming standard
-- Preferred labels: Valo Curbside, Valo Resort
-- Supporting context for Resort: inside the Prescott Resort
+- Preferred labels: Valo Curbside (drive-up), Valo (sit-down, inside the Prescott Resort)
+- Never write "Valo Resort" together as a title, heading, eyebrow, footer label, page title, or schema.org @name. Valo is not a resort - it's a coffee brand with a location inside the Prescott Resort.
+- Disambiguate the sit-down location with surrounding context: "inside the Prescott Resort", "at the Prescott Resort", or by listing the address (1500 AZ-69).
 
 ### Menu scope rule (important)
 - Never claim drink scope. Copy must not say "two drinks", "only two coffees", or anything that implies the printed coffee list is the limit.
@@ -67,8 +68,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Primary CTA: Get directions
 - Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 
-#### Card: Valo Resort
-- Location label: Valo Resort
+#### Card: Valo (inside the Prescott Resort)
+- Location label: Valo (never "Valo Resort")
 - Status headline fallback: Open Wed-Sun
 - Status meta fallback: Wed-Fri, 7-10 AM · Sat-Sun, 7 AM-2 PM
 - Address line 1: 1500 AZ-69
@@ -114,8 +115,9 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Hours line: Daily, 7 AM - 6 PM
 - Link CTA: Get directions
 
-- Location heading: Valo Resort
+- Location heading: Valo (never "Valo Resort")
 - Address: 1500 AZ-69, Prescott, AZ
+- Location context line: Inside the Prescott Resort
 - Hours line 1: Wed-Fri, 7-10 AM
 - Hours line 2: Sat-Sun, 7 AM - 2 PM
 - Link CTA: Get directions
@@ -129,8 +131,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ## Locations Page (`/locations.html`)
 
 ### Metadata
-- Page title: Locations | Valo Coffee Curbside and Valo Resort
-- Meta description: Two ways to visit Valo. Choose Curbside for coffee brought to your car. Choose Resort for coffee with a view of Prescott.
+- Page title: Locations | Valo Coffee
+- Meta description: Two ways to visit Valo. Curbside for drive-up coffee, or inside the Prescott Resort for a sit-down experience with a view of Prescott.
 
 ### Intro
 - Eyebrow: Locations
@@ -148,15 +150,15 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Body: Drive up, stay in your car, and we bring your coffee to you.
 - CTA: Get directions
 
-### Location section: Valo Resort
-- Eyebrow: Valo Resort
+### Location section: Valo (inside the Prescott Resort)
+- Eyebrow: Valo (never "Valo Resort")
 - H2: Inside the Prescott Resort lobby.
 - Positioning line: The Valo tasting experience lives here.
 - Status headline fallback: Open Wed-Sun
 - Status meta fallback: Wed-Fri, 7-10 AM · Sat-Sun, 7 AM-2 PM
 - Address line 1: 1500 AZ-69
 - Address line 2: Prescott, Arizona
-- Body: Valo Resort is inside the Prescott Resort.
+- Body: Sit down inside the Prescott Resort and explore the coffees we are serving.
 - CTA: Get directions
 
 ### Footer
@@ -181,18 +183,18 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Support note: We discover coffee beans that have distinct, naturally occurring flavor notes. Pick a bean and we brew your coffee with it.
 - Section label: Not coffee
 
-### Valo Resort feature
-- Step label: Valo Resort feature
+### Inside Prescott Resort feature
+- Step label: Inside Prescott Resort (never "Valo Resort feature")
 - Headline: Tasting experiences - 19
 - Body line 1: Choose one tasting flight.
 - Body line 2: Coffee tasting experience: Four coffees as pour-overs in a flight, then any full-size drink from the menu.
 - Body line 3: Not coffee tasting flight: Any four not coffee lattes in a flight, then any full-size drink from the menu.
-- Body line 4: Valo Resort only.
+- Body line 4: Available inside the Prescott Resort only.
 
 ### Coffee beans note
 - Headline: Coffee beans
 - Body line 1: Whole beans are available at both locations.
-- Body line 2: For custom grinding and vacuum sealing, visit Valo Resort.
+- Body line 2: For custom grinding and vacuum sealing, visit us inside the Prescott Resort.
 
 ### Bottom CTA row
 - Primary CTA: View locations

@@ -9,7 +9,7 @@ This file is the source of truth for how the Valo Coffee website should look, so
 
 ## 1. What this project is
 
-A static marketing website for Valo Coffee (Prescott, Arizona) hosted on GitHub Pages. Two physical locations: **Valo Curbside** (drive-up) and **Valo Resort** (sit-down, inside Prescott Resort).
+A static marketing website for Valo Coffee (Prescott, Arizona) hosted on GitHub Pages. Two physical locations: **Valo Curbside** (the drive-up location) and **Valo** at the Prescott Resort (the sit-down location, inside the Prescott Resort lobby). Valo is never called "Valo Resort" — Valo is not a resort. See the location naming rule in section 3.
 
 The site exists to make visitors feel informed, excited, and driven to visit. It is not a directory listing, not an ordering app, and not a generic cafe site.
 
@@ -18,8 +18,8 @@ The site exists to make visitors feel informed, excited, and driven to visit. It
 After visiting the site, a person should know:
 1. Valo has the best coffee in Arizona.
 2. Whether Valo Curbside is open right now (and if not, when it opens).
-3. Whether Valo Resort is open right now (and if not, when it opens).
-4. The difference between Curbside and Resort.
+3. Whether Valo inside the Prescott Resort is open right now (and if not, when it opens).
+4. The difference between Curbside and the Prescott Resort location.
 5. How to get to either location.
 6. How to choose from the menu.
 7. That the brand is premium, careful, precise, and worth visiting intentionally.
@@ -89,10 +89,11 @@ Valo should NOT feel: busy, generic, trendy, gimmicky, colorful, app-like, over-
 ### Copy rules
 
 - **Be binary and direct.** No "maybe," "sort of," "one of the," "kind of," "could be," "a coffee experience for some people."
+- **Never call the sit-down location "Valo Resort."** Valo is not a resort — it's a coffee brand with a location *inside* the Prescott Resort. The location's name is **Valo**. When the location must be disambiguated from Valo Curbside, use surrounding context like "inside the Prescott Resort" or "at the Prescott Resort." Never write the two words "Valo Resort" together as a title, eyebrow, heading, footer label, page title, or schema.org @name. Same for any near-form (e.g., "Valo at Resort", "Valo's Resort", "the Valo Resort"). The host hotel is "the Prescott Resort"; that's distinct from us.
 - **Never claim drink scope.** Latte and black coffee are the two coffees we list because they're our most popular — they are not the totality. We can make any espresso drink to order (cortado, cappuccino, flat white, and more). Copy must never say "two drinks", "only two coffees", or anything that implies the printed list is the limit.
 - **Do not soften strong claims.** "Some of the best coffee in Prescott" → "The best coffee in Arizona." "A quality-focused beverage experience" → "Coffee chosen by flavor and made with precision."
 - **"Best coffee" language is allowed.** There is no rule against it. Use with restraint and confidence — don't force it everywhere, don't avoid it.
-- **Treat reviews as one Valo signal.** Reputation language refers to Valo as one brand, not separate reputations for Curbside vs Resort.
+- **Treat reviews as one Valo signal.** Reputation language refers to Valo as one brand, not separate reputations for our two locations.
 - **Every major section should** tell visitors whether Valo is open, where to go, what makes Valo different, how to choose, or why Valo is worth visiting.
 
 ### Customer choice (critical)
@@ -177,7 +178,7 @@ Rectangular, restrained, easy to tap. `min-height: 44px`. Border-radius max 2px.
 
 ### Photography
 
-Few, strong photos. Subjects: paper menu, espresso being made, finished coffee, bean selection, curbside arrival, resort view, tasting experience, customer handoff.
+Few, strong photos. Subjects: paper menu, espresso being made, finished coffee, bean selection, curbside arrival, view from inside the Prescott Resort, tasting experience, customer handoff.
 
 Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drinks, generic stock, muddy interiors. One excellent image > six average ones.
 
@@ -189,7 +190,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 | ---------- | ------------------ | -------------------------------------------------------- |
 | Home       | `/`                | Status, both locations, create desire to visit           |
 | Menu       | `/menu.html`       | HTML mirror of the paper menu                            |
-| Locations  | `/locations.html`  | Curbside vs Resort with directions                       |
+| Locations  | `/locations.html`  | Both locations with directions                           |
 | Philosophy | `/philosophy.html` | Why Valo's coffee is different                           |
 
 ### Homepage sections (in order)
@@ -211,8 +212,8 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 
 - Headline: "Menu." Supporting: "Choose your drink. Choose your bean."
 - Core menu card mirrors the paper menu's spacing and simplicity.
-- **Resort feature** card highlights the tasting experience ($19) — frame as a feature, not a disclaimer. Don't make Curbside feel like it's missing something.
-- **Coffee beans note**: "Whole beans are available at both locations. For custom grinding and vacuum sealing, visit Valo Resort." Never write "Curbside does not grind beans" — frame the positive.
+- **Inside Prescott Resort feature** card highlights the tasting experience ($19) — frame as a feature, not a disclaimer. Don't make Curbside feel like it's missing something.
+- **Coffee beans note**: "Whole beans are available at both locations. For custom grinding and vacuum sealing, visit us inside the Prescott Resort." Never write "Curbside does not grind beans" — frame the positive.
 - Menu must be real HTML text, printable, mobile-readable.
 
 ### Philosophy page
@@ -258,9 +259,9 @@ A GitHub Action will sync `data/locations.json` from Google Maps hours. **Never 
 Each page: unique title, meta description, clear H1, clean heading hierarchy, real address text, image alt text, local business language.
 
 - Home title: `Valo Coffee | The Best Coffee in Arizona`
-- Home meta: `Valo Coffee serves the best coffee in Arizona through a simple menu, precise recipes, and two ways to visit: Curbside and Resort.`
+- Home meta: `Valo Coffee serves the best coffee in Arizona. A simple menu, precise recipes, and two locations in Prescott: drive-up at Curbside or sit-down inside the Prescott Resort.`
 - Menu: `Menu | Valo Coffee`
-- Locations: `Locations | Valo Coffee Curbside and Valo Resort`
+- Locations: `Locations | Valo Coffee`
 - Philosophy: `Our Philosophy | Valo Coffee`
 
 ---
@@ -269,7 +270,7 @@ Each page: unique title, meta description, clear H1, clean heading hierarchy, re
 
 **Valo Curbside** — 300 Heather Heights, Prescott, AZ. Drive up, we'll take your order and bring your drink to you.
 
-**Valo Resort** — 1500 AZ-69, Prescott, AZ. Inside the Prescott Resort. Sit-down, view of Prescott, tasting experience lives here.
+**Valo** (sit-down location, inside the Prescott Resort) — 1500 AZ-69, Prescott, AZ. Sit-down, view of Prescott, tasting experience lives here. Never label this location "Valo Resort." See the location naming rule in section 3.
 
 Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix`.
 
@@ -328,13 +329,13 @@ The site is done when:
 6. Strong, direct, non-ambiguous copy.
 7. "Best coffee in Arizona" used as the strongest reputation claim.
 8. No rule in the codebase against "best coffee" language.
-9. Curbside and Resort both clearly shown.
+9. Curbside and the Prescott Resort location both clearly shown.
 10. Each location has independent open/closed + today's hours.
 11. Each location has its own directions action.
-12. The Curbside vs Resort distinction is obvious.
+12. The Curbside vs Prescott Resort location distinction is obvious.
 13. Menu page mirrors the paper menu.
 14. Menu shows how to choose, never what to order.
-15. Resort tasting experience is highlighted as a feature.
+15. Tasting experience inside the Prescott Resort is highlighted as a feature.
 16. Works on Safari, Chrome, Edge, iPhone, Android, Mac, Windows.
 17. Readable at 200% zoom.
 18. No horizontal scrolling.
