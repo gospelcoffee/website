@@ -89,7 +89,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 
 ### Menu preview
-- Section eyebrow: The menu
+- Section eyebrow: Menu
 - Section anchor: #menu (the hero "View menu" button scrolls here)
 - Background: warm paper (section-warm), so the menu reads like a menu page and provides a visual split between the white sections above and below. No dividers needed around it.
 - No headline. The eyebrow plus the menu groups speak for themselves. Never claim drink scope ("two drinks", "six beans", etc.) - see global copy rules.
