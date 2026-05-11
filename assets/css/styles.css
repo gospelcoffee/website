@@ -629,8 +629,8 @@ p {
 
 .paper-menu {
   display: grid;
-  grid-template-columns: 1fr 0.8fr 0.9fr 1.6fr 2.4fr;
-  gap: var(--space-5);
+  grid-template-columns: 1fr 1.6fr 2.4fr;
+  gap: var(--space-6);
   align-items: start;
 }
 
@@ -706,15 +706,6 @@ p {
   .paper-menu-not-coffee {
     max-width: none;
     margin-top: var(--space-5);
-  }
-
-  /* Mobile: hide step numbers, temp, and milk to simplify */
-  .paper-menu-num-prefix {
-    display: none;
-  }
-  .paper-step-2,
-  .paper-step-3 {
-    display: none;
   }
 
   /* Mobile: larger, more legible step labels and row spacing */

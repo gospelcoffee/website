@@ -322,9 +322,11 @@ Weight conventions (mirrored on the digital menu):
 The printed list above mirrors the paper menu. It is not the limit of what we make. **Latte and coffee are our two most popular coffee drinks; we can prepare any specialty espresso drink to order — cortado, cappuccino, flat white, and more.** This must be communicated wherever the coffee list appears in marketing copy, but the printed/digital menu stays simple. See the copy rules in section 3.
 
 Layout rule for the digital menu page (`/menu.html`):
-- **Desktop (≥900px):** the six steps render as a horizontal row, mirroring the paper menu. All steps and step numbers are visible.
-- **Mobile (<900px):** the layout is simplified for scannability — **step numbers are hidden**, and **steps 2 (temp) and 3 (milk) are hidden entirely**. Mobile flow: pick a drink → pick a bean → optional → (pick add-ins | pick a sweetener as two side-by-side columns) → not coffee. Add-ins and sweetener stay side-by-side on mobile because they're short lists that scan faster as a pair than stacked. Step labels are slightly larger and more legible than on desktop. The "not coffee" section always sits below at full width.
-- **Voice rule for step labels:** every step label leads with a verb ("pick a drink", "pick a bean", "pick a sweetener"). Never just the noun ("bean", "temp") — it's too ambiguous and lacks a directive. The paper menu only had "pick a drink" on step 1, but on the digital menu we apply "pick" universally for clarity.
+- The digital menu intentionally **does not display step numbers** (no "1.", "2.", etc.) and **does not display temp or milk** (steps 2 and 3 of the paper menu). The paper menu in-person still has those choices; the website strips them so the customer experience is simpler and the page is easier to scan. Temp and milk are decided at the counter or curbside.
+- The digital menu shows: **pick a drink**, **pick a bean**, **optional** (with **pick add-ins** and **pick a sweetener** beneath), then **not coffee** below everything.
+- **Desktop (≥900px):** three columns horizontally — pick a drink | pick a bean | optional (which itself splits into add-ins + sweetener as two sub-columns).
+- **Mobile (<900px):** stacks vertically — pick a drink → pick a bean → optional → (pick add-ins | pick a sweetener side-by-side) → not coffee. Add-ins and sweetener stay side-by-side on mobile because they're short lists that scan faster as a pair than stacked. Step labels are slightly larger and more legible than on desktop. The "not coffee" section always sits below at full width.
+- **Voice rule for step labels:** every step label leads with a verb ("pick a drink", "pick a bean", "pick a sweetener"). Never just the noun ("bean") — it's too ambiguous and lacks a directive.
 - The home page menu preview is intentionally simpler (coffee + beans only) and does not mirror either layout — see section 5 item 4.
 
 ---
