@@ -114,8 +114,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Position: last section on the home page, before the footer.
 - Section eyebrow: Our approach
 - Headline: A simpler menu (no trailing period - headline, not sentence)
-- Body: Every drink on our menu is made with pure ingredients. We never add anything else, so their naturally occurring flavors come through on their own.
-- Voice note: We don't "highlight" or "enhance" the flavor. The flavor is already there. Our role is restraint: we don't add anything that would distract. Avoid verbs that imply we make the flavor stand out (highlight, bring out, enhance). Use verbs that describe what the flavor does (comes through, emerges, stays clear) and what we don't do (never add, don't distract).
+- Body: Every drink on our menu is made with pure ingredients. We never add anything else, so their naturally occurring flavors can be enjoyed clearly.
+- Voice note: We don't "highlight" or "enhance" the flavor. The flavor is already there. Our role is restraint: we don't add anything that would distract. The point of that restraint is the customer's enjoyment, not just the mechanical fact that the flavor comes through. Use verbs that describe the customer's experience (enjoyed clearly, enjoyed purely), what the flavor does (comes through, stays clear), and what we don't do (never add, don't distract). Avoid verbs that imply we make the flavor stand out (highlight, bring out, enhance).
 - Word note: avoid the noun phrase "natural flavor(s)" - it reads as the FDA-regulated ingredient-list term, which can include chemically extracted concentrates that we never use. Use "naturally occurring flavors" or "naturally occurring tasting notes" instead.
 - Link CTA: Read our philosophy
 
