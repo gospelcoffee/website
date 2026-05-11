@@ -35,6 +35,11 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Omit minutes when they are :00 ("7 AM", not "7:00 AM"). Show minutes only when non-zero ("6:30 AM").
 - Day-range abbreviations (Wed–Fri, Sat–Sun) keep their en-dash without spaces. Hour ranges use spaces.
 
+### Dashes rule (site copy)
+- Never use en-dash (–) or em-dash (—) anywhere in site copy: prose, headlines, eyebrows, notes, status text, captions, alt text. Only exceptions: time ranges (7 AM – 6 PM) and number ranges ($5–10), where the en-dash is required.
+- For pauses or asides, use a comma, colon, period, or rephrase ("Nothing added before or after the roast." not "Nothing added — before or after the roast.").
+- For separators between a title and a price, use a middot (·) or restructure into separate elements ("Tasting experiences · 19" not "Tasting experiences — 19").
+
 ---
 
 ## Home Page (`/index.html`)
