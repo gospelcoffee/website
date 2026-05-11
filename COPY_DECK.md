@@ -116,7 +116,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Position: last section on the home page, before the footer.
 - Section eyebrow: Our approach
 - Headline: A simpler menu (no trailing period - headline, not sentence)
-- Body: Every flavor on our menu is naturally in the bean. Nothing added - before or after the roast.
+- Body: Every drink on our menu is made with pure ingredients. We never add anything else, so their natural flavors come through on their own.
+- Voice note: We don't "highlight" or "enhance" the flavor. The flavor is already there. Our role is restraint: we don't add anything that would distract. Avoid verbs that imply we make the flavor stand out (highlight, bring out, enhance). Use verbs that describe what the flavor does (comes through, emerges, stays clear) and what we don't do (never add, don't distract).
 - Link CTA: Read our philosophy
 
 ### Footer
