@@ -205,7 +205,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ### Inside Prescott Resort feature
 - Step label: Inside Prescott Resort (never "Valo Resort feature")
 - Headline: Tasting experiences - 19
-- Body line 1: Choose one tasting flight.
+- Body line 1: choose your experience
 - Body line 2: Coffee tasting experience: Four coffees as pour-overs in a flight, then any full-size drink from the menu.
 - Body line 3: Not coffee tasting flight: Any four not coffee lattes in a flight, then any full-size drink from the menu.
 - Body line 4: Available inside the Prescott Resort only.
