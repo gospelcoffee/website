@@ -78,7 +78,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Status meta fallback: 7 AM – 6 PM
 - Address line 1: 1500 Heather Heights
 - Address line 2: Prescott, Arizona
-- Body: Drive up, stay in your car, and we bring your coffee to you. The best coffee at drive-through speed.
+- Body: Drive up, stay in your car, and we bring your coffee to you. Specialty coffee at drive-through speed.
+- Voice note: never write "the best coffee at drive-through speed." "Best" in that phrase reads as "best for a drive-through" which sounds like a limited claim. Valo's claim is best overall, served at drive-through speed. Always "Specialty coffee at drive-through speed" or similar.
 - Primary CTA: Get directions
 - Secondary CTA: View menu (scrolls to #menu on the same page, does not navigate)
 

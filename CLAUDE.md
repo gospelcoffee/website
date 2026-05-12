@@ -215,7 +215,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Locations page
 
 - Headline: "Two ways to visit Valo."
-- Curbside section: address, status, "Drive up, we'll take your order and bring your drink to you. The best coffee, at drive through speeds." Positioning line: "Specialty coffee at drive-through speed."
+- Curbside section: address, status, "Drive up, we'll take your order and bring your drink to you. Specialty coffee at drive-through speed." Positioning line: "Specialty coffee at drive-through speed." Never write "the best coffee at drive-through speed" — "best" in that phrase narrows the claim to "best for a drive-through" rather than best overall.
 - Resort section: address, status, "Valo is inside the Prescott Resort, located in the lobby." Positioning line: "The Valo tasting experience lives here."
 - Directions: clean address + directions button + arrival instructions + minimal line illustration. No embedded Google Map as primary visual. Directions button can open Google Maps in a new tab.
 

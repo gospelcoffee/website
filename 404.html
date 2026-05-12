@@ -17,7 +17,15 @@
       <a class="brand" href="/">
         <img class="brand-mark" src="/assets/images/valo-coffee-horizontal-black-and-clear.svg" alt="Valo Coffee" />
       </a>
-      <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <a href="/">Home</a>
         <a href="/locations.html">Locations</a>
         <a href="/menu.html">Menu</a>
         <a href="/philosophy.html">Philosophy</a>
@@ -47,5 +55,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="/assets/js/status.js" defer></script>
 </body>
 </html>
