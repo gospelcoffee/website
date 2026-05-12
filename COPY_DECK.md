@@ -204,7 +204,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Tasting experience card (paper-style, exclusive to the Prescott Resort location)
 - Visual: same warm-paper menu card as the main menu, so the tasting experience reads as an extension of the menu, not a separate marketing block. Lives in its own `.menu-card.menu-card-warm.paper-menu-card.resort-tasting-card` article right beneath the main menu card.
-- Step label: choose your tasting experience (italic, lowercase, like other menu step labels)
+- Section header (above the card, same style as the main menu's "Menu" header): `<h2 class="eyebrow">Tasting experience</h2>` — renders as "TASTING EXPERIENCE" in small caps, with the same margin-bottom as the main menu header so the spacing pattern is identical.
+- Step label inside the card: choose your experience (italic, lowercase, like other menu step labels)
 - Each option is a menu-row: bold lowercase label on the left, price `19` on the right (same `.meta meta-strong` styling as other prices). A short description sits as subtext beneath each row.
 - Item 1 — label: coffee tasting experience · price: 19 · description: Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu.
 - Item 2 — label: not coffee tasting experience · price: 19 · description: Four not coffee drinks of your choice, served as a sample flight, then any full-size drink from the menu.
