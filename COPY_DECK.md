@@ -189,7 +189,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - No lede. The previous "Choose your drink. Choose your bean. Or choose from our other beverages." line was removed because it cluttered the page. The menu card itself is the page's content.
 
 ### Page structure
-- The menu page has three separate paper-style cards, each with its own small-caps eyebrow header above it: **Menu** → **Not coffee** → **Tasting experience**. The cards are siblings, not nested. Each header uses the same `<...class="eyebrow">` treatment and the same `margin-bottom: var(--space-6)` so the spacing rhythm is identical down the page.
+- The menu page has four separate paper-style cards, each with its own small-caps eyebrow header above it: **Menu** → **Not coffee** → **Tasting experience** → **Coffee beans**. The cards are siblings, not nested. Each header uses the same `<...class="eyebrow">` treatment and the same `margin-bottom: var(--space-6)` so the spacing rhythm is identical down the page.
 
 ### Main menu card (paper-style)
 - The digital menu does NOT display step numbers and does NOT display temp or milk. Those still live on the in-person paper menu and are handled at the counter/curbside. Stripping them on the website makes the page easier to scan.
@@ -221,10 +221,12 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Verbiage rule: the two descriptions must use identical sentence structure. Only the option-specific words differ (coffees vs. not coffee drinks; pour-over vs. sample flight). If one description changes, the other should change to match.
 - Footnote at the bottom of the card: "Available inside the Prescott Resort only." (italic, quiet)
 
-### Coffee beans note
-- Headline: Coffee beans
-- Body line 1: Whole beans are available at both locations.
-- Body line 2: For custom grinding and vacuum sealing, visit us inside the Prescott Resort.
+### Coffee beans card (paper-style)
+- Section header above the card: `<h2 class="eyebrow">Coffee beans</h2>`.
+- Step label inside the card: half pound bag (italic, lowercase — describes the unit being sold).
+- Items: all six beans at 22 each. Same labels and order as the bean column in the main menu (dark & smoky, peanut butter, peach, strawberry, apple spice, decaf). Bean names regular weight, prices bold.
+- Desktop: two CSS columns. Mobile: one column. (Same pattern as the Not coffee card.)
+- Footnote: "Available at both locations. For custom grinding and vacuum sealing, visit us inside the Prescott Resort." (italic, quiet)
 
 ### Bottom CTA row
 - Primary CTA: View locations

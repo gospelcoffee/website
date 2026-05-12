@@ -669,13 +669,15 @@ p {
 }
 
 .paper-menu .menu-row,
-.not-coffee-card .menu-row {
+.not-coffee-card .menu-row,
+.beans-card .menu-row {
   padding-block: var(--space-2);
   border-bottom: 0;
 }
 
 .paper-menu .menu-row .label,
-.not-coffee-card .menu-row .label {
+.not-coffee-card .menu-row .label,
+.beans-card .menu-row .label {
   letter-spacing: 0;
 }
 
@@ -683,16 +685,31 @@ p {
   font-weight: 600;
 }
 
-/* Not coffee card: two columns on desktop, one on mobile */
-.not-coffee-card .menu-list {
+/* Two-column list cards (not coffee, beans): two columns on desktop, one on mobile */
+.not-coffee-card .menu-list,
+.beans-card .menu-list {
   columns: 2;
   column-gap: var(--space-7);
 }
 
-.not-coffee-card .menu-row {
+.not-coffee-card .menu-row,
+.beans-card .menu-row {
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
+}
+
+.beans-card .paper-menu-num {
+  color: var(--color-ink);
+  margin-bottom: var(--space-4);
+}
+
+.beans-card-footnote {
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--color-ink-quiet);
+  margin-top: var(--space-6);
+  max-width: 60ch;
 }
 
 @media (max-width: 900px) {
@@ -711,7 +728,8 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4);
   }
-  .not-coffee-card .menu-list {
+  .not-coffee-card .menu-list,
+  .beans-card .menu-list {
     columns: 1;
   }
 
@@ -722,7 +740,8 @@ p {
     margin-bottom: var(--space-3);
   }
   .paper-menu .menu-row,
-  .not-coffee-card .menu-row {
+  .not-coffee-card .menu-row,
+  .beans-card .menu-row {
     padding-block: var(--space-2);
   }
 }
