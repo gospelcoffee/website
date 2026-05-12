@@ -179,6 +179,8 @@ System fonts are fine for v1. Use `clamp()` for fluid sizing. No tiny menu text,
 
 Rectangular, restrained, easy to tap. `min-height: 44px`. Border-radius max 2px. Black primary, transparent + black border for secondary. `touch-action: manipulation`.
 
+**Stacking on mobile:** in any `.button-row` below 600px viewport width, buttons switch to a single-column stack and stretch to full container width so the primary and secondary buttons are visually identical in size. The primary stays on top (first in source order) and the secondary sits below it. Above 600px, buttons sit side-by-side with their natural widths.
+
 ### Photography
 
 Few, strong photos. Subjects: paper menu, espresso being made, finished coffee, bean selection, curbside arrival, view from inside the Prescott Resort, tasting experience, customer handoff.
