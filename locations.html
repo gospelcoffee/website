@@ -3,22 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Locations | Valo Coffee</title>
-  <meta name="description" content="Two ways to visit Valo. Curbside for drive-up coffee, or inside the Prescott Resort for a sit-down experience with a view of Prescott." />
+  <title>Locations | Valo Coffee in Prescott, Arizona</title>
+  <meta name="description" content="Two Valo Coffee locations in Prescott, Arizona. Curbside for drive-up specialty coffee, or sit-down inside the Prescott Resort with a view of Prescott." />
+  <meta name="keywords" content="Valo Coffee locations, Prescott coffee shop, drive-thru coffee Prescott, Prescott Resort coffee, Heather Heights coffee, coffee near me Prescott Arizona" />
+  <meta name="author" content="Valo Coffee" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://valocoffee.com/locations.html" />
   <link rel="icon" type="image/png" href="assets/images/sun-icon-black-clear.png" />
+  <link rel="apple-touch-icon" href="assets/images/sun-icon-black-clear.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <meta name="theme-color" content="#ffffff" />
+  <meta name="geo.region" content="US-AZ" />
+  <meta name="geo.placename" content="Prescott, Arizona" />
+  <meta property="og:site_name" content="Valo Coffee" />
+  <meta property="og:title" content="Locations | Valo Coffee in Prescott, Arizona" />
+  <meta property="og:description" content="Two Valo Coffee locations in Prescott. Curbside for drive-up specialty coffee, or sit-down inside the Prescott Resort." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://valocoffee.com/locations.html" />
+  <meta property="og:image" content="https://valocoffee.com/assets/images/coffee_look_desktop.jpeg" />
+  <meta property="og:image:alt" content="Espresso and milk poured into a Valo coffee cup." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Locations | Valo Coffee in Prescott, Arizona" />
+  <meta name="twitter:description" content="Two Valo Coffee locations in Prescott. Curbside for drive-up, or sit-down inside the Prescott Resort." />
+  <meta name="twitter:image" content="https://valocoffee.com/assets/images/coffee_look_desktop.jpeg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valocoffee.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://valocoffee.com/locations.html" }
+        ]
+      },
+      {
         "@type": "CafeOrCoffeeShop",
         "@id": "https://valocoffee.com/locations.html#curbside",
         "name": "Valo Curbside",
+        "description": "Specialty coffee at drive-through speed. Drive up, stay in your car, and we bring your coffee to you.",
         "url": "https://valocoffee.com/locations.html#curbside",
         "telephone": "+1-928-910-6087",
+        "priceRange": "$$",
+        "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1500 Heather Heights",
@@ -33,14 +61,20 @@
           "closes": "18:00"
         }],
         "hasMap": "https://maps.app.goo.gl/pQiKMV2w1YkQii3p9",
-        "servesCuisine": "Coffee"
+        "hasMenu": "https://valocoffee.com/menu.html",
+        "servesCuisine": ["Coffee","Specialty Coffee","Espresso"],
+        "acceptsReservations": "False"
       },
       {
         "@type": "CafeOrCoffeeShop",
         "@id": "https://valocoffee.com/locations.html#resort",
         "name": "Valo",
+        "alternateName": "Valo at the Prescott Resort",
+        "description": "Sit down inside the Prescott Resort and explore the coffees we're serving. The Valo tasting experience lives here.",
         "url": "https://valocoffee.com/locations.html#resort",
         "telephone": "+1-928-910-6087",
+        "priceRange": "$$",
+        "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1500 AZ-69",
@@ -63,7 +97,9 @@
           }
         ],
         "hasMap": "https://maps.app.goo.gl/BHweLz91EeAwYa32A",
-        "servesCuisine": "Coffee"
+        "hasMenu": "https://valocoffee.com/menu.html",
+        "servesCuisine": ["Coffee","Specialty Coffee","Espresso"],
+        "acceptsReservations": "False"
       }
     ]
   }

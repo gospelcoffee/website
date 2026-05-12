@@ -5,34 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Valo Coffee | The Best Coffee in Arizona</title>
   <meta name="description" content="Valo Coffee serves the best coffee in Arizona. A simple menu, precise recipes, and two locations in Prescott: drive-up at Curbside or sit-down inside the Prescott Resort." />
+  <meta name="keywords" content="specialty coffee, Prescott coffee, Prescott Arizona coffee shop, Valo Coffee, drive-thru coffee Prescott, coffee Prescott Resort, single origin coffee Prescott, espresso Prescott" />
+  <meta name="author" content="Valo Coffee" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://valocoffee.com/" />
   <link rel="icon" type="image/png" href="assets/images/sun-icon-black-clear.png" />
+  <link rel="apple-touch-icon" href="assets/images/sun-icon-black-clear.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preload" as="image" href="assets/images/coffee_look_desktop.jpeg" media="(min-width: 761px)" />
+  <link rel="preload" as="image" href="assets/images/Coffee_look_mobile.jpeg" media="(max-width: 760px)" />
   <meta name="theme-color" content="#ffffff" />
+  <meta name="geo.region" content="US-AZ" />
+  <meta name="geo.placename" content="Prescott, Arizona" />
+  <meta property="og:site_name" content="Valo Coffee" />
   <meta property="og:title" content="Valo Coffee | The Best Coffee in Arizona" />
-  <meta property="og:description" content="Valo Coffee in Prescott, Arizona. Drive-up at Curbside, or sit-down inside the Prescott Resort." />
+  <meta property="og:description" content="Specialty coffee in Prescott, Arizona. Two locations: drive-up at Curbside, or sit-down inside the Prescott Resort." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://valocoffee.com/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://valocoffee.com/assets/images/coffee_look_desktop.jpeg" />
+  <meta property="og:image:alt" content="Espresso and milk poured into a Valo coffee cup." />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Valo Coffee | The Best Coffee in Arizona" />
+  <meta name="twitter:description" content="Specialty coffee in Prescott, Arizona. Two locations: drive-up at Curbside, or sit-down inside the Prescott Resort." />
+  <meta name="twitter:image" content="https://valocoffee.com/assets/images/coffee_look_desktop.jpeg" />
+  <meta name="twitter:image:alt" content="Espresso and milk poured into a Valo coffee cup." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://valocoffee.com/#website",
+        "url": "https://valocoffee.com/",
+        "name": "Valo Coffee",
+        "description": "Specialty coffee in Prescott, Arizona.",
+        "publisher": { "@id": "https://valocoffee.com/#org" },
+        "inLanguage": "en-US"
+      },
+      {
         "@type": "Organization",
         "@id": "https://valocoffee.com/#org",
         "name": "Valo Coffee",
+        "legalName": "Gospel Coffee LLC",
         "url": "https://valocoffee.com/",
-        "logo": "https://valocoffee.com/assets/images/valo-coffee-horizontal-black-and-clear.svg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://valocoffee.com/assets/images/valo-coffee-horizontal-black-and-clear.svg"
+        },
+        "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
+        "telephone": "+1-928-910-6087",
+        "email": "support@valocoffee.com",
+        "areaServed": {
+          "@type": "City",
+          "name": "Prescott",
+          "containedInPlace": { "@type": "State", "name": "Arizona" }
+        },
         "sameAs": []
       },
       {
         "@type": "CafeOrCoffeeShop",
         "@id": "https://valocoffee.com/#curbside",
         "name": "Valo Curbside",
+        "description": "Specialty coffee at drive-through speed. Drive up, stay in your car, and we bring your coffee to you.",
         "parentOrganization": { "@id": "https://valocoffee.com/#org" },
         "url": "https://valocoffee.com/locations.html#curbside",
         "telephone": "+1-928-910-6087",
+        "priceRange": "$$",
+        "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1500 Heather Heights",
@@ -47,15 +87,21 @@
           "closes": "18:00"
         }],
         "hasMap": "https://maps.app.goo.gl/pQiKMV2w1YkQii3p9",
-        "servesCuisine": "Coffee"
+        "hasMenu": "https://valocoffee.com/menu.html",
+        "servesCuisine": ["Coffee","Specialty Coffee","Espresso"],
+        "acceptsReservations": "False"
       },
       {
         "@type": "CafeOrCoffeeShop",
         "@id": "https://valocoffee.com/#resort",
         "name": "Valo",
+        "alternateName": "Valo at the Prescott Resort",
+        "description": "Sit down inside the Prescott Resort and explore the coffees we're serving. The Valo tasting experience lives here.",
         "parentOrganization": { "@id": "https://valocoffee.com/#org" },
         "url": "https://valocoffee.com/locations.html#resort",
         "telephone": "+1-928-910-6087",
+        "priceRange": "$$",
+        "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "1500 AZ-69",
@@ -78,7 +124,9 @@
           }
         ],
         "hasMap": "https://maps.app.goo.gl/BHweLz91EeAwYa32A",
-        "servesCuisine": "Coffee"
+        "hasMenu": "https://valocoffee.com/menu.html",
+        "servesCuisine": ["Coffee","Specialty Coffee","Espresso"],
+        "acceptsReservations": "False"
       }
     ]
   }
@@ -108,7 +156,7 @@
       <picture class="hero-media">
         <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
         <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
-        <img src="assets/images/coffee_look.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" />
+        <img src="assets/images/coffee_look.jpg" alt="Espresso and milk poured into a Valo coffee cup." loading="eager" decoding="async" fetchpriority="high" width="3872" height="2178" />
       </picture>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-content">

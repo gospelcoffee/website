@@ -286,11 +286,36 @@ A GitHub Action will sync `data/locations.json` from Google Maps hours. **Never 
 
 Each page: unique title, meta description, clear H1, clean heading hierarchy, real address text, image alt text, local business language.
 
-- Home title: `Valo Coffee | The Best Coffee in Arizona`
-- Home meta: `Valo Coffee serves the best coffee in Arizona. A simple menu, precise recipes, and two locations in Prescott: drive-up at Curbside or sit-down inside the Prescott Resort.`
-- Menu: `Menu | Valo Coffee`
-- Locations: `Locations | Valo Coffee`
-- Philosophy: `Our Philosophy | Valo Coffee`
+**Required head tags on every page:**
+- `<title>` — unique per page, ends with `| Valo Coffee` (or includes the brand)
+- `<meta name="description">` — unique, under ~160 chars, summarizes the page
+- `<meta name="keywords">` — Prescott + specialty coffee + page-specific terms
+- `<meta name="author" content="Valo Coffee">`
+- `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">` (except 404, which is `noindex, follow`)
+- `<link rel="canonical">` — absolute URL
+- `<link rel="icon">` and `<link rel="apple-touch-icon">`
+- `<meta name="geo.region" content="US-AZ">` + `<meta name="geo.placename" content="Prescott, Arizona">`
+- **Open Graph**: og:site_name, og:title, og:description, og:type, og:url, og:image, og:image:alt, og:locale (en_US). Image: `https://valocoffee.com/assets/images/coffee_look_desktop.jpeg`.
+- **Twitter Card**: summary_large_image with title, description, image.
+
+**Page titles (current):**
+- Home: `Valo Coffee | The Best Coffee in Arizona`
+- Locations: `Locations | Valo Coffee in Prescott, Arizona`
+- Menu: `Coffee Menu | Valo Coffee in Prescott, Arizona`
+- Philosophy: `Our Coffee Philosophy | Valo Coffee in Prescott, Arizona`
+- 404: `Not Found | Valo Coffee` (with `noindex`)
+
+**Required structured data (JSON-LD `application/ld+json`):**
+- **Home**: WebSite, Organization (with legalName "Gospel Coffee LLC", logo, image, telephone, email, areaServed), two CafeOrCoffeeShop entities (Valo Curbside, Valo at the Prescott Resort) with priceRange, image, openingHoursSpecification, hasMenu, servesCuisine.
+- **Locations**: BreadcrumbList + the two CafeOrCoffeeShop entities (same enrichment).
+- **Menu**: BreadcrumbList + Menu entity with hasMenuSection for Coffee, Beans, Not coffee, Tasting experience, Coffee beans (all items with MenuItem + Offer/price).
+- **Philosophy**: BreadcrumbList + FAQPage with each section's question/answer (the collapsibles map directly to FAQ entries — this is what lets the page appear as a rich result in Google "People also ask" style).
+
+**Other SEO standards:**
+- `<img>` tags: descriptive alt text, explicit width/height for CLS prevention, `loading="lazy"` for below-the-fold images (`loading="eager"` + `fetchpriority="high"` for the hero).
+- Hero image preload: `<link rel="preload" as="image">` with media queries pointing at the responsive desktop/mobile sources.
+- Sitemap.xml must list every indexable URL with `<lastmod>` updated when content changes.
+- robots.txt allows all crawling and points at the sitemap.
 
 ---
 
