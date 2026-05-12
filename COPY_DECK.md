@@ -54,7 +54,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Nav item: Locations (on home page scrolls to #today; on other pages navigates to locations.html)
 - Nav item: Menu (on home page scrolls to #menu; on other pages navigates to menu.html)
 - Nav item: Philosophy (on home page scrolls to #philosophy; on other pages navigates to philosophy.html)
-- Nav item: Get directions (on home page scrolls to #today; on other pages navigates to locations.html)
+- A previous "Get directions" nav item was removed because it duplicated Locations. Do not reintroduce it. Directions are still reachable via the Get directions buttons inside each location card and footer.
 - Dual-mode rule: on the home page every nav link stays on the page. Visitors reach the deeper pages via section CTAs (View full menu, Get directions on each location card, Read our philosophy).
 
 ### Hero
