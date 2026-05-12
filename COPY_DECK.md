@@ -204,12 +204,12 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Tasting experience card (paper-style, exclusive to the Prescott Resort location)
 - Visual: same warm-paper menu card as the main menu, so the tasting experience reads as an extension of the menu, not a separate marketing block. Lives in its own `.menu-card.menu-card-warm.paper-menu-card.resort-tasting-card` article right beneath the main menu card.
-- Top eyebrow: "inside the Prescott Resort only · 19" (italic, lowercase; the price 19 is rendered with the same `.meta meta-strong` styling as menu prices)
-- Headline: "tasting experience" (lowercase, medium weight, slightly larger than body)
-- Intro line: choose your experience
-- Body line 1: Coffee tasting experience: four coffees of your choice served as a pour-over flight, then any full-size drink from the menu.
-- Body line 2: Not coffee tasting experience: Any four drinks from the not coffee menu lattes served in a sample flight, then any full-size drink from the menu.
-- Do not add a redundant "Available inside the Prescott Resort only" line at the bottom — the top eyebrow already communicates this.
+- Step label: choose your tasting experience (italic, lowercase, like other menu step labels)
+- Each option is a menu-row: bold lowercase label on the left, price `19` on the right (same `.meta meta-strong` styling as other prices). A short description sits as subtext beneath each row.
+- Item 1 — label: coffee tasting experience · price: 19 · description: Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu.
+- Item 2 — label: not coffee tasting experience · price: 19 · description: Four not coffee drinks of your choice, served as a sample flight, then any full-size drink from the menu.
+- Verbiage rule: the two descriptions must use identical sentence structure. Only the option-specific words differ (coffees vs. not coffee drinks; pour-over vs. sample flight). If one description changes, the other should change to match.
+- Footnote at the bottom of the card: "Available inside the Prescott Resort only." (italic, quiet)
 
 ### Coffee beans note
 - Headline: Coffee beans
