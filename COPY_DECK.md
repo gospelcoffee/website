@@ -160,7 +160,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Address line 1: 1500 Heather Heights
 - Address line 2: Prescott, Arizona
 - Body: Drive up, stay in your car, and we bring your coffee to you.
-- CTA: Get directions
+- Primary CTA: Get directions (opens Google Maps in a new tab)
+- Secondary CTA: View menu (navigates to menu.html)
 
 ### Location section: Valo (inside the Prescott Resort)
 - Eyebrow: Valo (never "Valo Resort")
@@ -170,7 +171,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Address line 1: 1500 AZ-69
 - Address line 2: Prescott, Arizona
 - Body: Sit down inside the Prescott Resort and explore the coffees we are serving.
-- CTA: Get directions
+- Primary CTA: Get directions (opens Google Maps in a new tab)
+- Secondary CTA: View menu (navigates to menu.html)
 
 ### Footer
 - Use same footer copy as Home.
@@ -184,7 +186,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Meta description: The Valo Coffee menu. Pick a drink, temp, milk, and bean. Plus our not coffee menu.
 
 ### Menu intro
-- Header: a single small "Menu" label, rendered as `<h1 class="eyebrow">Menu</h1>` so the page keeps a semantic h1 for SEO/a11y while looking like a quiet eyebrow. No huge display headline.
+- Header: a single small "Coffee" label, rendered as `<h1 class="eyebrow">Coffee</h1>`. This labels the first card on the page (the main coffee menu). Each card below has its own eyebrow header (Not coffee, Tasting experience, Coffee beans), so the page reads as a sequence of labeled paper cards rather than one big "Menu" page.
 - No lede. The previous "Choose your drink. Choose your bean. Or choose from our other beverages." line was removed because it cluttered the page. The menu card itself is the page's content.
 
 ### Page structure
@@ -241,11 +243,11 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Metadata
 - Page title: Philosophy | Valo Coffee
-- Meta description: Valo's philosophy. Coffee is any drink where you can clearly taste the bean. If sweetener and milk drown it out, that's coffee flavoring, not coffee.
+- Meta description: Valo's philosophy. Coffee is any drink where you can clearly taste the bean. If sweetener, milk, and added flavors drown it out, that's coffee flavoring, not coffee.
 
 ### Page header + opening lede (always expanded at the top)
 - Header: rendered as `<h1 class="eyebrow">What is coffee?</h1>`. The page header is a philosophical QUESTION that the lede answers. No huge display headline.
-- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "Coffee, to us, is any drink where you can clearly taste the bean. If sweetener and milk drown it out, that's coffee flavoring, not coffee."
+- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "Coffee, to us, is any drink where you can clearly taste the bean. If sweetener, milk, and added flavors drown it out, that's coffee flavoring, not coffee."
 - This is the only section that is always visible. The other four questions sit below as collapsibles.
 
 ### Section format (applies to every section below)
