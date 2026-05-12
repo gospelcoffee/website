@@ -290,8 +290,8 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Retired question (do not reintroduce): "What if it isn't right?" — the question itself implied we serve imperfect drinks. The correct framing is the perfect drink, then personalized.
 
 ### Bottom CTA row
-- Primary CTA: View the menu
-- Secondary CTA: Visit Valo
+- Primary CTA: Visit Valo (links to /locations.html)
+- Secondary CTA: View the menu (links to /menu.html)
 
 ### Footer
 - Use same footer copy as Home.
