@@ -213,8 +213,9 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Step label inside the card: choose your experience (italic, lowercase, like other menu step labels)
 - Each option is a menu-row: bold lowercase label on the left, price `19` on the right (same `.meta meta-strong` styling as other prices). A short description sits as subtext beneath each row.
 - Item 1 — label: coffee tasting experience · price: 19 · description: Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu.
-- Item 2 — label: not coffee tasting experience · price: 19 · description: Four not coffee drinks of your choice, served as a sample flight, then any full-size drink from the menu.
-- Verbiage rule: the two descriptions must use identical sentence structure. Only the option-specific words differ (coffees vs. not coffee drinks; pour-over vs. sample flight). If one description changes, the other should change to match.
+- Item 2 — label: not coffee tasting experience · price: 19 · description: Four not coffee lattes of your choice, served as a sample flight, then any full-size drink from the menu.
+- Verbiage rule: the two descriptions must use identical sentence structure. Only the option-specific words differ (coffees vs. not coffee lattes; pour-over vs. sample flight). If one description changes, the other should change to match.
+- Scope note: the not coffee tasting experience covers the latte-format items on the not coffee menu (cocoa, chai, matcha, ube, golden lattes). It does not include the non-latte items (butterfly lemonade, Jamaica, hibiscus yuzu) — those don't fit the tasting-flight format.
 - Footnote at the bottom of the card: "Available inside the Prescott Resort only." (italic, quiet)
 
 ### Coffee beans card (paper-style)
