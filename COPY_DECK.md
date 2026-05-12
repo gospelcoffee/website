@@ -51,11 +51,14 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - OG description: Valo Coffee in Prescott, Arizona. Two locations: Curbside and Resort.
 
 ### Header / Navigation
-- Nav item: Locations (on home page scrolls to #today; on other pages navigates to locations.html)
-- Nav item: Menu (on home page scrolls to #menu; on other pages navigates to menu.html)
-- Nav item: Philosophy (on home page scrolls to #philosophy; on other pages navigates to philosophy.html)
+- Per-page nav rule: the current page is never present in its own header nav. On non-home pages, "Home" is added as the first nav item so the visitor can get back. Order is always: Home (when shown) → Locations → Menu → Philosophy, with the current page omitted.
+  - Home page (/): Locations, Menu, Philosophy. No "Home" item. All three are in-page anchors (#today, #menu, #philosophy).
+  - Locations page: Home, Menu, Philosophy. Home leads; Locations is omitted.
+  - Menu page: Home, Locations, Philosophy. Home leads; Menu is omitted.
+  - Philosophy page: Home, Locations, Menu. Home leads; Philosophy is omitted.
+- "Home" links to `/` (the site root).
 - A previous "Get directions" nav item was removed because it duplicated Locations. Do not reintroduce it. Directions are still reachable via the Get directions buttons inside each location card and footer.
-- Dual-mode rule: on the home page every nav link stays on the page. Visitors reach the deeper pages via section CTAs (View full menu, Get directions on each location card, Read our philosophy).
+- Dual-mode rule: on the home page every nav link stays on the page (in-page anchors). On every other page, the nav navigates between pages. Visitors reach the deeper pages on the home page via section CTAs (View full menu, Get directions on each location card, Read our philosophy).
 
 ### Hero
 - Layout: full-width banner. Featured image covers the section edge-to-edge with a dark gradient overlay so the headline and buttons read with strong contrast.
@@ -238,23 +241,49 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Metadata
 - Page title: Philosophy | Valo Coffee
-- Meta description: Valo's philosophy. The bean leads. Every drink is made with pure ingredients, so their naturally occurring flavors can be enjoyed clearly.
+- Meta description: Valo's philosophy. Coffee is any drink where you can clearly taste the bean. If sweetener and milk drown it out, that's coffee flavoring, not coffee.
 
-### Page header + opening lede
-- Header: small "Philosophy" label, rendered as `<h1 class="eyebrow">Philosophy</h1>` (matches the menu and locations pages). No huge display headline.
-- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "The bean leads. Every drink on our menu is made with pure ingredients. We never add anything else, so their naturally occurring flavors can be enjoyed clearly."
+### Page header + opening lede (always expanded at the top)
+- Header: rendered as `<h1 class="eyebrow">What is coffee?</h1>`. The page header is a philosophical QUESTION that the lede answers. No huge display headline.
+- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "Coffee, to us, is any drink where you can clearly taste the bean. If sweetener and milk drown it out, that's coffee flavoring, not coffee."
+- This is the only section that is always visible. The other four questions sit below as collapsibles.
 
-### Principle: Pure
-- Eyebrow: Pure
-- Body: We choose every ingredient for what it already is. No flavor sprays, no syrups stirred in, no chemical enhancements at any step.
+### Section format (applies to every section below)
+- Every section is a `<details class="philosophy-detail">` collapsible. The `<summary>` is the question; the body inside is the answer.
+- Questions render in the same small-caps eyebrow style as the page header, plus a `+` indicator on the right that flips to `−` when open.
+- Sections start collapsed so the page reads light. Visitors expand the ones they care about.
+- Every question must be a real philosophical question, end with a question mark, and be short (roughly 4-7 words) so it reads cleanly in the small-caps style.
+- **Stand-alone rule:** because answers are collapsed by default, each question must make sense on its own without the answer visible. Avoid vague subjects like "Why so simple?" (simple what — the menu? the website? the ingredients?). Always name the subject in the question so the reader knows what you're asking about before they decide whether to expand.
+- The questions are how Valo "thinks out loud" — the page reads as a conversation the brand has with itself, not a list of principles or marketing assertions.
 
-### Principle: Natural
-- Eyebrow: Natural
-- Body: The tasting notes you see on our menu come from the beans themselves. Strawberry from a strawberry-tasting bean. Peach from a peach-tasting bean. Nothing added to make them taste that way, before or after the roast.
+### Section: Where do the tasting notes come from?
+- Eyebrow: Where do the tasting notes come from?
+- Body: Coffee is a fruit, and like any fruit, it comes in many varietals. A Honeycrisp apple tastes nothing like a Granny Smith. The same is true of coffee: every variety carries its own naturally occurring flavor. We source beans whose flavor matches a tasting note you'd recognize: strawberry, peach, peanut butter. We don't add anything to make them taste that way, before or after the roast.
+- Voice note: this section should read as confidence-building and lightly scientific (varietals, naturally occurring flavor) without being jargony. The apple analogy is the anchor.
 
-### Principle: Simple
-- Eyebrow: Simple
-- Body: A simpler menu means a better cup. We list our most popular drinks and prepare any specialty to order. The bean stays the choice that matters most.
+### Section: Why is the menu so simple?
+- Eyebrow: Why is the menu so simple?
+- Body: The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we're happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most.
+- Flow rule: every sentence in this section must serve the simplicity thread. The menu sentence flows in via "starting with our menu" — that transition links the philosophy ("we keep things short") to the first concrete example (the menu). The "Our add-ins are just as short" sentence pivots to the second example. Do not drop in a menu/offering sentence that isn't tied to the simplicity claim; if a sentence reads as informational rather than illustrative, either reframe it or remove it.
+- Consistency rule: when describing the ingredients we use, lead each one with "Our X is..." (not "The X is..."). The possessive emphasizes that this is what Valo specifically uses, and it pairs cleanly with "our sweetener list" later in the sentence.
+- Opening rule: the section must answer the question "why" before it lists the "what." The opening sentence ("The fewer things in your cup, the more clearly you can taste the bean.") states the reason simplicity matters. Do not lead with "we keep things short" — that's the action, not the answer.
+- Structural note: this section is the merge of what used to be two near-duplicate sections (short menu + few add-ins). The combined point: simplicity runs through the whole offering — short menu, short add-in list, AND each add-in's ingredient list is short too. The single-ingredient detail is what makes the section earn its space.
+- Accuracy note: do NOT name specific drinks we "don't sell" (e.g., chai latte) in this section. We do sell a chai latte as a not-coffee drink. Keep the section about what we use, not what we forbid.
+
+### Section: How do we make espresso?
+- Eyebrow: How do we make espresso?
+- Body: Most of what's considered standard in espresso is dogma. We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for smoothness. We even brew each shot differently depending on the bean and drink type. We offgas our beans because crema is just trapped carbon dioxide that tastes bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets the bean's naturally occurring tasting notes come through and gives you the best cup of coffee we know how to make.
+- Structural rule: the section has two distinct rhythm zones. First, three short "[parameter] for [benefit]" fragments (heavier doses for clarity, colder brew temps for sweetness, lower pressure for smoothness). Then a group of longer "We [do X]" sentences (we brew each shot differently, we offgas our beans because…, we have 21 steps). Do not drop a long descriptive sentence into the fragment list — definitions and reasons belong in the second group, not the first.
+- Closing-line rule: the section closes by tying our experimentation rigor (testing, proving) to the customer outcome (bean's tasting notes + best cup). Both halves must be present. We don't just choose intentionally — we test, and we keep what proves to be meaningfully better.
+- Retired phrase (do not reintroduce anywhere on the site): "Every detail is chosen for the cup, not for tradition." The against-tradition framing was wrong; the closing line should connect intention to the bean's naturally occurring tasting notes and to the customer's cup.
+
+### Section: How do we make the perfect drink?
+- Eyebrow: How do we make the perfect drink?
+- Body: Every drink starts the same way: made exactly the way we know to be best. From there, it gets personal. We'll ask you to taste your drink before you go, and we're happy to adjust anything to make it perfectly yours.
+- Pronoun rule: this section addresses the visitor directly in second person (you / your / yours). Do not switch to third person ("every customer / their / they") mid-section — the shift from "their drink" to "perfectly yours" is jarring and was caught and removed.
+- Framing rule: this section is about how we achieve a *perfect* drink, not how we fix mistakes. Every drink is made exactly right; the personalization step is about the individual's preference, not about correcting an error. **Do not use "make it right" or "if anything needs adjusting" or other language that implies the drink was wrong.** The structure: we make it right → then we make it yours.
+- Voice note: customer-led and feedback-driven, not stubbornly principled. Do not reintroduce "we could make it more appealing but we won't" framing.
+- Retired question (do not reintroduce): "What if it isn't right?" — the question itself implied we serve imperfect drinks. The correct framing is the perfect drink, then personalized.
 
 ### Bottom CTA row
 - Primary CTA: View the menu
