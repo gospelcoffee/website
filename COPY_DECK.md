@@ -247,7 +247,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Page header + opening lede (always expanded at the top)
 - Header: rendered as `<h1 class="eyebrow">What is coffee?</h1>`. The page header is a philosophical QUESTION that the lede answers. No huge display headline.
-- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "Coffee, to us, is any drink where you can clearly taste the bean. If sweetener, milk, and added flavors drown it out, that's coffee flavoring, not coffee. Real coffee is the bean coming through clearly."
+- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "Coffee, to us, is any drink where you can clearly taste the bean. If sweetener, milk, and added flavors drown it out, that's coffee flavoring, not coffee. Coffee is the bean coming through clearly."
 - Three-beat structure: (1) definition, (2) counter-definition / what isn't coffee, (3) reiteration of the definition. The closing sentence should restate the position more tightly than the opening, so the section ends on a punch rather than a counter-example.
 - This is the only section that is always visible. The other four questions sit below as collapsibles.
 
