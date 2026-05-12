@@ -161,8 +161,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Location section: Valo (inside the Prescott Resort)
 - Eyebrow: Valo (never "Valo Resort")
-- Context line: Inside the Prescott Resort
-- Positioning line: The Valo tasting experience lives here.
+- Positioning line: Inside the Prescott Resort
 - Status headline fallback: Open Wed-Sun
 - Status meta fallback: Wed-Fri, 7 AM – 10 AM · Sat-Sun, 7 AM – 2 PM
 - Address line 1: 1500 AZ-69

@@ -255,7 +255,7 @@ A GitHub Action will sync `data/locations.json` from Google Maps hours. **Never 
 - Real text always — never images of text.
 - Tap targets ≥ 44px. `touch-action: manipulation` on links and buttons.
 - Fluid layouts. `img, svg { max-width: 100%; height: auto; }`. `body { overflow-x: hidden; }`.
-- Two-column location grid collapses to one column ≤ 760px.
+- On the locations page, the two locations sit side-by-side as a two-column grid on desktop (≥900px) and collapse to one column below that. Curbside is always first in source order, so it leads on both viewports.
 
 ---
 
