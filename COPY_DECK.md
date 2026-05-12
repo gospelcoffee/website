@@ -147,9 +147,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Meta description: Two ways to visit Valo. Curbside for drive-up coffee, or inside the Prescott Resort for a sit-down experience with a view of Prescott.
 
 ### Intro
-- Eyebrow: Locations
-- H1: TWO WAYS TO VISIT VALO.
-- Lede: Two locations. Two distinct ways to visit Valo.
+- Header: a single small "Locations" label, rendered as `<h1 class="eyebrow">Locations</h1>` (matches the menu page pattern). No huge display headline, no lede.
 
 ### Location section: Valo Curbside
 - Eyebrow: Valo Curbside
