@@ -237,32 +237,28 @@ The home page stays light. It does not try to explain the philosophy — it grou
 ## Philosophy Page (`/philosophy.html`)
 
 ### Metadata
-- Page title: Our Philosophy | Valo Coffee
-- Meta description: Most coffee shops ask you to choose flavors. Valo asks you to choose coffee. The natural flavor of the bean shapes the drink.
+- Page title: Philosophy | Valo Coffee
+- Meta description: Valo's philosophy. The bean leads. Every drink is made with pure ingredients, so their naturally occurring flavors can be enjoyed clearly.
 
-### Intro
-- Eyebrow: Philosophy
-- H1 line 1: Most coffee shops ask you to choose flavors.
-- H1 line 2: Valo asks you to choose coffee.
+### Page header + opening lede
+- Header: small "Philosophy" label, rendered as `<h1 class="eyebrow">Philosophy</h1>` (matches the menu and locations pages). No huge display headline.
+- Opening lede (immediately below the header, separated by `margin-bottom: var(--space-6)`): "The bean leads. Every drink on our menu is made with pure ingredients. We never add anything else, so their naturally occurring flavors can be enjoyed clearly."
 
-### Warm section
-- Body line 1: The bean's natural flavor leads the drink. Nothing is added to the coffee to create the notes you taste.
-- Body line 2: We start with simple drinks, then let you choose the bean by the flavor it naturally brings to the cup.
-- Body line 3: We hold every ingredient to the same standard: pure, simple, carefully selected, and always coffee first.
+### Principle: Pure
+- Eyebrow: Pure
+- Body: We choose every ingredient for what it already is. No flavor sprays, no syrups stirred in, no chemical enhancements at any step.
 
-### Three principles
-- Section heading: Coffee first
-- Body: The bean leads the drink. Milk, sweetness, and add-ins support the coffee.
+### Principle: Natural
+- Eyebrow: Natural
+- Body: The tasting notes you see on our menu come from the beans themselves. Strawberry from a strawberry-tasting bean. Peach from a peach-tasting bean. Nothing added to make them taste that way, before or after the roast.
 
-- Section heading: Simple choices
-- Body: A smaller menu helps us make better drinks. Choose your drink, choose your bean, and we guide the rest.
-
-- Section heading: Made with care
-- Body: We make your drink right. If it needs an adjustment, we fix it.
+### Principle: Simple
+- Eyebrow: Simple
+- Body: A simpler menu means a better cup. We list our most popular drinks and prepare any specialty to order. The bean stays the choice that matters most.
 
 ### Bottom CTA row
 - Primary CTA: View the menu
-- Secondary CTA: Choose your location
+- Secondary CTA: Visit Valo
 
 ### Footer
 - Use same footer copy as Home.

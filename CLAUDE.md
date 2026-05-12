@@ -221,7 +221,17 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 
 ### Philosophy page
 
-Short. Direct. Three sections: Coffee first, Simple choices, Made with care. Don't copy the employee guide. Don't over-explain. Don't tell customers what to order.
+Short. Direct. Same clean intro pattern as the menu and locations pages: small `<h1 class="eyebrow">Philosophy</h1>` — no huge display headline.
+
+Structure:
+1. Page header (`<h1 class="eyebrow">Philosophy</h1>`) + opening lede in one section. The lede is the strongest single sentence the page makes: "The bean leads. Every drink on our menu is made with pure ingredients. We never add anything else, so their naturally occurring flavors can be enjoyed clearly."
+2. Three single-paragraph principles, each as its own section with a `<h2 class="eyebrow">` header: **Pure**, **Natural**, **Simple**.
+   - Pure — about ingredients (we don't add anything at any step).
+   - Natural — about tasting notes (they come from the beans themselves).
+   - Simple — about the menu (a smaller menu, made-to-order specialties, the bean is the choice).
+3. Bottom CTA row: View the menu | Visit Valo.
+
+Voice rules apply: no en/em-dashes in copy, no "natural flavors" as a noun phrase (use "naturally occurring"), no claiming Valo "highlights" or "enhances" flavor, no claiming drink scope. Don't copy the employee guide. Don't over-explain. Don't tell customers what to order.
 
 ---
 
