@@ -669,12 +669,13 @@ p {
 }
 
 .paper-menu .menu-row,
-.paper-menu-not-coffee .menu-row {
+.not-coffee-card .menu-row {
   padding-block: var(--space-2);
   border-bottom: 0;
 }
 
-.paper-menu .menu-row .label {
+.paper-menu .menu-row .label,
+.not-coffee-card .menu-row .label {
   letter-spacing: 0;
 }
 
@@ -682,9 +683,16 @@ p {
   font-weight: 600;
 }
 
-.paper-menu-not-coffee {
-  margin-top: var(--space-8);
-  max-width: 360px;
+/* Not coffee card: two columns on desktop, one on mobile */
+.not-coffee-card .menu-list {
+  columns: 2;
+  column-gap: var(--space-7);
+}
+
+.not-coffee-card .menu-row {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 @media (max-width: 900px) {
@@ -703,9 +711,8 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4);
   }
-  .paper-menu-not-coffee {
-    max-width: none;
-    margin-top: var(--space-5);
+  .not-coffee-card .menu-list {
+    columns: 1;
   }
 
   /* Mobile: larger, more legible step labels and row spacing */
@@ -715,7 +722,7 @@ p {
     margin-bottom: var(--space-3);
   }
   .paper-menu .menu-row,
-  .paper-menu-not-coffee .menu-row {
+  .not-coffee-card .menu-row {
     padding-block: var(--space-2);
   }
 }

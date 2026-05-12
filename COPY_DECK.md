@@ -188,11 +188,15 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Header: a single small "Menu" label, rendered as `<h1 class="eyebrow">Menu</h1>` so the page keeps a semantic h1 for SEO/a11y while looking like a quiet eyebrow. No huge display headline.
 - No lede. The previous "Choose your drink. Choose your bean. Or choose from our other beverages." line was removed because it cluttered the page. The menu card itself is the page's content.
 
-### Core menu card (paper-style)
+### Page structure
+- The menu page has three separate paper-style cards, each with its own small-caps eyebrow header above it: **Menu** → **Not coffee** → **Tasting experience**. The cards are siblings, not nested. Each header uses the same `<...class="eyebrow">` treatment and the same `margin-bottom: var(--space-6)` so the spacing rhythm is identical down the page.
+
+### Main menu card (paper-style)
 - The digital menu does NOT display step numbers and does NOT display temp or milk. Those still live on the in-person paper menu and are handled at the counter/curbside. Stripping them on the website makes the page easier to scan.
-- Visible sections, in order: pick a drink, pick a bean, optional (pick add-ins, pick a sweetener), not coffee.
+- The main menu card does NOT contain "not coffee" — it lives in its own card below.
+- Visible sections inside the main menu card, in order: pick a drink, pick a bean, optional (pick add-ins, pick a sweetener).
 - Desktop (≥900px): three columns horizontally — pick a drink | pick a bean | optional (which splits into add-ins + sweetener).
-- Mobile (<900px): stacks vertically. Add-ins and sweetener stay side-by-side as two columns under the optional header. Not coffee always at the bottom at full width.
+- Mobile (<900px): stacks vertically. Add-ins and sweetener stay side-by-side as two columns under the optional header.
 - Bold weight = standard option; regular weight = secondary/accommodation option.
 - "optional" italic label sits above the add-ins + sweetener sub-grid with a thin horizontal rule below it.
 - pick a drink: latte (7) bold, coffee (5) bold
@@ -200,7 +204,12 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - pick add-ins (optional): vanilla, mocha, caramel (all regular)
 - pick a sweetener (optional): sugar, brown sugar, honey, maple, splenda | stevia (all regular)
 - Voice rule: every step label leads with a verb. Never just a noun like "bean" — too ambiguous, no directive. "pick a [noun]" is the pattern.
-- Not coffee section below: cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7, golden latte 7, Jamaica 7, butterfly lemonade 7, hibiscus yuzu 7 (item names regular, prices bold)
+
+### Not coffee card (paper-style)
+- Section header above the card: `<h2 class="eyebrow">Not coffee</h2>`.
+- The card has no internal label — the eyebrow above already names the section, so the items start directly inside the card.
+- Desktop: two CSS columns. Mobile: one column.
+- Items (item names regular, prices bold): cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7, golden latte 7, Jamaica 7, butterfly lemonade 7, hibiscus yuzu 7.
 
 ### Tasting experience card (paper-style, exclusive to the Prescott Resort location)
 - Visual: same warm-paper menu card as the main menu, so the tasting experience reads as an extension of the menu, not a separate marketing block. Lives in its own `.menu-card.menu-card-warm.paper-menu-card.resort-tasting-card` article right beneath the main menu card.
