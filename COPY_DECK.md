@@ -151,8 +151,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Location section: Valo Curbside
 - Eyebrow: Valo Curbside
-- H2: Drive up. Stay in your car.
-- Positioning line: High-quality coffee at drive-through speed.
+- Positioning line: Specialty coffee at drive-through speed.
 - Status headline fallback: Open daily
 - Status meta fallback: 7 AM – 6 PM
 - Address line 1: 1500 Heather Heights
@@ -162,7 +161,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 
 ### Location section: Valo (inside the Prescott Resort)
 - Eyebrow: Valo (never "Valo Resort")
-- H2: Inside the Prescott Resort lobby.
+- Context line: Inside the Prescott Resort
 - Positioning line: The Valo tasting experience lives here.
 - Status headline fallback: Open Wed-Sun
 - Status meta fallback: Wed-Fri, 7 AM – 10 AM · Sat-Sun, 7 AM – 2 PM
