@@ -323,7 +323,7 @@ Each page: unique title, meta description, clear H1, clean heading hierarchy, re
 
 ## 9. Locations (factual)
 
-**Valo Curbside** — 1500 Heather Heights, Prescott, AZ. Drive up, we'll take your order and bring your drink to you.
+**Valo Curbside** — 1500 AZ-69D, Prescott, AZ. Drive up, we'll take your order and bring your drink to you.
 
 **Valo** (sit-down location, inside the Prescott Resort) — 1500 AZ-69, Prescott, AZ. Sit-down, view of Prescott, tasting experience lives here. Never label this location "Valo Resort." See the location naming rule in section 3.
 
