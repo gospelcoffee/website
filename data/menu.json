@@ -1,0 +1,62 @@
+{
+  "coffee": {
+    "label": "Coffee",
+    "items": [
+      { "name": "latte", "price": "7" },
+      { "name": "coffee", "price": "5" },
+      { "name": "cappuccino", "price": "7", "options": "traditional or extra milk" },
+      { "name": "flat white", "price": "7", "options": "traditional or extra milk" },
+      { "name": "cortado", "price": "5–7", "options": "traditional or extra milk" },
+      { "name": "espresso", "price": "5" }
+    ]
+  },
+  "beans": {
+    "label": "Bean Menu",
+    "note": "Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.",
+    "items": [
+      { "name": "dark & smoky", "origin": "colombia" },
+      { "name": "peanut butter", "origin": "brazil" },
+      { "name": "peach", "origin": "colombia" },
+      { "name": "strawberry", "origin": "honduras" },
+      { "name": "apple spice", "origin": "colombia" },
+      { "name": "decaf", "origin": "mexico" }
+    ]
+  },
+  "optional": {
+    "label": "Optional",
+    "items": ["vanilla", "mocha", "caramel", "sugar", "brown sugar", "honey", "maple", "splenda", "stevia"]
+  },
+  "notCoffee": {
+    "label": "Not coffee",
+    "items": [
+      { "name": "cocoa latte", "price": "5" },
+      { "name": "chai latte", "price": "7" },
+      { "name": "matcha latte", "price": "7" },
+      { "name": "ube latte", "price": "7" },
+      { "name": "golden latte", "price": "7" },
+      { "name": "butterfly lemonade", "price": "7" },
+      { "name": "hibiscus yuzu", "price": "7" }
+    ]
+  },
+  "tasting": {
+    "label": "Tasting experience",
+    "availability": "Tasting experiences are available at Valo Sit-Down only.",
+    "items": [
+      { "name": "coffee tasting experience", "price": "19", "desc": "Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu." },
+      { "name": "not coffee tasting experience", "price": "19", "desc": "Four not coffee lattes of your choice, served as a sample flight, then any full-size drink from the menu." }
+    ]
+  },
+  "beansForSale": {
+    "label": "Coffee beans",
+    "sublabel": "half pound bag",
+    "items": [
+      { "name": "dark & smoky", "price": "22" },
+      { "name": "peanut butter", "price": "22" },
+      { "name": "peach", "price": "22" },
+      { "name": "strawberry", "price": "22" },
+      { "name": "apple spice", "price": "22" },
+      { "name": "decaf", "price": "22" }
+    ],
+    "note": "Available at both locations. For custom grinding and vacuum sealing, visit Valo Sit-Down."
+  }
+}

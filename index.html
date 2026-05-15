@@ -77,7 +77,7 @@
         "name": "Valo Curbside",
         "description": "Specialty coffee at drive-thru speeds. Drive up, stay in your car, and we bring your coffee to you.",
         "parentOrganization": { "@id": "https://valocoffee.com/#org" },
-        "url": "https://valocoffee.com/locations.html#curbside",
+        "url": "https://valocoffee.com/#curbside",
         "telephone": "+1-928-910-6087",
         "priceRange": "$$",
         "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
@@ -95,7 +95,7 @@
           "closes": "18:00"
         }],
         "hasMap": "https://maps.app.goo.gl/pQiKMV2w1YkQii3p9",
-        "hasMenu": "https://valocoffee.com/menu.html",
+        "hasMenu": "https://valocoffee.com/#menu",
         "servesCuisine": ["Coffee","Specialty Coffee","Espresso"],
         "acceptsReservations": "False"
       },
@@ -106,7 +106,7 @@
         "alternateName": "Valo Sit-Down at the Prescott Resort",
         "description": "Sit down, take in the view of Prescott, and try our coffees. The Valo tasting experience lives here.",
         "parentOrganization": { "@id": "https://valocoffee.com/#org" },
-        "url": "https://valocoffee.com/locations.html#resort",
+        "url": "https://valocoffee.com/#resort",
         "telephone": "+1-928-910-6087",
         "priceRange": "$$",
         "image": "https://valocoffee.com/assets/images/coffee_look_desktop.jpeg",
@@ -132,9 +132,118 @@
           }
         ],
         "hasMap": "https://maps.app.goo.gl/BHweLz91EeAwYa32A",
-        "hasMenu": "https://valocoffee.com/menu.html",
+        "hasMenu": "https://valocoffee.com/#menu",
         "servesCuisine": ["Coffee","Specialty Coffee","Espresso"],
         "acceptsReservations": "False"
+      },
+      {
+        "@type": "Menu",
+        "@id": "https://valocoffee.com/#menu",
+        "name": "Valo Coffee Menu",
+        "description": "Specialty coffee drinks, single-origin beans, not-coffee lattes, and a guided tasting experience at Valo Sit-Down.",
+        "inLanguage": "en-US",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Coffee",
+            "description": "Made with pure ingredients and the bean you choose.",
+            "hasMenuItem": [
+              { "@type": "MenuItem", "name": "Latte", "description": "Espresso with steamed milk, made with the bean of your choice.", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Coffee", "description": "Pour-over or long black, made with the bean of your choice.", "offers": { "@type": "Offer", "price": "5", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Cappuccino", "description": "Traditional or extra milk. Made with the bean of your choice.", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Flat White", "description": "Traditional or extra milk. Made with the bean of your choice.", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Cortado", "description": "Traditional or extra milk. Espresso cut with steamed milk, made with the bean of your choice.", "offers": { "@type": "AggregateOffer", "lowPrice": "5", "highPrice": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Espresso", "description": "A single or double shot of espresso, made with the bean of your choice.", "offers": { "@type": "Offer", "price": "5", "priceCurrency": "USD" } }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Bean Menu",
+            "description": "Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.",
+            "hasMenuItem": [
+              { "@type": "MenuItem", "name": "Dark & Smoky", "description": "Colombia." },
+              { "@type": "MenuItem", "name": "Peanut Butter", "description": "Brazil." },
+              { "@type": "MenuItem", "name": "Peach", "description": "Colombia." },
+              { "@type": "MenuItem", "name": "Strawberry", "description": "Honduras." },
+              { "@type": "MenuItem", "name": "Apple Spice", "description": "Colombia." },
+              { "@type": "MenuItem", "name": "Decaf", "description": "Mexico." }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Not coffee",
+            "description": "Latte-format drinks and other beverages, made with pure ingredients.",
+            "hasMenuItem": [
+              { "@type": "MenuItem", "name": "Cocoa latte", "offers": { "@type": "Offer", "price": "5", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Chai latte", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Matcha latte", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Ube latte", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Golden latte", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Butterfly lemonade", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Hibiscus yuzu", "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" } }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Tasting experience",
+            "description": "Tasting experiences are available at Valo Sit-Down only. Four drinks of your choice served as a flight, then any full-size drink from the menu.",
+            "hasMenuItem": [
+              { "@type": "MenuItem", "name": "Coffee tasting experience", "description": "Four coffees of your choice served as a pour-over flight, then any full-size drink from the menu.", "offers": { "@type": "Offer", "price": "19", "priceCurrency": "USD", "availableAtOrFrom": { "@id": "https://valocoffee.com/#resort" } } },
+              { "@type": "MenuItem", "name": "Not coffee tasting experience", "description": "Any four drinks from the not coffee menu lattes served in a sample flight, then any full-size drink from the menu.", "offers": { "@type": "Offer", "price": "19", "priceCurrency": "USD", "availableAtOrFrom": { "@id": "https://valocoffee.com/#resort" } } }
+            ]
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Coffee beans",
+            "description": "Available at both locations. For custom grinding and vacuum sealing, visit Valo Sit-Down. Sold as half pound bags.",
+            "hasMenuItem": [
+              { "@type": "MenuItem", "name": "Dark & Smoky (half pound bag)", "description": "Colombia.", "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Peanut Butter (half pound bag)", "description": "Brazil.", "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Peach (half pound bag)", "description": "Colombia.", "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Strawberry (half pound bag)", "description": "Honduras.", "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Apple Spice (half pound bag)", "description": "Colombia.", "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" } },
+              { "@type": "MenuItem", "name": "Decaf (half pound bag)", "description": "Mexico.", "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" } }
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://valocoffee.com/#philosophy",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is coffee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do the tasting notes come from?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor profiles. The same is true of coffee. Every variety carries its own naturally occurring flavor notes. We source beans with relatable and recognizable flavor notes such as strawberry, peach, and peanut butter. The best way to discover how this works is to try our coffee tasting experience at our Valo Sit-Down location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is the menu so simple?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we're happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do we make espresso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for smoothness. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make."
+            }
+          }
+        ]
       }
     ]
   }
@@ -148,22 +257,6 @@
       <a class="brand" href="/">
         <img class="brand-mark" src="assets/images/valo-coffee-horizontal-black-and-clear.svg" alt="Valo Coffee" />
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu" data-nav-toggle>
-        <svg class="nav-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
-          <line x1="4" y1="7" x2="20" y2="7" />
-          <line x1="4" y1="12" x2="20" y2="12" />
-          <line x1="4" y1="17" x2="20" y2="17" />
-        </svg>
-        <svg class="nav-toggle-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
-          <line x1="5" y1="5" x2="19" y2="19" />
-          <line x1="19" y1="5" x2="5" y2="19" />
-        </svg>
-      </button>
-      <nav class="site-nav" id="primary-nav" aria-label="Primary">
-        <a href="#today">Locations</a>
-        <a href="#menu">Menu</a>
-        <a href="#philosophy">Philosophy</a>
-      </nav>
     </div>
   </header>
 
@@ -171,18 +264,38 @@
 
     <!-- Hero -->
     <section class="hero home-hero">
-      <picture class="hero-media">
-        <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
-        <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
-        <img src="assets/images/coffee_look.jpg" alt="Espresso and milk poured into a Valo coffee cup." loading="eager" decoding="async" fetchpriority="high" width="3872" height="2178" />
-      </picture>
+      <div class="hero-carousel" data-carousel data-interval="6000" aria-roledescription="carousel" aria-label="Valo Coffee images">
+        <ul class="hero-slides" data-slides>
+          <li class="hero-slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+            <picture class="hero-media">
+              <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
+              <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
+              <img src="assets/images/coffee_look.jpg" alt="Espresso and milk poured into a Valo coffee cup." loading="eager" decoding="async" fetchpriority="high" width="3872" height="2178" />
+            </picture>
+          </li>
+          <li class="hero-slide" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
+            <picture class="hero-media">
+              <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
+              <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
+              <img src="assets/images/coffee_look.jpg" alt="A coffee handoff at Valo Curbside." loading="lazy" decoding="async" width="3872" height="2178" />
+            </picture>
+          </li>
+          <li class="hero-slide" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
+            <picture class="hero-media">
+              <source media="(max-width: 760px)" srcset="assets/images/Coffee_look_mobile.jpeg" />
+              <source media="(min-width: 761px)" srcset="assets/images/coffee_look_desktop.jpeg" />
+              <img src="assets/images/coffee_look.jpg" alt="Inside Valo Sit-Down at the Prescott Resort." loading="lazy" decoding="async" width="3872" height="2178" />
+            </picture>
+          </li>
+        </ul>
+      </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-content">
         <h1 class="hero-headline">The best coffee in Arizona</h1>
         <p class="hero-sub">Open daily</p>
         <div class="button-row">
-          <a class="button" href="#today">View locations</a>
-          <a class="button button-secondary" href="#menu">View menu</a>
+          <a class="button" href="#today">Visit Valo</a>
+          <a class="button button-secondary" href="#menu">See the menu</a>
         </div>
       </div>
     </section>
@@ -195,7 +308,7 @@
         </div>
 
         <div class="today-grid">
-          <article class="today-card" data-location="curbside" data-status-state="open">
+          <article class="today-card" id="curbside" data-location="curbside" data-status-state="open">
             <span class="today-name">Valo Curbside</span>
             <p class="status-line" data-status-headline>Open today until 6 PM</p>
             <ul class="today-hours" data-status-hours>
@@ -212,7 +325,7 @@
             </div>
           </article>
 
-          <article class="today-card" data-location="resort" data-status-state="open">
+          <article class="today-card" id="resort" data-location="resort" data-status-state="open">
             <span class="today-name">Valo Sit-Down</span>
             <p class="status-line" data-status-headline>Open today until 10 AM</p>
             <ul class="today-hours" data-status-hours>
@@ -269,63 +382,174 @@
         </div>
 
         <div class="button-row" style="margin-top: var(--space-7)">
-          <a class="button button-secondary" href="menu.html">View full menu</a>
+          <button class="button button-secondary" type="button" data-menu-open>View full menu</button>
         </div>
       </div>
     </section>
 
-    <!-- Coffee philosophy preview -->
+    <!-- Our Approach -->
     <section class="section" id="philosophy">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Our approach</span>
-          <h2>A simpler menu</h2>
-        </div>
-        <p class="lede">Every drink on our menu is made with pure, raw ingredients. We do not add anything else, so the bean&rsquo;s naturally occurring flavors can be enjoyed clearly.</p>
-        <div class="button-row" style="margin-top: var(--space-5)">
-          <a class="text-link" href="philosophy.html">Read our philosophy</a>
+        <span class="eyebrow" style="display: block; margin-bottom: var(--space-5)">Our Approach</span>
+        <p class="philosophy-lede" style="margin-bottom: var(--space-7)">Every drink on our menu is made with pure, raw ingredients. We do not add anything else, so the bean&rsquo;s naturally occurring flavors can be enjoyed clearly.</p>
+
+        <h2 class="eyebrow" style="margin-bottom: var(--space-5)">What is coffee?</h2>
+        <p class="philosophy-lede">Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy.</p>
+
+        <div style="margin-top: var(--space-7)">
+          <details class="philosophy-detail">
+            <summary>Where do the tasting notes come from?</summary>
+            <div class="philosophy-detail-body">
+              <p class="philosophy-body">Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor profiles. The same is true of coffee. Every variety carries its own naturally occurring flavor notes. We source beans with relatable and recognizable flavor notes such as strawberry, peach, and peanut butter. The best way to discover how this works is to try our coffee tasting experience at our Valo Sit-Down location.</p>
+            </div>
+          </details>
+
+          <details class="philosophy-detail">
+            <summary>Why is the menu so simple?</summary>
+            <div class="philosophy-detail-body">
+              <p class="philosophy-body">The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we&rsquo;re happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most.</p>
+            </div>
+          </details>
+
+          <details class="philosophy-detail">
+            <summary>How do we make espresso?</summary>
+            <div class="philosophy-detail-body">
+              <p class="philosophy-body">We&rsquo;ve questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for smoothness. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean&rsquo;s naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
+
+    <!-- Full menu modal -->
+    <div class="menu-modal" id="menu-modal" role="dialog" aria-modal="true" aria-labelledby="menu-modal-title" hidden>
+      <div class="menu-modal-backdrop" data-menu-close></div>
+      <div class="menu-modal-card" role="document">
+        <div class="menu-modal-header">
+          <h2 id="menu-modal-title" class="eyebrow">Full menu</h2>
+          <button class="menu-modal-close" type="button" aria-label="Close menu" data-menu-close>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+              <line x1="5" y1="5" x2="19" y2="19" />
+              <line x1="19" y1="5" x2="5" y2="19" />
+            </svg>
+          </button>
+        </div>
+        <div class="menu-modal-body" data-menu-body>
+          <article class="menu-card menu-card-warm paper-menu-card">
+
+            <section class="menu-section-block">
+              <h2 class="menu-section-label">Coffee</h2>
+              <div class="paper-menu">
+                <div class="paper-menu-step paper-step-drink">
+                  <ul class="menu-list">
+                    <li class="menu-row"><span class="row-label-area"><strong class="label">latte</strong></span><span class="meta meta-strong">7</span></li>
+                    <li class="menu-row"><span class="row-label-area"><strong class="label">coffee</strong></span><span class="meta meta-strong">5</span></li>
+                    <li class="menu-row"><span class="row-label-area"><strong class="label">cappuccino</strong><span class="row-option">traditional or extra milk</span></span><span class="meta meta-strong">7</span></li>
+                    <li class="menu-row"><span class="row-label-area"><strong class="label">flat white</strong><span class="row-option">traditional or extra milk</span></span><span class="meta meta-strong">7</span></li>
+                    <li class="menu-row"><span class="row-label-area"><strong class="label">cortado</strong><span class="row-option">traditional or extra milk</span></span><span class="meta meta-strong">5&ndash;7</span></li>
+                    <li class="menu-row"><span class="row-label-area"><strong class="label">espresso</strong></span><span class="meta meta-strong">5</span></li>
+                  </ul>
+                </div>
+
+                <div class="paper-menu-step paper-step-bean">
+                  <p class="paper-menu-num">Bean Menu</p>
+                  <ul class="menu-list">
+                    <li class="menu-row"><strong class="label">dark &amp; smoky</strong><span class="meta">colombia</span></li>
+                    <li class="menu-row"><strong class="label">peanut butter</strong><span class="meta">brazil</span></li>
+                    <li class="menu-row"><strong class="label">peach</strong><span class="meta">colombia</span></li>
+                    <li class="menu-row"><strong class="label">strawberry</strong><span class="meta">honduras</span></li>
+                    <li class="menu-row"><strong class="label">apple spice</strong><span class="meta">colombia</span></li>
+                    <li class="menu-row"><strong class="label">decaf</strong><span class="meta">mexico</span></li>
+                  </ul>
+                  <p class="menu-note" style="margin-top: var(--space-4)">Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.</p>
+                </div>
+
+                <div class="paper-menu-optional">
+                  <p class="paper-menu-optional-label">Optional</p>
+                  <ul class="menu-list">
+                    <li class="menu-row"><span class="label">vanilla</span></li>
+                    <li class="menu-row"><span class="label">mocha</span></li>
+                    <li class="menu-row"><span class="label">caramel</span></li>
+                    <li class="menu-row"><span class="label">sugar</span></li>
+                    <li class="menu-row"><span class="label">brown sugar</span></li>
+                    <li class="menu-row"><span class="label">honey</span></li>
+                    <li class="menu-row"><span class="label">maple</span></li>
+                    <li class="menu-row"><span class="label">splenda</span></li>
+                    <li class="menu-row"><span class="label">stevia</span></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="menu-section-block not-coffee-card">
+              <h2 class="menu-section-label">Not coffee</h2>
+              <ul class="menu-list">
+                <li class="menu-row"><span class="label">cocoa latte</span><span class="meta meta-strong">5</span></li>
+                <li class="menu-row"><span class="label">chai latte</span><span class="meta meta-strong">7</span></li>
+                <li class="menu-row"><span class="label">matcha latte</span><span class="meta meta-strong">7</span></li>
+                <li class="menu-row"><span class="label">ube latte</span><span class="meta meta-strong">7</span></li>
+                <li class="menu-row"><span class="label">golden latte</span><span class="meta meta-strong">7</span></li>
+                <li class="menu-row"><span class="label">butterfly lemonade</span><span class="meta meta-strong">7</span></li>
+                <li class="menu-row"><span class="label">hibiscus yuzu</span><span class="meta meta-strong">7</span></li>
+              </ul>
+            </section>
+
+            <section class="menu-section-block resort-tasting-card">
+              <h2 class="menu-section-label">Tasting experience</h2>
+              <p class="resort-tasting-footnote" style="margin-bottom: var(--space-5)">Tasting experiences are available at Valo Sit-Down only.</p>
+
+              <div class="resort-tasting-items">
+                <div class="resort-tasting-item">
+                  <div class="menu-row">
+                    <strong class="label">coffee tasting experience</strong>
+                    <span class="meta meta-strong">19</span>
+                  </div>
+                  <p class="resort-tasting-desc">Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu.</p>
+                </div>
+
+                <div class="resort-tasting-item">
+                  <div class="menu-row">
+                    <strong class="label">not coffee tasting experience</strong>
+                    <span class="meta meta-strong">19</span>
+                  </div>
+                  <p class="resort-tasting-desc">Four not coffee lattes of your choice, served as a sample flight, then any full-size drink from the menu.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="menu-section-block beans-card">
+              <h2 class="menu-section-label">Coffee beans</h2>
+              <p class="paper-menu-num">half pound bag</p>
+              <ul class="menu-list">
+                <li class="menu-row"><span class="label">dark &amp; smoky</span><span class="meta meta-strong">22</span></li>
+                <li class="menu-row"><span class="label">peanut butter</span><span class="meta meta-strong">22</span></li>
+                <li class="menu-row"><span class="label">peach</span><span class="meta meta-strong">22</span></li>
+                <li class="menu-row"><span class="label">strawberry</span><span class="meta meta-strong">22</span></li>
+                <li class="menu-row"><span class="label">apple spice</span><span class="meta meta-strong">22</span></li>
+                <li class="menu-row"><span class="label">decaf</span><span class="meta meta-strong">22</span></li>
+              </ul>
+              <p class="beans-card-footnote">Available at both locations. For custom grinding and vacuum sealing, visit Valo Sit-Down.</p>
+            </section>
+
+          </article>
+        </div>
+      </div>
+    </div>
 
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Valo Curbside</h4>
-          <ul>
-            <li>1500 AZ-69D, Prescott, AZ</li>
-            <li>Daily, 7 AM &ndash; 6 PM</li>
-            <li><a href="https://maps.app.goo.gl/pQiKMV2w1YkQii3p9" target="_blank" rel="noopener">Get directions</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Valo Sit-Down</h4>
-          <ul>
-            <li>1500 AZ-69, Prescott, AZ</li>
-            <li>Inside the Prescott Resort</li>
-            <li>Wed&ndash;Fri, 7 AM &ndash; 10 AM</li>
-            <li>Sat&ndash;Sun, 7 AM &ndash; 2 PM</li>
-            <li><a href="https://maps.app.goo.gl/BHweLz91EeAwYa32A" target="_blank" rel="noopener">Get directions</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="tel:+19289106087">928-910-6087</a></li>
-            <li><a href="mailto:support@valocoffee.com">support@valocoffee.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
+      <div class="footer-simple">
+        <a href="tel:+19289106087">928-910-6087</a>
+        <a href="mailto:support@valocoffee.com">support@valocoffee.com</a>
         <span>&copy; Valo Coffee</span>
-        <span>Prescott, Arizona</span>
       </div>
     </div>
   </footer>
 
   <script src="assets/js/status.js?v=2" defer></script>
+  <script src="assets/js/carousel.js?v=1" defer></script>
+  <script src="assets/js/menu.js?v=1" defer></script>
 </body>
 </html>

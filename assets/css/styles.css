@@ -463,6 +463,43 @@ p {
   }
 }
 
+/* ---------- Hero carousel ---------- */
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero-slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+/* Picture/img sizing is inherited from the existing .hero-media rules;
+   only the stacking needs adjusting now that it sits inside the carousel. */
+.hero-carousel .hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: auto;
+}
+
+/* Reduced motion: the global prefers-reduced-motion block already disables
+   the fade transition, and carousel.js skips rotation, so slide 1 stays static. */
+
 /* ---------- Today at Valo ---------- */
 .today-grid {
   display: grid;
@@ -1048,6 +1085,86 @@ p {
   padding-bottom: var(--space-5);
 }
 
+/* ---------- Full menu modal ---------- */
+.menu-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-modal[hidden] {
+  display: none;
+}
+
+.menu-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.menu-modal-card {
+  position: relative;
+  background: var(--color-paper-warm);
+  width: calc(100% - var(--space-6));
+  max-width: 880px;
+  max-height: min(90vh, 90dvh);
+  overflow-y: auto;
+  border-radius: 2px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-7);
+  background: var(--color-paper-warm);
+  border-bottom: 1px solid var(--color-rule-soft);
+}
+
+.menu-modal-header .eyebrow {
+  margin: 0;
+}
+
+.menu-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 2px;
+  color: var(--color-ink-quiet);
+}
+
+.menu-modal-close:hover,
+.menu-modal-close:focus-visible {
+  color: var(--color-ink);
+}
+
+body.menu-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .menu-modal-card {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    max-height: 100dvh;
+    border-radius: 0;
+  }
+  .menu-modal-header {
+    padding: var(--space-4) var(--space-5);
+  }
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--color-rule-soft);
@@ -1089,6 +1206,22 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-3);
+}
+
+.footer-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .footer-simple {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
 }
 
 @media (max-width: 700px) {
