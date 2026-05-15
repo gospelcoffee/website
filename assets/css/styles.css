@@ -1144,6 +1144,17 @@ p {
   color: var(--color-ink-quiet);
 }
 
+.menu-modal-brand-close {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-modal-brand-close:hover {
+  opacity: 0.7;
+}
+
 .menu-modal-brand-mark {
   height: 24px;
   width: auto;
