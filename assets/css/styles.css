@@ -681,11 +681,11 @@ p {
 
 .menu-section-label {
   font-size: var(--text-xs);
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-ink-quiet);
   margin: 0 0 var(--space-5);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .paper-menu {

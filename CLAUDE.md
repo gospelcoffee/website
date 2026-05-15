@@ -377,10 +377,12 @@ The printed list above mirrors the paper menu. **Latte and coffee are our two mo
 Layout rule for the digital menu page (`/menu.html`):
 - The page is a **single paper-style menu card** with internal section blocks: **Coffee** (Drinks + Bean Menu + Optional), then **Not coffee**, then **Tasting experience**, then **Coffee beans**. The page-level eyebrow is "Menu" (h1). Each section inside the card has its own small-caps section label (h2) and is separated from the next by `--space-7` of vertical padding and a thin top border.
 - The digital menu intentionally **does not display temp or milk** as separate steps. Temp and milk are decided at the counter or curbside.
-- The Coffee section shows three category columns: **Drinks**, **Bean Menu**, and **Optional**.
-- **Desktop (≥900px):** the Coffee section's category grid is three columns horizontally — Drinks (1.6fr) | Bean Menu (1fr) | Optional (1.4fr). Not coffee, Beans, and Optional each use CSS columns: 2 for compact layout.
-- **Mobile (<900px):** the Coffee category grid stacks vertically — Drinks → Bean Menu → Optional. Not coffee and Beans collapse to one CSS column. Category labels are slightly larger and more legible than on desktop.
-- **Voice rule for category labels:** use plain noun-phrase categories ("Drinks", "Bean Menu", "Optional"). Never imperatives ("pick a drink", "choose your experience"). Imperative labels tell visitors what to do; we let the structure do the guiding.
+- The Coffee section shows three category columns: drink list (no sub-label, since the section is already named Coffee), **Bean Menu**, and **Optional**.
+- **No-doubling rule:** the section's header already names the contents, so never repeat it with a sub-label inside (e.g., do not put "Drinks" inside the Coffee section — the drink list sits directly under the Coffee section label). Sub-labels are only used when the column adds a *new* concept on top of the section (Bean Menu = which bean to pick, Optional = add-ins/sweeteners).
+- **Desktop (≥900px):** the Coffee section's category grid is three columns horizontally — drink list (1.6fr) | Bean Menu (1fr) | Optional (1.4fr). Not coffee, Beans, and Optional each use CSS columns: 2 for compact layout.
+- **Mobile (<900px):** the Coffee category grid stacks vertically — drink list → Bean Menu → Optional. Not coffee and Beans collapse to one CSS column. Sub-labels are slightly larger and more legible than on desktop.
+- **Voice rule for sub-labels:** use plain noun-phrase categories ("Bean Menu", "Optional"). Never imperatives ("pick a drink", "choose your experience"). The structure does the guiding.
+- **Subtle section labels:** the four section labels (Coffee, Not coffee, Tasting experience, Coffee beans) use a quiet uppercase small-caps style at normal (400) weight, not bold — they organize the card without competing with the items.
 - **Drink rows with size options**: cappuccino, flat white, and cortado each show name + "traditional or extra milk" italic note + price on a single row, using a flex label-area inside the menu-row. The option text wraps below the name only on very narrow viewports.
 - The home page menu preview is intentionally simpler (coffee + beans only) and does not mirror this layout — see section 5 item 4.
 
