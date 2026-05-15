@@ -1139,8 +1139,14 @@ p {
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
+  padding: var(--space-2);
   border-radius: 2px;
   color: var(--color-ink-quiet);
+}
+
+.menu-modal-brand-mark {
+  height: 24px;
+  width: auto;
 }
 
 .menu-modal-close:hover,
