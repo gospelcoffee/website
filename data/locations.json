@@ -11,8 +11,8 @@
       "phoneDisplay": "928-910-6087",
       "timezone": "America/Phoenix",
       "directionsUrl": "https://maps.app.goo.gl/pQiKMV2w1YkQii3p9",
-      "positioning": "Specialty coffee at drive-thru speeds.",
-      "blurb": "Drive up, stay in your car, and we bring your coffee to you. Specialty coffee at drive-thru speeds.",
+      "positioning": "Specialty coffee at drive-through speed.",
+      "blurb": "Drive up, stay in your car, and we bring your coffee to you.",
       "hours": [
         { "day": "Monday", "open": "07:00", "close": "18:00" },
         { "day": "Tuesday", "open": "07:00", "close": "18:00" },
@@ -25,8 +25,8 @@
     },
     {
       "id": "resort",
-      "name": "Valo Sit-Down",
-      "shortName": "Sit-Down",
+      "name": "Valo",
+      "shortName": "Resort",
       "addressLine1": "1500 AZ-69",
       "addressLine2": "Prescott, Arizona",
       "addressFull": "1500 AZ-69, Prescott, AZ",
@@ -35,7 +35,7 @@
       "timezone": "America/Phoenix",
       "directionsUrl": "https://maps.app.goo.gl/BHweLz91EeAwYa32A",
       "positioning": "The Valo tasting experience lives here.",
-      "blurb": "Sit down, take in the view of Prescott, and try our coffees. The Valo tasting experience lives here.",
+      "blurb": "Sit down, enjoy the view of Prescott, and explore the coffees we're serving.",
       "hours": [
         { "day": "Monday", "open": null, "close": null },
         { "day": "Tuesday", "open": null, "close": null },
