@@ -9,7 +9,9 @@ This file is the source of truth for how the Valo Coffee website should look, so
 
 ## 1. What this project is
 
-A static marketing website for Valo Coffee (Prescott, Arizona) hosted on GitHub Pages. Two physical locations: **Valo Curbside** (the drive-up location) and **Valo** at the Prescott Resort (the sit-down location, inside the Prescott Resort lobby). Valo is never called "Valo Resort" — Valo is not a resort. See the location naming rule in section 3.
+A static marketing website for Valo Coffee (Prescott, Arizona) hosted on GitHub Pages. Two physical locations: **Valo Curbside** (the drive-thru location, 1500 AZ-69D) and **Valo Sit-Down** (the sit-down location, 1500 AZ-69, inside the Prescott Resort). The sit-down location is never called "Valo" alone in copy — it's always "Valo Sit-Down" so visitors can distinguish it from the brand and from Curbside. Never "Valo Resort." See the location naming rule in section 3.
+
+**Site architecture (May 2026 consolidation):** the site is now a single-page experience. The homepage `/` contains Hero → Visit Valo → Menu (with simplified ⇄ full toggle) → Our Approach → slim footer. Legacy `/locations.html`, `/menu.html`, and `/philosophy.html` exist only as `noindex` redirect documents that send visitors to the corresponding homepage section. The 404 page uses the same simplified header and slim footer.
 
 The site exists to make visitors feel informed, excited, and driven to visit. It is not a directory listing, not an ordering app, and not a generic cafe site.
 
@@ -92,7 +94,8 @@ Valo should NOT feel: busy, generic, trendy, gimmicky, colorful, app-like, over-
 - **Don't take credit for the flavor.** Valo does not "highlight," "bring out," or "enhance" the flavors of its ingredients. The flavor is already in the ingredient. Our role is restraint — we don't add anything that would distract from it. The point of that restraint is the *customer's enjoyment*: pure ingredients can be enjoyed clearly. Use verbs that describe the customer's experience (enjoyed clearly, enjoyed purely, experienced cleanly), what the flavor does (comes through, emerges, stays clear), and our restraint (we never add, we don't distract). Avoid verbs that put Valo in the active position of producing flavor (highlight, bring out, enhance, draw out, accentuate, amplify). Also avoid mechanical framings that stop at "the flavor comes through" without connecting to why that matters for the person drinking it.
 - **Avoid "natural flavor(s)" as a noun phrase.** On packaged-food ingredient lists, "natural flavors" is a regulated catch-all that can refer to chemically extracted flavor concentrates. We don't use anything like that, and our copy shouldn't echo that wording. Use "naturally occurring flavors", "naturally occurring tasting notes", "the flavor that's already in the bean/ingredient", or similar — phrasing that makes clear we're describing what's inherent to the ingredient, not an additive.
 - **Be binary and direct.** No "maybe," "sort of," "one of the," "kind of," "could be," "a coffee experience for some people."
-- **Never call the sit-down location "Valo Resort."** Valo is not a resort — it's a coffee brand with a location *inside* the Prescott Resort. The location's name is **Valo**. When the location must be disambiguated from Valo Curbside, use surrounding context like "inside the Prescott Resort" or "at the Prescott Resort." Never write the two words "Valo Resort" together as a title, eyebrow, heading, footer label, page title, or schema.org @name. Same for any near-form (e.g., "Valo at Resort", "Valo's Resort", "the Valo Resort"). The host hotel is "the Prescott Resort"; that's distinct from us.
+- **Location naming rule.** The two locations are **Valo Curbside** (drive-thru, 1500 AZ-69D) and **Valo Sit-Down** (1500 AZ-69, inside the Prescott Resort). Never call the sit-down location just "Valo" alone in customer-facing copy — that conflicts with the brand name and confuses visitors who don't know which location is which. Never write "Valo Resort"; the host hotel is "the Prescott Resort" but Valo is not a resort. "Inside the Prescott Resort" is acceptable supporting context, but not a substitute for the location name. The brand is "Valo Coffee"; the locations are "Valo Curbside" and "Valo Sit-Down."
+- **"drive-thru" not "drive-through."** Use "drive-thru" as the standard spelling. Pluralize "speeds" in the positioning line: "Specialty coffee at drive-thru speeds." (plural, casual, matches the brand voice).
 - **Never claim drink scope.** Latte and black coffee are the two coffees we list because they're our most popular — they are not the totality. We can make any espresso drink to order (cortado, cappuccino, flat white, and more). Copy must never say "two drinks", "only two coffees", or anything that implies the printed list is the limit.
 - **Do not soften strong claims.** "Some of the best coffee in Prescott" → "The best coffee in Arizona." "A quality-focused beverage experience" → "Coffee chosen by flavor and made with precision."
 - **"Best coffee" language is allowed.** There is no rule against it. Use with restraint and confidence — don't force it everywhere, don't avoid it.
@@ -217,7 +220,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Locations page
 
 - Headline: "Two ways to visit Valo."
-- Curbside section: address, status, "Drive up, we'll take your order and bring your drink to you. Specialty coffee at drive-through speed." Positioning line: "Specialty coffee at drive-through speed." Never write "the best coffee at drive-through speed" — "best" in that phrase narrows the claim to "best for a drive-through" rather than best overall.
+- Curbside section: address, status, "Drive up, stay in your car, and we bring your coffee to you. Specialty coffee at drive-thru speeds." Positioning line: "Specialty coffee at drive-thru speeds." Never write "the best coffee at drive-thru speeds" — "best" in that phrase narrows the claim to "best for a drive-thru" rather than best overall.
 - Resort section: address, status, "Valo is inside the Prescott Resort, located in the lobby." Positioning line: "The Valo tasting experience lives here."
 - Directions: clean address + directions button + arrival instructions + minimal line illustration. No embedded Google Map as primary visual. Directions button can open Google Maps in a new tab.
 
@@ -325,7 +328,7 @@ Each page: unique title, meta description, clear H1, clean heading hierarchy, re
 
 **Valo Curbside** — 1500 AZ-69D, Prescott, AZ. Drive up, we'll take your order and bring your drink to you.
 
-**Valo** (sit-down location, inside the Prescott Resort) — 1500 AZ-69, Prescott, AZ. Sit-down, view of Prescott, tasting experience lives here. Never label this location "Valo Resort." See the location naming rule in section 3.
+**Valo Sit-Down** (inside the Prescott Resort) — 1500 AZ-69, Prescott, AZ. Sit-down, view of Prescott, tasting experience lives here. Never label this location "Valo" alone or "Valo Resort." See the location naming rule in section 3.
 
 Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix`.
 
