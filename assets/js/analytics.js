@@ -1,5 +1,13 @@
 /* Valo Coffee — analytics
- * Sends a uniquely named GA4 event for every meaningful interaction.
+ * Sends a uniquely named GA4 event for every meaningful interaction, each
+ * enriched with a consistent parameter schema so the user journey is
+ * unambiguous in reporting:
+ *   ux_area   - region of the page the interaction happened in
+ *   ux_action - the verb (what the user did), shared across related events
+ *               so they roll up (e.g. every way of closing the menu)
+ *   ux_detail - the exact trigger (which button / location / question)
+ *   state     - philosophy collapsibles only: "open" or "closed"
+ *
  * Event names are declared via data-ga on the element; modal-Escape and the
  * ?menu=full deep link are handled explicitly. No-ops if gtag is unavailable
  * (e.g. blocked), so it never breaks the page.
@@ -7,11 +15,35 @@
 (function () {
   "use strict";
 
-  function track(name, params) {
-    if (!name) return;
-    if (typeof window.gtag === "function") {
-      window.gtag("event", name, params || {});
-    }
+  /* name -> { ux_area, ux_action, ux_detail }
+     Same ux_action across related events lets GA4 group them (e.g. filter
+     ux_action = close_full_menu, break down by ux_detail to see whether
+     people use the X, the wordmark, the backdrop, or Escape). */
+  const META = {
+    hero_visit_valo:          { ux_area: "hero",         ux_action: "scroll_to_visit_valo", ux_detail: "hero_button" },
+    hero_see_menu:            { ux_area: "hero",         ux_action: "scroll_to_menu",       ux_detail: "hero_button" },
+    viewmenu_curbside:        { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "curbside_card" },
+    viewmenu_sitdown:         { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "sitdown_card" },
+    directions_curbside:      { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "curbside" },
+    directions_sitdown:       { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "sitdown" },
+    full_menu_open:           { ux_area: "menu_preview", ux_action: "open_full_menu",       ux_detail: "view_full_menu_button" },
+    menu_deeplink_opened:     { ux_area: "full_menu",    ux_action: "open_full_menu",       ux_detail: "deeplink" },
+    full_menu_close_x:        { ux_area: "full_menu",    ux_action: "close_full_menu",      ux_detail: "x_button" },
+    full_menu_close_wordmark: { ux_area: "full_menu",    ux_action: "close_full_menu",      ux_detail: "wordmark" },
+    full_menu_close_backdrop: { ux_area: "full_menu",    ux_action: "close_full_menu",      ux_detail: "backdrop" },
+    full_menu_close_escape:   { ux_area: "full_menu",    ux_action: "close_full_menu",      ux_detail: "escape_key" },
+    philosophy_what_is_coffee:{ ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "what_is_coffee" },
+    philosophy_tasting_notes: { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "tasting_notes" },
+    philosophy_menu_simple:   { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "menu_simple" },
+    philosophy_espresso:      { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "espresso" },
+    contact_phone:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "phone" },
+    contact_email:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "email" }
+  };
+
+  function track(name, extra) {
+    if (!name || typeof window.gtag !== "function") return;
+    const params = Object.assign({}, META[name] || {}, extra || {});
+    window.gtag("event", name, params);
   }
 
   /* Click-driven events: any element (or ancestor) carrying data-ga.
@@ -23,8 +55,8 @@
     track(el.getAttribute("data-ga"));
   });
 
-  /* Philosophy collapsibles: one unique event name per question, with the
-     open/closed state as a parameter. */
+  /* Philosophy collapsibles: one unique event name per question, plus the
+     open/closed direction so you can see what people actually expand. */
   document.querySelectorAll("details[data-ga]").forEach(function (d) {
     d.addEventListener("toggle", function () {
       track(d.getAttribute("data-ga"), { state: d.open ? "open" : "closed" });
