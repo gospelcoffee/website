@@ -9,7 +9,7 @@ This file is the source of truth for how the Valo Coffee website should look, so
 
 ## 1. What this project is
 
-A static marketing website for Valo Coffee (Prescott, Arizona) hosted on GitHub Pages. Two physical locations: **Valo Curbside** (the drive-up location) and **Valo** at the Prescott Resort (the sit-down location, inside the Prescott Resort lobby). Valo is never called "Valo Resort" — Valo is not a resort. See the location naming rule in section 3.
+A static marketing website for Valo Coffee (Prescott, Arizona) hosted on GitHub Pages. Two physical locations: **Valo Curbside** (the drive-thru location, 1500 AZ-69D) and **Valo Sit-Down** (the sit-down location, 1500 AZ-69, inside the Prescott Resort lobby). The sit-down location is never called "Valo" alone or "Valo Resort" — it's always **Valo Sit-Down**. See the location naming rule in section 3.
 
 The site exists to make visitors feel informed, excited, and driven to visit. It is not a directory listing, not an ordering app, and not a generic cafe site.
 
@@ -18,8 +18,8 @@ The site exists to make visitors feel informed, excited, and driven to visit. It
 After visiting the site, a person should know:
 1. Valo has the best coffee in Arizona.
 2. Whether Valo Curbside is open right now (and if not, when it opens).
-3. Whether Valo inside the Prescott Resort is open right now (and if not, when it opens).
-4. The difference between Curbside and the Prescott Resort location.
+3. Whether Valo Sit-Down is open right now (and if not, when it opens).
+4. The difference between Valo Curbside and Valo Sit-Down.
 5. How to get to either location.
 6. How to choose from the menu.
 7. That the brand is premium, careful, precise, and worth visiting intentionally.
@@ -92,7 +92,8 @@ Valo should NOT feel: busy, generic, trendy, gimmicky, colorful, app-like, over-
 - **Don't take credit for the flavor.** Valo does not "highlight," "bring out," or "enhance" the flavors of its ingredients. The flavor is already in the ingredient. Our role is restraint — we don't add anything that would distract from it. The point of that restraint is the *customer's enjoyment*: pure ingredients can be enjoyed clearly. Use verbs that describe the customer's experience (enjoyed clearly, enjoyed purely, experienced cleanly), what the flavor does (comes through, emerges, stays clear), and our restraint (we never add, we don't distract). Avoid verbs that put Valo in the active position of producing flavor (highlight, bring out, enhance, draw out, accentuate, amplify). Also avoid mechanical framings that stop at "the flavor comes through" without connecting to why that matters for the person drinking it.
 - **Avoid "natural flavor(s)" as a noun phrase.** On packaged-food ingredient lists, "natural flavors" is a regulated catch-all that can refer to chemically extracted flavor concentrates. We don't use anything like that, and our copy shouldn't echo that wording. Use "naturally occurring flavors", "naturally occurring tasting notes", "the flavor that's already in the bean/ingredient", or similar — phrasing that makes clear we're describing what's inherent to the ingredient, not an additive.
 - **Be binary and direct.** No "maybe," "sort of," "one of the," "kind of," "could be," "a coffee experience for some people."
-- **Never call the sit-down location "Valo Resort."** Valo is not a resort — it's a coffee brand with a location *inside* the Prescott Resort. The location's name is **Valo**. When the location must be disambiguated from Valo Curbside, use surrounding context like "inside the Prescott Resort" or "at the Prescott Resort." Never write the two words "Valo Resort" together as a title, eyebrow, heading, footer label, page title, or schema.org @name. Same for any near-form (e.g., "Valo at Resort", "Valo's Resort", "the Valo Resort"). The host hotel is "the Prescott Resort"; that's distinct from us.
+- **Location naming: Valo Curbside and Valo Sit-Down.** The drive-thru location is **Valo Curbside**. The sit-down location is **Valo Sit-Down** — never "Valo" alone, never "Valo Resort", never "Valo at the Prescott Resort" as the primary name. Valo Sit-Down happens to be located inside the Prescott Resort lobby, but the location's *name* is Valo Sit-Down. "Inside the Prescott Resort" is acceptable as a wayfinding sub-line (e.g., on an address card) but never as the location's positioning or primary label. Never write "Valo Resort" or near-forms like "Valo at Resort", "Valo's Resort", "the Valo Resort". Use **Valo Sit-Down** consistently in titles, eyebrows, headings, footer labels, page titles, schema.org @name fields, and the tasting-experience availability note ("Tasting experiences are available at Valo Sit-Down only.").
+- **"drive-thru" not "drive-through."** And **"drive-thru speeds"** (plural) when describing the Curbside experience. Example: "Specialty coffee at drive-thru speeds." Never write "the best coffee at drive-thru speeds" — "best" in that phrase narrows the claim to "best for a drive-thru" rather than best overall.
 - **Never claim drink scope.** Latte and black coffee are the two coffees we list because they're our most popular — they are not the totality. We can make any espresso drink to order (cortado, cappuccino, flat white, and more). Copy must never say "two drinks", "only two coffees", or anything that implies the printed list is the limit.
 - **Do not soften strong claims.** "Some of the best coffee in Prescott" → "The best coffee in Arizona." "A quality-focused beverage experience" → "Coffee chosen by flavor and made with precision."
 - **"Best coffee" language is allowed.** There is no rule against it. Use with restraint and confidence — don't force it everywhere, don't avoid it.
@@ -217,16 +218,19 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 ### Locations page
 
 - Headline: "Two ways to visit Valo."
-- Curbside section: address, status, "Drive up, we'll take your order and bring your drink to you. Specialty coffee at drive-through speed." Positioning line: "Specialty coffee at drive-through speed." Never write "the best coffee at drive-through speed" — "best" in that phrase narrows the claim to "best for a drive-through" rather than best overall.
-- Resort section: address, status, "Valo is inside the Prescott Resort, located in the lobby." Positioning line: "The Valo tasting experience lives here."
+- Valo Curbside section: address, status, body copy "Drive up, stay in your car, and we bring your coffee to you." Positioning line: "Specialty coffee at drive-thru speeds."
+- Valo Sit-Down section: address (1500 AZ-69 · Inside the Prescott Resort), status, body copy "Sit down, take in the view of Prescott, and try our coffees." Positioning line: "The Valo tasting experience lives here." Eyebrow: "Valo Sit-Down".
 - Directions: clean address + directions button + arrival instructions + minimal line illustration. No embedded Google Map as primary visual. Directions button can open Google Maps in a new tab.
 
 ### Menu page
 
-- Headline: "Menu." Supporting: "Choose your drink. Choose your bean."
-- Core menu card mirrors the paper menu's spacing and simplicity.
-- **Inside Prescott Resort feature** card highlights the tasting experience ($19) — frame as a feature, not a disclaimer. Don't make Curbside feel like it's missing something.
-- **Coffee beans note**: "Whole beans are available at both locations. For custom grinding and vacuum sealing, visit us inside the Prescott Resort." Never write "Curbside does not grind beans" — frame the positive.
+- Page eyebrow: "Coffee." Use category labels, not imperatives — no "pick", no "choose".
+- Core menu card mirrors the paper menu's spacing and simplicity. Step labels are non-imperative category words: **Drinks**, **Bean Menu**, **Optional**.
+- Coffee category includes: latte, coffee, cappuccino, flat white, cortado, espresso. Cappuccino and flat white show "traditional or extra milk" as a sub-line. Only latte (7) and coffee (5) have printed prices — new items don't have invented prices.
+- **Bean Menu** is the section heading for beans. Beneath the list, the bean note reads: "Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans."
+- **Optional** is a single flat list (no add-in/sweetener sub-headings): vanilla, mocha, caramel, sugar, brown sugar, honey, maple, splenda, stevia.
+- **Tasting experience** card opens with the availability note at the top: "Tasting experiences are available at Valo Sit-Down only." Then lists coffee tasting experience (19) and not coffee tasting experience (19). Frame as a feature, not a disclaimer. Don't make Curbside feel like it's missing something.
+- **Coffee beans note**: "Available at both locations. For custom grinding and vacuum sealing, visit Valo Sit-Down." Never write "Curbside does not grind beans" — frame the positive.
 - Menu must be real HTML text, printable, mobile-readable.
 
 ### Philosophy page
@@ -238,12 +242,11 @@ Same clean intro pattern as the menu and locations pages: small eyebrow header �
 **Stand-alone rule**: because the four lower questions are collapsibles whose answers are hidden by default, each question must make sense on its own without the answer visible. Name the subject in the question — "Why is the menu so simple?" not "Why so simple?" (simple what?). A visitor scanning the collapsed list should be able to tell what each question is about before deciding whether to expand it.
 
 Structure:
-1. **Page header + opening lede** in one section, always expanded at the top of the page. Header question: "What is coffee?" Answer: "Coffee, to us, is any drink where you can clearly taste the bean. If sweetener and milk drown it out, that's coffee flavoring, not coffee."
-2. **Four collapsible question/answer sections**, each using `<details class="philosophy-detail">` + `<summary>Question?</summary>`. They start collapsed so the page reads light; visitors expand the ones they care about. The summary uses the same small-caps eyebrow styling as the page header, plus a `+` indicator that flips to `−` when open. Order moves from where flavor comes from → why our offering is simple → how we make it → how we serve you:
-   - **Where do the tasting notes come from?** — one paragraph using an apples-have-varietals analogy to explain that every coffee variety carries its own naturally occurring flavor, that we source beans whose flavor matches a recognizable note (strawberry, peach, peanut butter), and that nothing is added before or after the roast. Confidence-building and lightly scientific without being jargony.
-   - **Why so simple?** — combines what used to be two separate sections (short menu + few add-ins). The point is that simplicity runs through everything: the menu is short, the add-in list is short, AND the ingredients of each add-in are short (cocoa is just cacao, salt, and water; honey is just honey; maple is 100% pure maple; vanilla is pure vanilla extract). Do not name specific drinks we "don't sell" (we sell chai, for example); the list is short, not prohibitive.
-   - **How do we make espresso?** — we question every traditional espresso parameter (doses, temps, pressure, crema); every detail is tested, and we only keep what proves to be meaningfully better.
-   - **How do we make the perfect drink?** — every drink starts the same way, made exactly the way we know to be best, then it gets personal. We ask every customer to taste their drink and we'll adjust anything to make it perfectly theirs. The two-part structure is **first we make it right, then we make it yours**. Do NOT frame this as "we make mistakes and fix them" — the drink is made right; the personalization is the individual's preference, not a correction. Avoid phrases like "make it right" or "if anything needs adjusting" that imply error. Also do NOT frame restraint as "we know you'd rate this higher with more sweetener but we won't" — that reads as us serving drinks against the customer's interest.
+1. **Page header + opening lede** in one section, always expanded at the top of the page. Header question: "What is coffee?" Answer: "Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy."
+2. **Three collapsible question/answer sections**, each using `<details class="philosophy-detail">` + `<summary>Question?</summary>`. They start collapsed so the page reads light; visitors expand the ones they care about. The summary uses the same small-caps eyebrow styling as the page header, plus a `+` indicator that flips to `−` when open. Order moves from where flavor comes from → why our offering is simple → how we make it:
+   - **Where do the tasting notes come from?** — one paragraph: coffee is the seed of a coffee cherry; like any fruit, varietals taste different (Honeycrisp vs. Granny Smith); every coffee variety carries its own naturally occurring flavor notes; we source beans whose flavor matches a recognizable note (strawberry, peach, peanut butter); we close by pointing to the coffee tasting experience at Valo Sit-Down as the best way to discover this.
+   - **Why is the menu so simple?** — simplicity runs through everything: the menu is short, the add-in list is short, AND the ingredients of each add-in are short (cocoa is just cacao, salt, and water; honey is just honey; maple is 100% pure maple; vanilla is pure vanilla extract). Do not name specific drinks we "don't sell" (we sell chai, for example); the list is short, not prohibitive.
+   - **How do we make espresso?** — we question every traditional espresso parameter (doses, temps, pressure); every detail is tested, and we only keep what proves to be meaningfully better. The closing sentence is: "Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make."
 3. Bottom CTA row: Visit Valo | View the menu.
 
 Voice rules apply: no en/em-dashes in copy, no "natural flavors" as a noun phrase (use "naturally occurring"), no claiming Valo "highlights" or "enhances" flavor, no claiming drink scope. Don't copy the employee guide verbatim — translate internal positions to public-facing copy, and verify each claim against what we actually sell (e.g., the internal guide says "we don't have chai as a flavor of latte" but we do sell a chai latte as a not-coffee drink — be careful not to overclaim). Don't over-explain. Don't tell customers what to order.
@@ -308,7 +311,7 @@ Each page: unique title, meta description, clear H1, clean heading hierarchy, re
 - 404: `Not Found | Valo Coffee` (with `noindex`)
 
 **Required structured data (JSON-LD `application/ld+json`):**
-- **Home**: WebSite, Organization (with legalName "Gospel Coffee LLC", logo, image, telephone, email, areaServed), two CafeOrCoffeeShop entities (Valo Curbside, Valo at the Prescott Resort) with priceRange, image, openingHoursSpecification, hasMenu, servesCuisine.
+- **Home**: WebSite, Organization (with legalName "Gospel Coffee LLC", logo, image, telephone, email, areaServed), two CafeOrCoffeeShop entities (Valo Curbside, Valo Sit-Down) with priceRange, image, openingHoursSpecification, hasMenu, servesCuisine.
 - **Locations**: BreadcrumbList + the two CafeOrCoffeeShop entities (same enrichment).
 - **Menu**: BreadcrumbList + Menu entity with hasMenuSection for Coffee, Beans, Not coffee, Tasting experience, Coffee beans (all items with MenuItem + Offer/price).
 - **Philosophy**: BreadcrumbList + FAQPage with each section's question/answer (the collapsibles map directly to FAQ entries — this is what lets the page appear as a rich result in Google "People also ask" style).
@@ -323,9 +326,9 @@ Each page: unique title, meta description, clear H1, clean heading hierarchy, re
 
 ## 9. Locations (factual)
 
-**Valo Curbside** — 1500 AZ-69D, Prescott, AZ. Drive up, we'll take your order and bring your drink to you.
+**Valo Curbside** — 1500 AZ-69D, Prescott, AZ. Drive up, stay in your car, and we bring your coffee to you.
 
-**Valo** (sit-down location, inside the Prescott Resort) — 1500 AZ-69, Prescott, AZ. Sit-down, view of Prescott, tasting experience lives here. Never label this location "Valo Resort." See the location naming rule in section 3.
+**Valo Sit-Down** (inside the Prescott Resort lobby) — 1500 AZ-69, Prescott, AZ. Sit down, view of Prescott, tasting experience lives here. Never call this location "Valo" alone or "Valo Resort." See the location naming rule in section 3.
 
 Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix`.
 
@@ -336,13 +339,16 @@ Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix
 The paper menu is laid out in six numbered steps across one horizontal row, with a "not coffee" section beneath. Steps 5 and 6 sit under an "optional" divider. Within each step, **bold** items are the standard options and regular-weight items are secondary/accommodation options.
 
 ```text
-1. pick a drink              2. pick a temp 3. pick a milk   4. pick a bean                     optional ─────────────
-   latte                7       hot            whole            dark & smoky    colombia        5. pick add-ins    6. pick a sweetener
-   coffee               5       iced           oat              peanut butter   brazil             vanilla            sugar
-                                extra hot      half & half      peach           colombia           mocha              brown sugar
-                                kids' temp                      strawberry      honduras           caramel            honey
-                                                                apple spice     colombia                              maple
-                                                                decaf           mexico                                splenda | stevia
+Drinks                          Bean Menu                          Optional
+   latte                7          dark & smoky    colombia           vanilla
+   coffee               5          peanut butter   brazil             mocha
+   cappuccino                      peach           colombia           caramel
+     traditional or extra milk     strawberry      honduras           sugar
+   flat white                      apple spice     colombia           brown sugar
+     traditional or extra milk     decaf           mexico             honey
+   cortado                                                            maple
+   espresso                                                           splenda
+                                                                      stevia
 
 not coffee
    cocoa latte                  5
@@ -350,34 +356,31 @@ not coffee
    matcha latte                 7
    ube latte                    7
    golden latte                 7
-   Jamaica                      7
    butterfly lemonade           7
    hibiscus yuzu                7
 
-Feature (inside the Prescott Resort)
-   tasting experience           19
-   A guided tasting of the coffees we're serving.
+Tasting experience (Valo Sit-Down only)
+   coffee tasting experience       19
+   not coffee tasting experience   19
 ```
 
 Bean ordering is fixed — do not re-rank. No defaults. No "recommended."
 
 Weight conventions (mirrored on the digital menu):
-- Step 1 latte/coffee: bold.
-- Step 2: hot/iced bold; extra hot/kids' temp regular.
-- Step 3: whole/oat bold; half & half regular.
-- Step 4 beans: all bold; origin shown in regular weight as a meta value.
-- Steps 5 & 6 (optional): all regular weight.
+- Drinks (latte, coffee, cappuccino, flat white, cortado, espresso): all bold. "traditional or extra milk" shown beneath cappuccino and flat white as a regular-weight sub-line.
+- Bean Menu: bean name bold; origin shown in regular weight as a meta value.
+- Optional: regular weight, single flat list (no sub-headings).
 - Not coffee items: regular weight; prices in bold.
 
-The printed list above mirrors the paper menu. It is not the limit of what we make. **Latte and coffee are our two most popular coffee drinks; we can prepare any specialty espresso drink to order — cortado, cappuccino, flat white, and more.** This must be communicated wherever the coffee list appears in marketing copy, but the printed/digital menu stays simple. See the copy rules in section 3.
+The printed list above mirrors the paper menu. **Latte and coffee are our two most popular coffee drinks; cappuccino, flat white, cortado, and espresso are listed as well.** Only latte (7) and coffee (5) carry printed prices. Pricing for the additional drinks is communicated in-store. Copy must never claim drink scope ("just two drinks", "only six drinks") — the menu is short, but we can make any specialty espresso drink to order.
 
 Layout rule for the digital menu page (`/menu.html`):
-- The page is composed of four separately-headed paper-style cards: **Menu** (the main menu), **Not coffee**, **Tasting experience**, and **Coffee beans**. Each card has its own small-caps eyebrow header above it (`<h1 class="eyebrow">Menu</h1>`, `<h2 class="eyebrow">Not coffee</h2>`, `<h2 class="eyebrow">Tasting experience</h2>`, `<h2 class="eyebrow">Coffee beans</h2>`) so the cards read as siblings, not nested sections.
-- The digital menu intentionally **does not display step numbers** (no "1.", "2.", etc.) and **does not display temp or milk** (steps 2 and 3 of the paper menu). The paper menu in-person still has those choices; the website strips them so the customer experience is simpler and the page is easier to scan. Temp and milk are decided at the counter or curbside.
-- The main menu card shows: **pick a drink**, **pick a bean**, **optional** (with **pick add-ins** and **pick a sweetener** beneath). It does NOT contain "not coffee" — that lives in its own card.
-- **Desktop (≥900px):** main menu card uses three columns horizontally — pick a drink | pick a bean | optional (which itself splits into add-ins + sweetener as two sub-columns). Not coffee card uses two CSS columns.
-- **Mobile (<900px):** main menu card stacks vertically — pick a drink → pick a bean → optional → (pick add-ins | pick a sweetener side-by-side). Not coffee card collapses to one column. Step labels are slightly larger and more legible than on desktop.
-- **Voice rule for step labels:** every step label leads with a verb ("pick a drink", "pick a bean", "pick a sweetener", "choose your experience"). Never just the noun ("bean") — it's too ambiguous and lacks a directive.
+- The page is composed of four separately-headed paper-style cards: **Coffee** (the main menu), **Not coffee**, **Tasting experience**, and **Coffee beans**. Each card has its own small-caps eyebrow header above it.
+- The digital menu intentionally **does not display temp or milk** as separate steps. Temp and milk are decided at the counter or curbside.
+- The main coffee card shows three category sections: **Drinks**, **Bean Menu**, and **Optional**. It does NOT contain "not coffee" — that lives in its own card.
+- **Desktop (≥900px):** main coffee card uses three columns horizontally — Drinks | Bean Menu | Optional. Not coffee card uses two CSS columns.
+- **Mobile (<900px):** main coffee card stacks vertically — Drinks → Bean Menu → Optional. Not coffee card collapses to one column. Category labels are slightly larger and more legible than on desktop.
+- **Voice rule for category labels:** use plain noun-phrase categories ("Drinks", "Bean Menu", "Optional"). Never imperatives ("pick a drink", "choose your experience"). Imperative labels tell visitors what to do; we let the structure do the guiding.
 - The home page menu preview is intentionally simpler (coffee + beans only) and does not mirror either layout — see section 5 item 4.
 
 ---
