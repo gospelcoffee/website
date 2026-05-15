@@ -188,13 +188,13 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Meta description: The Valo Coffee menu. Specialty coffee drinks, single-origin beans, not-coffee lattes, and an in-person tasting experience at Valo Sit-Down.
 
 ### Menu intro
-- Header: a single small "Coffee" label, rendered as `<h1 class="eyebrow">Coffee</h1>`. This labels the first card on the page (the main coffee menu). Each card below has its own eyebrow header (Not coffee, Tasting experience, Coffee beans), so the page reads as a sequence of labeled paper cards rather than one big "Menu" page.
+- Header: a single small "Menu" label, rendered as `<h1 class="eyebrow">Menu</h1>`. This sits above one consolidated paper menu card that contains all four sections.
 - No lede.
 
 ### Page structure
-- The menu page has four separate paper-style cards, each with its own small-caps eyebrow header above it: **Coffee** → **Not coffee** → **Tasting experience** → **Coffee beans**. The cards are siblings, not nested. Each header uses the same `<...class="eyebrow">` treatment and the same `margin-bottom: var(--space-6)` so the spacing rhythm is identical down the page.
+- The menu page is **one paper-style card** with four internal section blocks: **Coffee** (Drinks + Bean Menu + Optional) → **Not coffee** → **Tasting experience** → **Coffee beans**. Each internal section has its own small-caps section label (h2) and is separated from the next by `--space-7` of vertical padding plus a thin top border, so the sections read as related parts of one menu rather than separate cards.
 
-### Main coffee card (paper-style)
+### Coffee section (inside the menu card)
 - The digital menu does NOT display temp or milk as separate steps. Those still live on the in-person paper menu and are handled at the counter/curbside.
 - The main coffee card does NOT contain "not coffee" — it lives in its own card below.
 - Visible sections inside the main coffee card, in order: Drinks, Bean Menu, Optional.
@@ -207,17 +207,15 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Optional: single flat list, all regular weight — vanilla, mocha, caramel, sugar, brown sugar, honey, maple, splenda, stevia. No sub-headings like "pick add-ins" or "pick a sweetener".
 - Voice rule for category labels: use plain noun-phrase categories ("Drinks", "Bean Menu", "Optional"). Never imperatives ("pick a drink", "choose your experience"). The structure does the guiding.
 
-### Not coffee card (paper-style)
-- Section header above the card: `<h2 class="eyebrow">Not coffee</h2>`.
-- The card has no internal label — the eyebrow above already names the section, so the items start directly inside the card.
+### Not coffee section (inside the menu card)
+- Section label inside the card: `<h2 class="menu-section-label">Not coffee</h2>`.
 - Desktop: two CSS columns. Mobile: one column.
 - Items (item names regular, prices bold): cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7, golden latte 7, butterfly lemonade 7, hibiscus yuzu 7.
 - Retired (do not reintroduce): Jamaica. Hibiscus yuzu already covers that style of drink.
 
-### Tasting experience card (paper-style, exclusive to Valo Sit-Down)
-- Visual: same warm-paper menu card as the main menu, so the tasting experience reads as an extension of the menu, not a separate marketing block.
-- Section header above the card: `<h2 class="eyebrow">Tasting experience</h2>`.
-- The card opens with the availability note at the top: "Tasting experiences are available at Valo Sit-Down only." (italic, quiet)
+### Tasting experience section (inside the menu card, exclusive to Valo Sit-Down)
+- Section label inside the card: `<h2 class="menu-section-label">Tasting experience</h2>`.
+- The section opens with the availability note at the top: "Tasting experiences are available at Valo Sit-Down only." (italic, quiet)
 - Each option is a menu-row: bold lowercase label on the left, price `19` on the right. A short description sits as subtext beneath each row.
 - Item 1 — label: coffee tasting experience · price: 19 · description: Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu.
 - Item 2 — label: not coffee tasting experience · price: 19 · description: Four not coffee lattes of your choice, served as a sample flight, then any full-size drink from the menu.
@@ -225,10 +223,10 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Scope note: the not coffee tasting experience covers the latte-format items on the not coffee menu (cocoa, chai, matcha, ube, golden lattes). It does not include the non-latte items (butterfly lemonade, hibiscus yuzu) — those don't fit the tasting-flight format.
 - Wording rule: always "Tasting experiences are available at Valo Sit-Down only." Never "inside the Prescott Resort only" as the primary wording — use the location name consistently.
 
-### Coffee beans card (paper-style)
-- Section header above the card: `<h2 class="eyebrow">Coffee beans</h2>`.
-- Step label inside the card: half pound bag (italic, lowercase — describes the unit being sold).
-- Items: all six beans at 22 each. Same labels and order as the bean column in the main menu (dark & smoky, peanut butter, peach, strawberry, apple spice, decaf). Bean names regular weight, prices bold.
+### Coffee beans section (inside the menu card)
+- Section label inside the card: `<h2 class="menu-section-label">Coffee beans</h2>`.
+- Step label inside the section: half pound bag (italic, lowercase — describes the unit being sold).
+- Items: all six beans at 22 each. Same labels and order as the bean column in the Coffee section (dark & smoky, peanut butter, peach, strawberry, apple spice, decaf). Bean names regular weight, prices bold.
 - Desktop: two CSS columns. Mobile: one column.
 - Footnote: "Available at both locations. For custom grinding and vacuum sealing, visit Valo Sit-Down." (italic, quiet)
 

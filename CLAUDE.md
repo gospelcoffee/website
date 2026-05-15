@@ -375,13 +375,14 @@ Weight conventions (mirrored on the digital menu):
 The printed list above mirrors the paper menu. **Latte and coffee are our two most popular coffee drinks; cappuccino, flat white, cortado, and espresso are listed as well.** Prices: latte 7, coffee 5, cappuccino 7, flat white 7, cortado 5-7 (price varies by traditional vs extra milk), espresso 5. Copy must never claim drink scope ("just two drinks", "only six drinks") — the menu is short, but we can make any specialty espresso drink to order.
 
 Layout rule for the digital menu page (`/menu.html`):
-- The page is composed of four separately-headed paper-style cards: **Coffee** (the main menu), **Not coffee**, **Tasting experience**, and **Coffee beans**. Each card has its own small-caps eyebrow header above it.
+- The page is a **single paper-style menu card** with internal section blocks: **Coffee** (Drinks + Bean Menu + Optional), then **Not coffee**, then **Tasting experience**, then **Coffee beans**. The page-level eyebrow is "Menu" (h1). Each section inside the card has its own small-caps section label (h2) and is separated from the next by `--space-7` of vertical padding and a thin top border.
 - The digital menu intentionally **does not display temp or milk** as separate steps. Temp and milk are decided at the counter or curbside.
-- The main coffee card shows three category sections: **Drinks**, **Bean Menu**, and **Optional**. It does NOT contain "not coffee" — that lives in its own card.
-- **Desktop (≥900px):** main coffee card uses three columns horizontally — Drinks | Bean Menu | Optional. Not coffee card uses two CSS columns.
-- **Mobile (<900px):** main coffee card stacks vertically — Drinks → Bean Menu → Optional. Not coffee card collapses to one column. Category labels are slightly larger and more legible than on desktop.
+- The Coffee section shows three category columns: **Drinks**, **Bean Menu**, and **Optional**.
+- **Desktop (≥900px):** the Coffee section's category grid is three columns horizontally — Drinks (1.6fr) | Bean Menu (1fr) | Optional (1.4fr). Not coffee, Beans, and Optional each use CSS columns: 2 for compact layout.
+- **Mobile (<900px):** the Coffee category grid stacks vertically — Drinks → Bean Menu → Optional. Not coffee and Beans collapse to one CSS column. Category labels are slightly larger and more legible than on desktop.
 - **Voice rule for category labels:** use plain noun-phrase categories ("Drinks", "Bean Menu", "Optional"). Never imperatives ("pick a drink", "choose your experience"). Imperative labels tell visitors what to do; we let the structure do the guiding.
-- The home page menu preview is intentionally simpler (coffee + beans only) and does not mirror either layout — see section 5 item 4.
+- **Drink rows with size options**: cappuccino, flat white, and cortado each show name + "traditional or extra milk" italic note + price on a single row, using a flex label-area inside the menu-row. The option text wraps below the name only on very narrow viewports.
+- The home page menu preview is intentionally simpler (coffee + beans only) and does not mirror this layout — see section 5 item 4.
 
 ---
 

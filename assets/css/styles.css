@@ -672,6 +672,22 @@ p {
   padding: var(--space-7);
 }
 
+/* Section blocks inside the single paper menu card */
+.menu-section-block + .menu-section-block {
+  margin-top: var(--space-7);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--color-rule-soft);
+}
+
+.menu-section-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-quiet);
+  margin: 0 0 var(--space-5);
+  font-weight: 600;
+}
+
 .paper-menu {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1.4fr;
