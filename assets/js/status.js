@@ -1,4 +1,4 @@
-/* Valo Coffee — open/closed status
+/* Valo Coffee — open/closed status + menu state toggle
  * Reads /data/locations.json and updates each [data-location] block.
  * No-JS fallback: each block ships with hard-coded text in the HTML.
  */
@@ -57,6 +57,18 @@
     return location.hours.find((h) => h.day === dayName);
   }
 
+  function findNextOpen(location, dayIndex) {
+    for (let i = 1; i <= 7; i++) {
+      const next = (dayIndex + i) % 7;
+      const day = hoursForDay(location, next);
+      if (day && day.open) {
+        const label = i === 1 ? "tomorrow" : day.day;
+        return { label, open: day.open };
+      }
+    }
+    return null;
+  }
+
   function computeStatus(location) {
     const { dayIndex, hour, minute } = nowInTz(location.timezone);
     const nowMin = hour * 60 + minute;
@@ -65,52 +77,51 @@
     if (today && today.open && today.close) {
       const openMin = minutes(today.open);
       const closeMin = minutes(today.close);
+
       if (nowMin >= openMin && nowMin < closeMin) {
         return {
           open: true,
-          headline: "Open now",
-          meta: `Today, ${formatTime(today.open)} – ${formatTime(today.close)}`,
+          headline: `Open today until ${formatTime(today.close)}`,
         };
       }
+
       if (nowMin < openMin) {
         return {
           open: false,
-          headline: "Closed now",
-          meta: `Opens today at ${formatTime(today.open)}`,
+          headline: `Opens today at ${formatTime(today.open)}`,
         };
       }
-    }
 
-    for (let i = 1; i <= 7; i++) {
-      const next = (dayIndex + i) % 7;
-      const day = hoursForDay(location, next);
-      if (day && day.open) {
-        const label = i === 1 ? "Opens tomorrow at" : `Opens ${day.day} at`;
+      // Closed for the day (was open earlier)
+      const nextOpen = findNextOpen(location, dayIndex);
+      if (nextOpen) {
         return {
           open: false,
-          headline: "Closed now",
-          meta: `${label} ${formatTime(day.open)}`,
+          headline: `Closed now · Opens ${nextOpen.label} at ${formatTime(nextOpen.open)}`,
         };
       }
+      return { open: false, headline: "Closed" };
     }
 
-    return {
-      open: false,
-      headline: "Closed",
-      meta: "Hours unavailable",
-    };
+    // Closed all day today
+    const nextOpen = findNextOpen(location, dayIndex);
+    if (nextOpen) {
+      return {
+        open: false,
+        headline: `Closed today · Opens ${nextOpen.label} at ${formatTime(nextOpen.open)}`,
+      };
+    }
+    return { open: false, headline: "Closed" };
   }
 
   function updateBlock(el, location) {
     const status = computeStatus(location);
     const headlineEl = el.querySelector("[data-status-headline]");
-    const metaEl = el.querySelector("[data-status-meta]");
     if (headlineEl) headlineEl.textContent = status.headline;
-    if (metaEl) metaEl.textContent = status.meta;
     el.setAttribute("data-status-state", status.open ? "open" : "closed");
   }
 
-  function init(data) {
+  function initStatus(data) {
     const blocks = document.querySelectorAll("[data-location]");
     blocks.forEach((el) => {
       const id = el.getAttribute("data-location");
@@ -129,17 +140,36 @@
 
   fetch(dataPath(), { cache: "no-cache" })
     .then((r) => (r.ok ? r.json() : Promise.reject(new Error("status fetch failed"))))
-    .then(init)
+    .then(initStatus)
     .catch(() => { /* leave hard-coded fallback in place */ });
 
-  // Simple nav toggle for mobile
+  // Menu state toggle (simplified <-> full) on the homepage
   document.addEventListener("click", function (e) {
-    const t = e.target.closest("[data-nav-toggle]");
-    if (!t) return;
-    const header = t.closest(".site-header");
-    if (!header) return;
-    const open = header.getAttribute("data-nav-open") === "true";
-    header.setAttribute("data-nav-open", open ? "false" : "true");
-    t.setAttribute("aria-expanded", open ? "false" : "true");
+    const trigger = e.target.closest("[data-menu-toggle]");
+    if (!trigger) return;
+    const target = trigger.getAttribute("data-menu-toggle"); // "full" or "simplified"
+    const state = trigger.closest(".menu-state");
+    if (!state || (target !== "full" && target !== "simplified")) return;
+    state.setAttribute("data-menu-state", target);
+    // Scroll the menu section back into view so the user lands at the top
+    const section = state.closest("#menu");
+    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+
+  // On load: if URL is /?menu=full or hash is #menu-full, open the full menu
+  function applyInitialMenuState() {
+    const state = document.querySelector(".menu-state");
+    if (!state) return;
+    const params = new URLSearchParams(window.location.search);
+    const wantFull = params.get("menu") === "full" || window.location.hash === "#menu-full";
+    if (wantFull) {
+      state.setAttribute("data-menu-state", "full");
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyInitialMenuState);
+  } else {
+    applyInitialMenuState();
+  }
 })();

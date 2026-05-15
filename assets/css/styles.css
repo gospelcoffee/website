@@ -506,6 +506,30 @@ p {
   line-height: 1.5;
 }
 
+.today-hours {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+  display: grid;
+  gap: 2px;
+}
+
+.today-hours > div {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-4);
+  align-items: baseline;
+}
+
+.today-hours dt {
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+}
+
+.today-hours dd {
+  margin: 0;
+}
+
 .today-blurb {
   font-size: var(--text-base);
   color: var(--color-ink-soft);
@@ -659,7 +683,7 @@ p {
 
 .paper-menu {
   display: grid;
-  grid-template-columns: 1fr 1.6fr 2.4fr;
+  grid-template-columns: 1.4fr 1.2fr 0.9fr;
   gap: var(--space-6);
   align-items: start;
 }
@@ -993,7 +1017,7 @@ p {
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid var(--color-rule-soft);
-  padding-block: var(--space-7);
+  padding-block: var(--space-6);
   font-size: var(--text-sm);
   color: var(--color-ink-quiet);
 }
@@ -1001,43 +1025,38 @@ p {
 .site-footer a { color: var(--color-ink-soft); text-decoration: none; }
 .site-footer a:hover { color: var(--color-ink); }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-6);
-}
-
-.footer-grid h4 {
-  font-size: var(--text-xs);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-  margin-bottom: var(--space-3);
-}
-
-.footer-grid ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: var(--space-2);
-}
-
-.footer-bottom {
-  margin-top: var(--space-6);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--color-rule-soft);
+.footer-contact {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-5);
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 700px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
+@media (max-width: 600px) {
+  .footer-contact {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
   }
+}
+
+/* ---------- Homepage menu state toggle (simplified <-> full) ---------- */
+.menu-state[data-menu-state="simplified"] .menu-view-full { display: none; }
+.menu-state[data-menu-state="full"] .menu-view-simplified { display: none; }
+
+.menu-card-group {
+  margin-top: var(--space-8);
+}
+
+.menu-card-group > .eyebrow {
+  display: block;
+  margin-bottom: var(--space-5);
+}
+
+/* ---------- Homepage Our Approach (philosophy) wrapper ---------- */
+.philosophy-details {
+  margin-top: var(--space-6);
 }
 
 /* ---------- Mobile spacing tightening ---------- */
