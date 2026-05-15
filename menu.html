@@ -73,22 +73,26 @@
               {
                 "@type": "MenuItem",
                 "name": "Cappuccino",
-                "description": "Traditional or extra milk. Made with the bean of your choice."
+                "description": "Traditional or extra milk. Made with the bean of your choice.",
+                "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" }
               },
               {
                 "@type": "MenuItem",
                 "name": "Flat White",
-                "description": "Traditional or extra milk. Made with the bean of your choice."
+                "description": "Traditional or extra milk. Made with the bean of your choice.",
+                "offers": { "@type": "Offer", "price": "7", "priceCurrency": "USD" }
               },
               {
                 "@type": "MenuItem",
                 "name": "Cortado",
-                "description": "Espresso cut with a small amount of steamed milk."
+                "description": "Traditional or extra milk. Espresso cut with steamed milk, made with the bean of your choice.",
+                "offers": { "@type": "AggregateOffer", "lowPrice": "5", "highPrice": "7", "priceCurrency": "USD" }
               },
               {
                 "@type": "MenuItem",
                 "name": "Espresso",
-                "description": "A single or double shot of espresso, made with the bean of your choice."
+                "description": "A single or double shot of espresso, made with the bean of your choice.",
+                "offers": { "@type": "Offer", "price": "5", "priceCurrency": "USD" }
               }
             ]
           },
@@ -197,12 +201,13 @@
               <ul class="menu-list">
                 <li class="menu-row"><strong class="label">latte</strong><span class="meta meta-strong">7</span></li>
                 <li class="menu-row"><strong class="label">coffee</strong><span class="meta meta-strong">5</span></li>
-                <li class="menu-row"><strong class="label">cappuccino</strong></li>
+                <li class="menu-row"><strong class="label">cappuccino</strong><span class="meta meta-strong">7</span></li>
                 <li class="menu-row menu-row-note"><span class="meta">traditional or extra milk</span></li>
-                <li class="menu-row"><strong class="label">flat white</strong></li>
+                <li class="menu-row"><strong class="label">flat white</strong><span class="meta meta-strong">7</span></li>
                 <li class="menu-row menu-row-note"><span class="meta">traditional or extra milk</span></li>
-                <li class="menu-row"><strong class="label">cortado</strong></li>
-                <li class="menu-row"><strong class="label">espresso</strong></li>
+                <li class="menu-row"><strong class="label">cortado</strong><span class="meta meta-strong">5&ndash;7</span></li>
+                <li class="menu-row menu-row-note"><span class="meta">traditional or extra milk</span></li>
+                <li class="menu-row"><strong class="label">espresso</strong><span class="meta meta-strong">5</span></li>
               </ul>
             </div>
 

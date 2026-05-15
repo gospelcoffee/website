@@ -27,7 +27,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Use Valo Sit-Down consistently in titles, eyebrows, headings, footer labels, page titles, schema.org @name fields, and the tasting-experience availability note.
 
 ### Menu scope rule
-- The Coffee list now includes latte, coffee, cappuccino, flat white, cortado, and espresso. Only latte (7) and coffee (5) carry printed prices. Cappuccino and flat white show "traditional or extra milk" as a sub-line.
+- The Coffee list now includes latte (7), coffee (5), cappuccino (7), flat white (7), cortado (5-7), and espresso (5). Cappuccino, flat white, and cortado each show "traditional or extra milk" as a regular-weight sub-line. Cortado's 5-7 price varies by traditional vs. extra milk.
 - Latte and coffee are our most popular. We can make any specialty espresso drink to order.
 - Never claim drink scope ("just two drinks", "only six drinks"). The menu is short, not prohibitive.
 
@@ -201,7 +201,7 @@ The home page stays light. It does not try to explain the philosophy — it grou
 - Desktop (≥900px): three columns horizontally — Drinks | Bean Menu | Optional.
 - Mobile (<900px): stacks vertically.
 - Bold weight = drink/bean name; regular weight = sub-line / origin / optional list items.
-- Drinks: latte (7) bold, coffee (5) bold, cappuccino bold (with "traditional or extra milk" regular sub-line), flat white bold (with "traditional or extra milk" regular sub-line), cortado bold, espresso bold. Only latte and coffee have printed prices.
+- Drinks: latte (7) bold, coffee (5) bold, cappuccino (7) bold with "traditional or extra milk" regular sub-line, flat white (7) bold with "traditional or extra milk" regular sub-line, cortado (5-7) bold with "traditional or extra milk" regular sub-line, espresso (5) bold. Cortado's 5-7 is a range that depends on traditional vs. extra milk.
 - Bean Menu: all bold (dark & smoky, peanut butter, peach, strawberry, apple spice, decaf); origins as regular-weight meta (colombia, brazil, colombia, honduras, colombia, mexico).
 - Bean note beneath the bean list: "Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans."
 - Optional: single flat list, all regular weight — vanilla, mocha, caramel, sugar, brown sugar, honey, maple, splenda, stevia. No sub-headings like "pick add-ins" or "pick a sweetener".

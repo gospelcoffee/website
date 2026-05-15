@@ -226,7 +226,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 
 - Page eyebrow: "Coffee." Use category labels, not imperatives — no "pick", no "choose".
 - Core menu card mirrors the paper menu's spacing and simplicity. Step labels are non-imperative category words: **Drinks**, **Bean Menu**, **Optional**.
-- Coffee category includes: latte, coffee, cappuccino, flat white, cortado, espresso. Cappuccino and flat white show "traditional or extra milk" as a sub-line. Only latte (7) and coffee (5) have printed prices — new items don't have invented prices.
+- Coffee category includes: latte (7), coffee (5), cappuccino (7), flat white (7), cortado (5-7), espresso (5). Cappuccino, flat white, and cortado each show "traditional or extra milk" as a regular-weight sub-line. Cortado's 5-7 is a range that depends on traditional vs. extra milk.
 - **Bean Menu** is the section heading for beans. Beneath the list, the bean note reads: "Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans."
 - **Optional** is a single flat list (no add-in/sweetener sub-headings): vanilla, mocha, caramel, sugar, brown sugar, honey, maple, splenda, stevia.
 - **Tasting experience** card opens with the availability note at the top: "Tasting experiences are available at Valo Sit-Down only." Then lists coffee tasting experience (19) and not coffee tasting experience (19). Frame as a feature, not a disclaimer. Don't make Curbside feel like it's missing something.
@@ -339,16 +339,16 @@ Default hours (both): 6:30 AM – 6:00 PM, every day. Timezone: `America/Phoenix
 The paper menu is laid out in six numbered steps across one horizontal row, with a "not coffee" section beneath. Steps 5 and 6 sit under an "optional" divider. Within each step, **bold** items are the standard options and regular-weight items are secondary/accommodation options.
 
 ```text
-Drinks                          Bean Menu                          Optional
-   latte                7          dark & smoky    colombia           vanilla
-   coffee               5          peanut butter   brazil             mocha
-   cappuccino                      peach           colombia           caramel
-     traditional or extra milk     strawberry      honduras           sugar
-   flat white                      apple spice     colombia           brown sugar
-     traditional or extra milk     decaf           mexico             honey
-   cortado                                                            maple
-   espresso                                                           splenda
-                                                                      stevia
+Drinks                            Bean Menu                          Optional
+   latte                  7          dark & smoky    colombia           vanilla
+   coffee                 5          peanut butter   brazil             mocha
+   cappuccino             7          peach           colombia           caramel
+     traditional or extra milk      strawberry      honduras           sugar
+   flat white             7          apple spice     colombia           brown sugar
+     traditional or extra milk      decaf           mexico             honey
+   cortado                5-7                                          maple
+     traditional or extra milk                                          splenda
+   espresso               5                                            stevia
 
 not coffee
    cocoa latte                  5
@@ -372,7 +372,7 @@ Weight conventions (mirrored on the digital menu):
 - Optional: regular weight, single flat list (no sub-headings).
 - Not coffee items: regular weight; prices in bold.
 
-The printed list above mirrors the paper menu. **Latte and coffee are our two most popular coffee drinks; cappuccino, flat white, cortado, and espresso are listed as well.** Only latte (7) and coffee (5) carry printed prices. Pricing for the additional drinks is communicated in-store. Copy must never claim drink scope ("just two drinks", "only six drinks") — the menu is short, but we can make any specialty espresso drink to order.
+The printed list above mirrors the paper menu. **Latte and coffee are our two most popular coffee drinks; cappuccino, flat white, cortado, and espresso are listed as well.** Prices: latte 7, coffee 5, cappuccino 7, flat white 7, cortado 5-7 (price varies by traditional vs extra milk), espresso 5. Copy must never claim drink scope ("just two drinks", "only six drinks") — the menu is short, but we can make any specialty espresso drink to order.
 
 Layout rule for the digital menu page (`/menu.html`):
 - The page is composed of four separately-headed paper-style cards: **Coffee** (the main menu), **Not coffee**, **Tasting experience**, and **Coffee beans**. Each card has its own small-caps eyebrow header above it.
