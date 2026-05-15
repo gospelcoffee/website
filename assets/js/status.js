@@ -100,18 +100,19 @@
       }
     }
 
-    const next = nextOpenDay(location, dayIndex);
     const closedAllDay = !today || !today.open;
-    const lead = closedAllDay ? "Closed today" : "Closed now";
-
-    if (!next) {
-      return { open: false, headline: lead };
+    if (closedAllDay) {
+      return { open: false, headline: "Closed today" };
     }
 
+    const next = nextOpenDay(location, dayIndex);
+    if (!next) {
+      return { open: false, headline: "Closed now" };
+    }
     const dayLabel = next.daysAway === 1 ? "tomorrow" : next.day.day;
     return {
       open: false,
-      headline: `${lead} · Opens ${dayLabel} at ${formatTime(next.day.open)}`,
+      headline: `Closed now · Opens ${dayLabel} at ${formatTime(next.day.open)}`,
     };
   }
 
