@@ -15,6 +15,16 @@
     "Saturday",
   ];
 
+  const DAY_ABBR = {
+    Sunday: "Sun",
+    Monday: "Mon",
+    Tuesday: "Tue",
+    Wednesday: "Wed",
+    Thursday: "Thu",
+    Friday: "Fri",
+    Saturday: "Sat",
+  };
+
   function pad(n) { return String(n).padStart(2, "0"); }
 
   function formatTime(hhmm) {
@@ -57,6 +67,17 @@
     return location.hours.find((h) => h.day === dayName);
   }
 
+  function nextOpenDay(location, fromDayIndex) {
+    for (let i = 1; i <= 7; i++) {
+      const next = (fromDayIndex + i) % 7;
+      const day = hoursForDay(location, next);
+      if (day && day.open) {
+        return { day, daysAway: i };
+      }
+    }
+    return null;
+  }
+
   function computeStatus(location) {
     const { dayIndex, hour, minute } = nowInTz(location.timezone);
     const nowMin = hour * 60 + minute;
@@ -68,45 +89,71 @@
       if (nowMin >= openMin && nowMin < closeMin) {
         return {
           open: true,
-          headline: "Open now",
-          meta: `Today, ${formatTime(today.open)} – ${formatTime(today.close)}`,
+          headline: `Open today until ${formatTime(today.close)}`,
         };
       }
       if (nowMin < openMin) {
         return {
           open: false,
-          headline: "Closed now",
-          meta: `Opens today at ${formatTime(today.open)}`,
+          headline: `Opens today at ${formatTime(today.open)}`,
         };
       }
     }
 
-    for (let i = 1; i <= 7; i++) {
-      const next = (dayIndex + i) % 7;
-      const day = hoursForDay(location, next);
-      if (day && day.open) {
-        const label = i === 1 ? "Opens tomorrow at" : `Opens ${day.day} at`;
-        return {
-          open: false,
-          headline: "Closed now",
-          meta: `${label} ${formatTime(day.open)}`,
-        };
-      }
+    const next = nextOpenDay(location, dayIndex);
+    const closedAllDay = !today || !today.open;
+    const lead = closedAllDay ? "Closed today" : "Closed now";
+
+    if (!next) {
+      return { open: false, headline: lead };
     }
 
+    const dayLabel = next.daysAway === 1 ? "tomorrow" : next.day.day;
     return {
       open: false,
-      headline: "Closed",
-      meta: "Hours unavailable",
+      headline: `${lead} · Opens ${dayLabel} at ${formatTime(next.day.open)}`,
     };
+  }
+
+  function buildHoursGroups(location) {
+    const groups = [];
+    let cur = null;
+    for (const day of location.hours) {
+      const key = day.open && day.close ? `${day.open}-${day.close}` : "closed";
+      if (cur && cur.key === key) {
+        cur.end = day.day;
+      } else {
+        if (cur) groups.push(cur);
+        cur = { key, start: day.day, end: day.day, open: day.open, close: day.close };
+      }
+    }
+    if (cur) groups.push(cur);
+    return groups.map((g) => {
+      const dayLabel = g.start === g.end
+        ? DAY_ABBR[g.start]
+        : `${DAY_ABBR[g.start]}–${DAY_ABBR[g.end]}`;
+      const hoursLabel = g.key === "closed"
+        ? "Closed"
+        : `${formatTime(g.open)}–${formatTime(g.close)}`;
+      return `${dayLabel}: ${hoursLabel}`;
+    });
+  }
+
+  function renderHoursList(el, lines) {
+    el.textContent = "";
+    for (const line of lines) {
+      const li = document.createElement("li");
+      li.textContent = line;
+      el.appendChild(li);
+    }
   }
 
   function updateBlock(el, location) {
     const status = computeStatus(location);
     const headlineEl = el.querySelector("[data-status-headline]");
-    const metaEl = el.querySelector("[data-status-meta]");
+    const hoursEl = el.querySelector("[data-status-hours]");
     if (headlineEl) headlineEl.textContent = status.headline;
-    if (metaEl) metaEl.textContent = status.meta;
+    if (hoursEl) renderHoursList(hoursEl, buildHoursGroups(location));
     el.setAttribute("data-status-state", status.open ? "open" : "closed");
   }
 
