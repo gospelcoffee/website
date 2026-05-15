@@ -294,8 +294,8 @@
         <h1 class="hero-headline">The best coffee in Arizona</h1>
         <p class="hero-sub">Open daily</p>
         <div class="button-row">
-          <a class="button" href="#today">Visit Valo</a>
-          <a class="button button-secondary" href="#menu">See the menu</a>
+          <a class="button" href="#today" data-ga="hero_visit_valo">Visit Valo</a>
+          <a class="button button-secondary" href="#menu" data-ga="hero_see_menu">See the menu</a>
         </div>
       </div>
     </section>
@@ -320,8 +320,8 @@
             </address>
             <p class="today-blurb">Drive up, stay in your car, and we bring your coffee to you. Specialty coffee at drive-thru speeds.</p>
             <div class="today-actions button-row">
-              <a class="button" href="https://maps.app.goo.gl/pQiKMV2w1YkQii3p9" target="_blank" rel="noopener">Get directions</a>
-              <a class="button button-secondary" href="#menu">View menu</a>
+              <a class="button" href="https://maps.app.goo.gl/pQiKMV2w1YkQii3p9" target="_blank" rel="noopener" data-ga="directions_curbside">Get directions</a>
+              <a class="button button-secondary" href="#menu" data-ga="viewmenu_curbside">View menu</a>
             </div>
           </article>
 
@@ -339,8 +339,8 @@
             </address>
             <p class="today-blurb">Sit down, take in the view of Prescott, and try our coffees. The Valo tasting experience lives here.</p>
             <div class="today-actions button-row">
-              <a class="button" href="https://maps.app.goo.gl/BHweLz91EeAwYa32A" target="_blank" rel="noopener">Get directions</a>
-              <a class="button button-secondary" href="#menu">View menu</a>
+              <a class="button" href="https://maps.app.goo.gl/BHweLz91EeAwYa32A" target="_blank" rel="noopener" data-ga="directions_sitdown">Get directions</a>
+              <a class="button button-secondary" href="#menu" data-ga="viewmenu_sitdown">View menu</a>
             </div>
           </article>
         </div>
@@ -378,7 +378,7 @@
         </div>
 
         <div class="button-row" style="margin-top: var(--space-7)">
-          <button class="button button-secondary" type="button" data-menu-open>View full menu</button>
+          <button class="button button-secondary" type="button" data-menu-open data-ga="full_menu_open">View full menu</button>
         </div>
       </div>
     </section>
@@ -390,28 +390,28 @@
         <p class="philosophy-lede" style="margin-bottom: var(--space-7)">Every drink on our menu is made with pure, raw ingredients. We do not add anything else, so the bean&rsquo;s naturally occurring flavors can be enjoyed clearly.</p>
 
         <div>
-          <details class="philosophy-detail">
+          <details class="philosophy-detail" data-ga="philosophy_what_is_coffee">
             <summary>What is coffee?</summary>
             <div class="philosophy-detail-body">
               <p class="philosophy-body">Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy.</p>
             </div>
           </details>
 
-          <details class="philosophy-detail">
+          <details class="philosophy-detail" data-ga="philosophy_tasting_notes">
             <summary>Where do the tasting notes come from?</summary>
             <div class="philosophy-detail-body">
               <p class="philosophy-body">Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor profiles. The same is true of coffee. Every variety carries its own naturally occurring flavor notes. We source beans with relatable and recognizable flavor notes such as strawberry, peach, and peanut butter. The best way to discover how this works is to try our coffee tasting experience at our Valo Sit-Down location.</p>
             </div>
           </details>
 
-          <details class="philosophy-detail">
+          <details class="philosophy-detail" data-ga="philosophy_menu_simple">
             <summary>Why is the menu so simple?</summary>
             <div class="philosophy-detail-body">
               <p class="philosophy-body">The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we&rsquo;re happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most.</p>
             </div>
           </details>
 
-          <details class="philosophy-detail">
+          <details class="philosophy-detail" data-ga="philosophy_espresso">
             <summary>How do we make espresso?</summary>
             <div class="philosophy-detail-body">
               <p class="philosophy-body">We&rsquo;ve questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for smoothness. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean&rsquo;s naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.</p>
@@ -423,13 +423,13 @@
 
     <!-- Full menu modal -->
     <div class="menu-modal" id="menu-modal" role="dialog" aria-modal="true" aria-label="Full menu" hidden>
-      <div class="menu-modal-backdrop" data-menu-close></div>
+      <div class="menu-modal-backdrop" data-menu-close data-ga="full_menu_close_backdrop"></div>
       <div class="menu-modal-card" role="document">
         <div class="menu-modal-header">
-          <button class="menu-modal-brand-close" type="button" tabindex="-1" aria-hidden="true" data-menu-close>
+          <button class="menu-modal-brand-close" type="button" tabindex="-1" aria-hidden="true" data-menu-close data-ga="full_menu_close_wordmark">
             <img class="menu-modal-brand-mark" src="assets/images/valo-coffee-horizontal-black-and-clear.svg" alt="Valo Coffee" />
           </button>
-          <button class="menu-modal-close" type="button" aria-label="Close menu" data-menu-close>
+          <button class="menu-modal-close" type="button" aria-label="Close menu" data-menu-close data-ga="full_menu_close_x">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
               <line x1="5" y1="5" x2="19" y2="19" />
               <line x1="19" y1="5" x2="5" y2="19" />
@@ -543,8 +543,8 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-simple">
-        <a href="tel:+19289106087">928-910-6087</a>
-        <a href="mailto:support@valocoffee.com">support@valocoffee.com</a>
+        <a href="tel:+19289106087" data-ga="contact_phone">928-910-6087</a>
+        <a href="mailto:support@valocoffee.com" data-ga="contact_email">support@valocoffee.com</a>
         <span>&copy; Valo Coffee</span>
       </div>
     </div>
@@ -553,5 +553,6 @@
   <script src="assets/js/status.js?v=2" defer></script>
   <script src="assets/js/carousel.js?v=1" defer></script>
   <script src="assets/js/menu.js?v=1" defer></script>
+  <script src="assets/js/analytics.js?v=1" defer></script>
 </body>
 </html>
