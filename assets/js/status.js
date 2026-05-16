@@ -79,11 +79,15 @@
     return null;
   }
 
+  // A location counts as "closing soon" when it closes in 30 minutes or less.
+  const CLOSING_SOON_MINUTES = 30;
+
   /* Two-line status. Returns:
    *   { isOpen, primary, secondary, closesInMinutes, closesSoon }
-   * primary  : "Open now" | "Closed now"
+   * primary  : "Open now" | "Closing soon" | "Closed now"
    * secondary: "Closes at 6 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
    *            | "Opens Wednesday at 7 AM"
+   * closesSoon is true when open and closing in <= 30 minutes.
    */
   function getStatus(location) {
     const { dayIndex, hour, minute } = nowInTz(location.timezone);
@@ -95,12 +99,13 @@
       const closeMin = minutes(today.close);
       if (nowMin >= openMin && nowMin < closeMin) {
         const closesInMinutes = closeMin - nowMin;
+        const closesSoon = closesInMinutes <= CLOSING_SOON_MINUTES;
         return {
           isOpen: true,
-          primary: "Open now",
+          primary: closesSoon ? "Closing soon" : "Open now",
           secondary: `Closes at ${formatTime(today.close)}`,
           closesInMinutes,
-          closesSoon: closesInMinutes < 60,
+          closesSoon,
         };
       }
     }
