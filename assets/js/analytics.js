@@ -33,6 +33,13 @@
     viewmenu_sitdown:         { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "sitdown_card",  location_id: "sitdown",  location_name: "Valo Lab" },
     directions_curbside:      { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "curbside",      location_id: "curbside", location_name: "Valo Curbside" },
     directions_sitdown:       { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "sitdown",       location_id: "sitdown",  location_name: "Valo Lab" },
+    visit_cta:                { ux_area: "visit_cta",    ux_action: "open_visit_modal",     ux_detail: "bottom_cta_button" },
+    visit_directions_curbside:{ ux_area: "visit_modal",  ux_action: "get_directions",       ux_detail: "curbside",      location_id: "curbside", location_name: "Valo Curbside" },
+    visit_directions_resort:  { ux_area: "visit_modal",  ux_action: "get_directions",       ux_detail: "sitdown",       location_id: "sitdown",  location_name: "Valo Lab" },
+    visit_close_x:            { ux_area: "visit_modal",  ux_action: "close_visit_modal",    ux_detail: "x_button" },
+    visit_close_wordmark:     { ux_area: "visit_modal",  ux_action: "close_visit_modal",    ux_detail: "wordmark" },
+    visit_close_backdrop:     { ux_area: "visit_modal",  ux_action: "close_visit_modal",    ux_detail: "backdrop" },
+    visit_close_escape:       { ux_area: "visit_modal",  ux_action: "close_visit_modal",    ux_detail: "escape_key" },
     full_menu_open:           { ux_area: "menu_preview", ux_action: "open_full_menu",       ux_detail: "view_full_menu_button" },
     menu_deeplink_opened:     { ux_area: "full_menu",    ux_action: "open_full_menu",       ux_detail: "deeplink" },
     full_menu_close_x:        { ux_area: "full_menu",    ux_action: "close_full_menu",      ux_detail: "x_button" },
@@ -43,6 +50,7 @@
     philosophy_tasting_notes: { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "tasting_notes" },
     philosophy_menu_simple:   { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "menu_simple" },
     philosophy_espresso:      { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "espresso" },
+    philosophy_coffee_origin: { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "coffee_origin" },
     contact_phone:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "phone" },
     contact_email:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "email" }
   };
@@ -58,7 +66,10 @@
     full_menu_open:       "view_menu",
     menu_deeplink_opened: "view_menu",
     directions_curbside:  "get_directions",
-    directions_sitdown:   "get_directions"
+    directions_sitdown:   "get_directions",
+    visit_cta:                 "view_location",
+    visit_directions_curbside: "get_directions",
+    visit_directions_resort:   "get_directions"
   };
 
   function track(name, extra) {
@@ -102,9 +113,13 @@
     "keydown",
     function (e) {
       if (e.key !== "Escape") return;
-      const modal = document.getElementById("menu-modal");
-      if (modal && !modal.hasAttribute("hidden")) {
+      const menu = document.getElementById("menu-modal");
+      if (menu && !menu.hasAttribute("hidden")) {
         track("full_menu_close_escape");
+      }
+      const visit = document.getElementById("visit-modal");
+      if (visit && !visit.hasAttribute("hidden")) {
+        track("visit_close_escape");
       }
     },
     true
