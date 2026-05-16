@@ -2,6 +2,8 @@
 
 Spec version: 0.7 (single-page site). Use this file as the single working draft for brand copy.
 
+> **Out of date:** the live site and `CLAUDE.md` are the source of truth (now v0.8.1). This draft still reflects v0.7 in places (old "Valo Sit-Down" name, pre-v0.8 menu, on-card addresses). Only the philosophy / lexicon copy below has been re-synced for the v0.8.1 pass; treat everything else here as historical until a full reconciliation.
+
 How to use
 - Edit copy in this file first.
 - Keep location references explicit: Valo Curbside (drive-thru) or Valo Sit-Down (the sit-down location inside the Prescott Resort). Never write "Valo" alone for the sit-down location. Never write "Valo Resort".
@@ -19,7 +21,7 @@ How to use
 - Retired (do not reintroduce): We make the cup around the coffee you want to taste.
 - Retired (do not reintroduce): Choose your drink. Choose your bean. The menu uses non-imperative category labels (Coffee, Bean Menu, Optional) instead.
 
-The page opens light: the hero grounds the visitor in who Valo is and that it is open daily. The sections below answer where, when, what's on the menu, and why the coffee is different. The philosophy is no longer behind a click — it lives in the **Our Approach** section near the bottom of the page as collapsible questions, present but never forced.
+The page opens light: the hero grounds the visitor in who Valo is and that it is open daily. The sections below answer where, when, what's on the menu, and why the coffee is different. The philosophy is no longer behind a click — it lives in the **Our Philosophy** section near the bottom of the page as collapsible questions, present but never forced.
 
 ### Location naming standard
 - Preferred labels: Valo Curbside (drive-thru), Valo Sit-Down (sit-down location inside the Prescott Resort).
@@ -44,8 +46,8 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 
 ### Flavor-credit voice rule
 - We don't "highlight," "bring out," or "enhance" the flavor. The flavor is already there. Our role is restraint: we don't add anything that would distract. The point of that restraint is the customer's enjoyment. Use verbs about the customer's experience (enjoyed clearly), what the flavor does (comes through, stays clear), and what we don't do (never add). Avoid highlight/bring out/enhance/draw out/accentuate/amplify.
-- **Approved exception:** the Our Approach section ships the website-revisions brief copy verbatim, which includes "highlights this philosophy" and "highlight the bean's naturally occurring flavor notes." That wording is approved and locked; do not silently rewrite it. The rule above still governs all other copy.
-- Avoid the noun phrase "natural flavor(s)" (reads as the FDA-regulated ingredient-list term). Use "naturally occurring flavors" / "naturally occurring tasting notes". (The philosophy section's "natural flavor notes of the coffee bean" is part of the approved brief copy.)
+- **Verbatim lock retired (v0.8.1):** the old "approved-brief verbatim lock" on the Our Philosophy copy no longer applies; the owner has directed the lexicon below and philosophy copy is edited like the rest of the site.
+- **Required lexicon (v0.8.1):** "flavor notes" (never "tasting notes" or "flavor profiles"); "naturally occurring flavor notes" (never "naturally occurring flavors"); "varietal/varietals" (never "variety/varieties"). Still avoid the bare "natural flavor(s)" (FDA ingredient-list term).
 
 ---
 
@@ -113,7 +115,7 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 #### Group: Beans (right column)
 - Group label: Beans
 - Items (in order): dark & smoky / colombia, peanut butter / brazil, peach / colombia, strawberry / honduras, apple spice / colombia, decaf / mexico
-- Support note: Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.
+- Support note: Each flavor note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.
 
 #### Bottom CTA
 - CTA: View full menu — opens the full-menu **modal** in place (does not navigate). The button is a real `<button>`, not a link.
@@ -124,24 +126,27 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 - Body content is the full menu — see "Full Menu Content" below. Rendered from `data/menu.json`, with an identical static copy as the no-JS fallback.
 - No visitor-facing prose beyond the menu itself and the close affordance.
 
-### Our Approach (philosophy, on the homepage)
+### Our Philosophy (on the homepage)
 - Position: last content section, anchor #philosophy, before the footer.
-- Section eyebrow: Our Approach
-- Opening lede: Every drink on our menu is made with pure, raw ingredients. We do not add anything else, so the bean's naturally occurring flavors can be enjoyed clearly.
-- Then four collapsible questions (`<details>`), all collapsed by default, in this order. Each `<summary>` is the question; the body is the answer.
+- Section eyebrow: Our Philosophy
+- Opening lede: Every drink on our menu is made with pure, raw ingredients. We do not add anything else, so the bean's naturally occurring flavor notes can be enjoyed clearly.
+- Then five collapsible questions (`<details>`), all collapsed by default, in this order. Each `<summary>` is the question; the body is the answer.
 
 #### 1. What is coffee?
 - Body: Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy.
 
-#### 2. Where do the tasting notes come from?
-- Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor profiles. The same is true of coffee. Every variety carries its own naturally occurring flavor notes. We source beans with relatable and recognizable flavor notes such as strawberry, peach, and peanut butter. The best way to discover how this works is to try our coffee tasting experience at our Valo Sit-Down location.
+#### 2. Where do the flavor notes come from?
+- Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor notes. The same is true of coffee. Every varietal carries its own naturally occurring flavor notes. We source beans with relatable and recognizable flavor notes such as strawberry, peach, and peanut butter. The best way to discover how this works is to try our coffee tasting experience at our Valo Lab location.
 
-#### 3. Why is the menu so simple?
+#### 3. Where does our coffee come from?
+- Body: **(empty placeholder — owner to supply copy.)** Shipped as a summary-only collapsible; excluded from the FAQ JSON-LD until it has body copy. Deferred here: moving the off-gassing explanation in (revision item 5).
+
+#### 4. Why is the menu so simple?
 - Body: The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we're happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most.
 - Accuracy note: do NOT name specific drinks we "don't sell" (e.g., chai). We do sell a chai latte. Keep it about what we use, not what we forbid.
 
-#### 4. How do we make espresso?
-- Body: We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for smoothness. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.
+#### 5. How do we make espresso?
+- Body: We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for balance. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.
 
 - Retired (do not reintroduce): the "How do we make the perfect drink?" question and its paragraph. Also retired: a separate philosophy page and any "Read our philosophy" link.
 - Stand-alone rule: every question must make sense collapsed — name the subject, end with "?", keep it ~4–7 words.
@@ -162,7 +167,7 @@ One paper-style card, sections in order: Coffee (Drinks + Bean Menu + Optional) 
 ### Coffee
 - Drinks (name bold, price bold): latte 7, coffee 5, cappuccino 7 (regular sub-line "traditional or extra milk"), flat white 7 (sub-line "traditional or extra milk"), cortado 5–7 (sub-line "traditional or extra milk"), espresso 5.
 - Bean Menu (sub-label "Bean Menu"; bean bold, origin regular meta): dark & smoky / colombia, peanut butter / brazil, peach / colombia, strawberry / honduras, apple spice / colombia, decaf / mexico.
-- Bean note: Each tasting note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.
+- Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight, no sub-headings): vanilla, mocha, caramel, sugar, brown sugar, honey, maple, splenda, stevia.
 - Voice rule: plain noun-phrase category labels only. Never "pick a drink", "choose your bean", "pick add-ins".
 
@@ -202,5 +207,5 @@ One paper-style card, sections in order: Coffee (Drinks + Bean Menu + Optional) 
 - Sit-Down is clearly positioned as the tasting-experience destination.
 - Footer is phone, email, copyright only.
 - Full menu opens in the modal; menu/preview use category labels, never imperatives or scope claims.
-- Our Approach is on the homepage with four collapsible questions; no "perfect drink" section.
+- Our Philosophy is on the homepage with five collapsible questions (the fifth an empty placeholder, excluded from FAQ JSON-LD); no "perfect drink" section.
 - Copy is concise, inviting, elegant, and direct. No prescriptive recommendation language.

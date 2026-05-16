@@ -522,11 +522,26 @@ p {
   text-transform: uppercase;
 }
 
+.today-status {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
 .status-line {
+  margin: 0;
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 1rem + 1.4vw, 2rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
+}
+
+.status-sub {
+  margin: 0;
+  font-size: var(--text-base);
+  color: var(--color-ink-quiet);
+  letter-spacing: 0.01em;
+  line-height: 1.3;
 }
 
 .status-meta {
@@ -550,13 +565,6 @@ p {
   display: block;
 }
 
-.today-address {
-  font-style: normal;
-  font-size: var(--text-sm);
-  color: var(--color-ink-quiet);
-  letter-spacing: 0.01em;
-  line-height: 1.5;
-}
 
 .today-blurb {
   font-size: var(--text-base);
@@ -740,11 +748,16 @@ p {
   font-weight: 400;
 }
 
+/* Full menu reads top-to-bottom: drink list, then Bean Menu, then Optional,
+   each a calm stacked block with the same rhythm as the major sections. */
 .paper-menu {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1.4fr;
-  gap: var(--space-6);
-  align-items: start;
+  display: block;
+}
+
+.paper-menu > * + * {
+  margin-top: var(--space-7);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--color-rule-soft);
 }
 
 .paper-menu-step {
@@ -766,13 +779,9 @@ p {
 
 .paper-menu-optional-label {
   font-style: italic;
-  font-size: var(--text-xs);
-  color: var(--color-ink-quiet);
-  letter-spacing: 0.04em;
-  text-align: center;
-  border-bottom: 1px solid var(--color-ink);
-  padding-bottom: var(--space-2);
-  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  margin: 0 0 var(--space-3);
 }
 
 .paper-menu-optional-cols {
@@ -1274,6 +1283,53 @@ body.menu-modal-open {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+/* ---------- Bottom smart CTA ---------- */
+.section-cta {
+  border-top: 1px solid var(--color-rule-soft);
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  min-width: 240px;
+}
+
+@media (max-width: 600px) {
+  .cta-button {
+    width: 100%;
+  }
+}
+
+/* ---------- Visit modal (reuses the .menu-modal chrome) ---------- */
+.visit-card-stack {
+  padding: var(--space-7);
+}
+
+.visit-loc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.visit-loc + .visit-loc {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-rule-soft);
+}
+
+.visit-loc .button-row {
+  margin-top: var(--space-1);
+}
+
+@media (max-width: 700px) {
+  .visit-card-stack {
+    padding: var(--space-5);
   }
 }
 

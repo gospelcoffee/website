@@ -1,6 +1,7 @@
 /* Valo Coffee — open/closed status
  * Reads /data/locations.json and updates each [data-location] block.
  * No-JS fallback: each block ships with hard-coded text in the HTML.
+ * Exposes window.ValoStatus for the Visit modal + bottom smart CTA.
  */
 (function () {
   "use strict";
@@ -78,7 +79,13 @@
     return null;
   }
 
-  function computeStatus(location) {
+  /* Two-line status. Returns:
+   *   { isOpen, primary, secondary, closesInMinutes, closesSoon }
+   * primary  : "Open now" | "Closed now"
+   * secondary: "Closes at 6 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
+   *            | "Opens Wednesday at 7 AM"
+   */
+  function getStatus(location) {
     const { dayIndex, hour, minute } = nowInTz(location.timezone);
     const nowMin = hour * 60 + minute;
     const today = hoursForDay(location, dayIndex);
@@ -87,32 +94,38 @@
       const openMin = minutes(today.open);
       const closeMin = minutes(today.close);
       if (nowMin >= openMin && nowMin < closeMin) {
+        const closesInMinutes = closeMin - nowMin;
         return {
-          open: true,
-          headline: `Open today until ${formatTime(today.close)}`,
-        };
-      }
-      if (nowMin < openMin) {
-        return {
-          open: false,
-          headline: `Opens today at ${formatTime(today.open)}`,
+          isOpen: true,
+          primary: "Open now",
+          secondary: `Closes at ${formatTime(today.close)}`,
+          closesInMinutes,
+          closesSoon: closesInMinutes < 60,
         };
       }
     }
 
-    const closedAllDay = !today || !today.open;
-    if (closedAllDay) {
-      return { open: false, headline: "Closed today" };
+    let openLabel = null;
+    if (today && today.open && nowMin < minutes(today.open)) {
+      openLabel = { time: today.open, dayLabel: "" }; // later today
+    } else {
+      const next = nextOpenDay(location, dayIndex);
+      if (next) {
+        openLabel = {
+          time: next.day.open,
+          dayLabel: next.daysAway === 1 ? "tomorrow" : next.day.day,
+        };
+      }
     }
-
-    const next = nextOpenDay(location, dayIndex);
-    if (!next) {
-      return { open: false, headline: "Closed now" };
-    }
-    const dayLabel = next.daysAway === 1 ? "tomorrow" : next.day.day;
+    const secondary = openLabel
+      ? `Opens ${openLabel.dayLabel ? openLabel.dayLabel + " " : ""}at ${formatTime(openLabel.time)}`
+      : "";
     return {
-      open: false,
-      headline: `Closed now · Opens ${dayLabel} at ${formatTime(next.day.open)}`,
+      isOpen: false,
+      primary: "Closed now",
+      secondary,
+      closesInMinutes: null,
+      closesSoon: false,
     };
   }
 
@@ -140,7 +153,21 @@
     });
   }
 
-  function renderHoursList(el, lines) {
+  /* Hours list lines. When every day shares the same open hours, collapse to a
+   * calm two-line summary ("Open daily" / "7 AM to 6 PM"); otherwise the
+   * grouped weekly schedule with the en-dash range format.
+   */
+  function buildHoursLines(location) {
+    const first = location.hours[0];
+    const uniform = first && first.open && first.close &&
+      location.hours.every((d) => d.open === first.open && d.close === first.close);
+    if (uniform) {
+      return ["Open daily", `${formatTime(first.open)} to ${formatTime(first.close)}`];
+    }
+    return buildHoursGroups(location);
+  }
+
+  function renderLines(el, lines) {
     el.textContent = "";
     for (const line of lines) {
       const li = document.createElement("li");
@@ -150,12 +177,14 @@
   }
 
   function updateBlock(el, location) {
-    const status = computeStatus(location);
+    const status = getStatus(location);
     const headlineEl = el.querySelector("[data-status-headline]");
+    const subEl = el.querySelector("[data-status-sub]");
     const hoursEl = el.querySelector("[data-status-hours]");
-    if (headlineEl) headlineEl.textContent = status.headline;
-    if (hoursEl) renderHoursList(hoursEl, buildHoursGroups(location));
-    el.setAttribute("data-status-state", status.open ? "open" : "closed");
+    if (headlineEl) headlineEl.textContent = status.primary;
+    if (subEl) subEl.textContent = status.secondary;
+    if (hoursEl) renderLines(hoursEl, buildHoursLines(location));
+    el.setAttribute("data-status-state", status.isOpen ? "open" : "closed");
   }
 
   function init(data) {
@@ -175,19 +204,18 @@
     return "data/locations.json";
   }
 
-  fetch(dataPath(), { cache: "no-cache" })
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error("status fetch failed"))))
+  const dataPromise = fetch(dataPath(), { cache: "no-cache" })
+    .then((r) => (r.ok ? r.json() : Promise.reject(new Error("status fetch failed"))));
+
+  dataPromise
     .then(init)
     .catch(() => { /* leave hard-coded fallback in place */ });
 
-  // Simple nav toggle for mobile
-  document.addEventListener("click", function (e) {
-    const t = e.target.closest("[data-nav-toggle]");
-    if (!t) return;
-    const header = t.closest(".site-header");
-    if (!header) return;
-    const open = header.getAttribute("data-nav-open") === "true";
-    header.setAttribute("data-nav-open", open ? "false" : "true");
-    t.setAttribute("aria-expanded", open ? "false" : "true");
-  });
+  // Shared API for the Visit modal + bottom smart CTA (see visit.js).
+  window.ValoStatus = {
+    load: () => dataPromise,
+    getStatus,
+    buildHoursLines,
+    formatTime,
+  };
 })();

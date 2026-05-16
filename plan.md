@@ -389,3 +389,20 @@ Run `python3 -m http.server 8000`, open `http://localhost:8000/`:
 - Rewrite `CLAUDE.md` v0.6 → v0.7 (single-page architecture) — it contradicts the new structure in §3, §5, §8.
 - Source real hero images (curbside handoff, sit-down/tasting, Prescott Resort view, beans/flight) and swap into slides 2–3; add slide indicators once slides differ visually.
 - Prune dead `.nav-toggle` / `.site-nav` CSS.
+
+---
+
+## v0.8 edit pass (2026-05-16)
+
+Owner's 37-point revision list executed: sit-down location renamed **Valo Lab** sitewide
+(`#resort` IDs kept), location cards de-addressed, two-line status (`Open now` / `Closes at …`),
+Curbside collapses to `Open daily` / `7 AM to 6 PM`, full-menu modal restacked to one column,
+menu fixes (black coffee, cortado $5, milk sub-lines removed), and a new bottom smart CTA →
+**Visit modal** (`assets/js/visit.js`, reuses the menu-modal chrome; `status.js` now exposes
+`window.ValoStatus`). `CLAUDE.md` bumped to spec v0.8.
+
+**Deferred (later pass):** the Our Approach / philosophy rebuild (revision items 20–27 —
+rename to "Our Philosophy", remove the accordion, reorder to five topics, move off-gassing to a
+sourcing section, modern-espresso rewrite). Only the Valo Lab rename was applied inside the
+philosophy answer text and FAQ JSON-LD this pass, per the owner's explicit instruction.
+`COPY_DECK.md` left as a working draft.
