@@ -189,7 +189,10 @@
     if (headlineEl) headlineEl.textContent = status.primary;
     if (subEl) subEl.textContent = status.secondary;
     if (hoursEl) renderLines(hoursEl, buildHoursLines(location));
-    el.setAttribute("data-status-state", status.isOpen ? "open" : "closed");
+    el.setAttribute(
+      "data-status-state",
+      status.isOpen ? (status.closesSoon ? "closing-soon" : "open") : "closed"
+    );
   }
 
   function init(data) {

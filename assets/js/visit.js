@@ -54,7 +54,7 @@
       .join("");
     const cta = CTA[loc.id] || "Visit Valo";
     return `
-      <section class="visit-loc" data-status-state="${s.isOpen ? "open" : "closed"}">
+      <section class="visit-loc" data-status-state="${s.isOpen ? (s.closesSoon ? "closing-soon" : "open") : "closed"}">
         <span class="today-name">${esc(loc.name)}</span>
         <div class="today-status">
           <p class="status-line">${esc(s.primary)}</p>
