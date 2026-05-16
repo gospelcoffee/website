@@ -8,6 +8,13 @@
  *   ux_detail - the exact trigger (which button / location / question)
  *   state     - philosophy collapsibles only: "open" or "closed"
  *
+ * Location-specific events also carry location_id / location_name.
+ *
+ * GA4 Key events are matched by event NAME, not parameter value, so the
+ * granular events additionally emit a stable rollup event (view_menu /
+ * view_location / get_directions) that can be marked as a Key event while
+ * source_event / key_event_group retain the exact origin.
+ *
  * Event names are declared via data-ga on the element; modal-Escape and the
  * ?menu=full deep link are handled explicitly. No-ops if gtag is unavailable
  * (e.g. blocked), so it never breaks the page.
@@ -22,10 +29,10 @@
   const META = {
     hero_visit_valo:          { ux_area: "hero",         ux_action: "scroll_to_visit_valo", ux_detail: "hero_button" },
     hero_see_menu:            { ux_area: "hero",         ux_action: "scroll_to_menu",       ux_detail: "hero_button" },
-    viewmenu_curbside:        { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "curbside_card" },
-    viewmenu_sitdown:         { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "sitdown_card" },
-    directions_curbside:      { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "curbside" },
-    directions_sitdown:       { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "sitdown" },
+    viewmenu_curbside:        { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "curbside_card", location_id: "curbside", location_name: "Valo Curbside" },
+    viewmenu_sitdown:         { ux_area: "visit_valo",   ux_action: "scroll_to_menu",       ux_detail: "sitdown_card",  location_id: "sitdown",  location_name: "Valo Sit-Down" },
+    directions_curbside:      { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "curbside",      location_id: "curbside", location_name: "Valo Curbside" },
+    directions_sitdown:       { ux_area: "visit_valo",   ux_action: "get_directions",       ux_detail: "sitdown",       location_id: "sitdown",  location_name: "Valo Sit-Down" },
     full_menu_open:           { ux_area: "menu_preview", ux_action: "open_full_menu",       ux_detail: "view_full_menu_button" },
     menu_deeplink_opened:     { ux_area: "full_menu",    ux_action: "open_full_menu",       ux_detail: "deeplink" },
     full_menu_close_x:        { ux_area: "full_menu",    ux_action: "close_full_menu",      ux_detail: "x_button" },
@@ -40,10 +47,36 @@
     contact_email:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "email" }
   };
 
+  /* Granular event name -> stable rollup name. GA4 Key events match on name,
+     so marking these three rollups as Key events captures every entry point
+     while source_event / key_event_group preserve the exact origin. */
+  const ROLLUP_EVENTS = {
+    hero_visit_valo:      "view_location",
+    hero_see_menu:        "view_menu",
+    viewmenu_curbside:    "view_menu",
+    viewmenu_sitdown:     "view_menu",
+    full_menu_open:       "view_menu",
+    menu_deeplink_opened: "view_menu",
+    directions_curbside:  "get_directions",
+    directions_sitdown:   "get_directions"
+  };
+
   function track(name, extra) {
     if (!name || typeof window.gtag !== "function") return;
     const params = Object.assign({}, META[name] || {}, extra || {});
     window.gtag("event", name, params);
+
+    const rollupName = ROLLUP_EVENTS[name];
+    if (rollupName) {
+      window.gtag(
+        "event",
+        rollupName,
+        Object.assign({}, params, {
+          source_event: name,
+          key_event_group: rollupName
+        })
+      );
+    }
   }
 
   /* Click-driven events: any element (or ancestor) carrying data-ga.
