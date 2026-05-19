@@ -133,17 +133,17 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 - Then five collapsible questions (`<details>`), all collapsed by default, in this order. Each `<summary>` is the question; the body is the answer.
 
 #### 1. What is coffee?
-- Body: Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy.
+- Body: Coffee, to us, is any drink where you can clearly taste the naturally occurring flavor notes of the coffee bean. Every drink you order from our coffee menu follows this philosophy.
 
 #### 2. Where do the flavor notes come from?
 - Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor notes. The same is true of coffee. Every varietal carries its own naturally occurring flavor notes. The best way to discover how this works is to try our coffee tasting experience at our Valo Lab location.
 
 #### 3. Where does our coffee come from?
-- Body (two paragraphs): We sample coffees from around the world looking for beans with clear, recognizable flavor notes like strawberry, peach, peanut butter, and apple spice. When we find a coffee with those clear, recognizable flavor notes, we buy it as green coffee and roast it at our offsite facility using production Loring roasters. / After roasting, we vacuum seal the coffee in opaque bags so it can offgas with very little oxygen, away from light and heat. This protects the beans and helps preserve their naturally occurring flavor notes.
+- Body (two paragraphs): We sample coffees from around the world looking for beans with clear, recognizable flavor notes like strawberry, peach, peanut butter, and apple spice. When we find a coffee with those clear, recognizable flavor notes, we buy it as green coffee and roast it at our offsite facility. / After roasting, we vacuum seal the coffee in opaque bags so it can offgas with very little oxygen, away from light and heat. This protects the beans and helps preserve their naturally occurring flavor notes.
 - Note: this delivers the "off-gassing in a sourcing section" intent (revision item 5). The espresso answer still has its own offgas sentence; de-duping is an open owner decision.
 
 #### 4. How do we make espresso?
-- Body: We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for balance. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.
+- Body: We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for balance. We even brew each shot differently depending on the bean and drink type. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets the bean's naturally occurring flavor notes come through so that we can serve you the best cup of coffee we know how to make.
 
 #### 5. Why is the menu so simple?
 - Body: The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we're happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most.
