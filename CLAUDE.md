@@ -61,7 +61,7 @@ The site must remain understandable if JavaScript fails. With JS off: the carous
   CNAME
   robots.txt
   sitemap.xml
-  plan.md             ← execution plan record (not visitor-facing)
+  TODO.md             ← backlog / potential to-dos + open questions (not visitor-facing)
   COPY_DECK.md        ← brand copy working draft (not visitor-facing)
   assets/
     css/styles.css
