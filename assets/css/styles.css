@@ -544,6 +544,17 @@ p {
   line-height: 1.3;
 }
 
+/* Quiet inline note after the prominent status word (e.g. "Open Closing
+   soon") — same subtle treatment as .status-sub, but inline. */
+.status-soft {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-ink-quiet);
+  letter-spacing: 0.01em;
+  margin-left: var(--space-2);
+}
+
 .status-meta {
   font-size: var(--text-sm);
   color: var(--color-ink-quiet);

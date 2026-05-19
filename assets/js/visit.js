@@ -57,7 +57,7 @@
       <section class="visit-loc" data-status-state="${s.isOpen ? (s.closesSoon ? "closing-soon" : "open") : "closed"}">
         <span class="today-name">${esc(loc.name)}</span>
         <div class="today-status">
-          <p class="status-line">${esc(s.primary)}</p>
+          <p class="status-line">${esc(s.primary)}${s.primaryNote ? ` <span class="status-soft">${esc(s.primaryNote)}</span>` : ""}</p>
           <p class="status-sub">${esc(s.secondary)}</p>
         </div>
         <ul class="today-hours">${hours}</ul>

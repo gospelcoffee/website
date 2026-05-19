@@ -54,7 +54,7 @@ the bottom of the page as collapsible questions, present but never forced.
 ### Status + hours format
 - Status is a quiet **two-line** block: a display line over a smaller sub-line.
   - Open: `Open now` / `Closes at 6 PM`
-  - Open but closing in 30 minutes or less: `Closing soon` / `Closes at 6 PM`
+  - Open but closing in 30 minutes or less: `Open` (prominent) + a quiet "Closing soon" note (subtle/grayed, like the sub-line) / `Closes at 6 PM`
   - Closed: `Closed` / `Opens at 7 AM` (primary line is just "Closed", no "now"; next actual opening: same day `Opens at 7 AM`;
     next day `Opens tomorrow at 7 AM`; further out `Opens Wednesday at 7 AM`).
 - Weekly hours list, generated from `data/locations.json`:
@@ -336,7 +336,7 @@ not-found message, "Go home" (`/`) and "View menu" (`/?menu=full#menu`) buttons.
 - The sit-down location is "Valo Lab" everywhere; no "Valo Sit-Down" in visitor copy.
 - Curbside appears first in source order; the Visit modal puts Valo Lab first only when open.
 - No visible street address on the location cards; addresses remain in the JSON-LD.
-- Status is two-line; "Closing soon" shows at ≤30 min to close; Curbside hours read
+- Status is two-line; closing-soon shows `Open` + a quiet "Closing soon" note at ≤30 min to close; Curbside hours read
   "Open daily" / "7 AM to 6 PM".
 - Menu: black coffee (not "coffee"), cortado $5, no "traditional or extra milk" sub-lines;
   full menu is one stacked column.

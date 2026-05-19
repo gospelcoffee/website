@@ -83,10 +83,12 @@
   const CLOSING_SOON_MINUTES = 30;
 
   /* Two-line status. Returns:
-   *   { isOpen, primary, secondary, closesInMinutes, closesSoon }
-   * primary  : "Open now" | "Closing soon" | "Closed"
-   * secondary: "Closes at 6 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
-   *            | "Opens Wednesday at 7 AM"
+   *   { isOpen, primary, primaryNote, secondary, closesInMinutes, closesSoon }
+   * primary     : "Open now" | "Open" | "Closed" (the prominent display word)
+   * primaryNote : null, or "Closing soon" (a quiet inline note rendered in the
+   *               same subtle style as the secondary line, after `primary`)
+   * secondary   : "Closes at 6 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
+   *               | "Opens Wednesday at 7 AM"
    * closesSoon is true when open and closing in <= 30 minutes.
    */
   function getStatus(location) {
@@ -102,7 +104,8 @@
         const closesSoon = closesInMinutes <= CLOSING_SOON_MINUTES;
         return {
           isOpen: true,
-          primary: closesSoon ? "Closing soon" : "Open now",
+          primary: closesSoon ? "Open" : "Open now",
+          primaryNote: closesSoon ? "Closing soon" : null,
           secondary: `Closes at ${formatTime(today.close)}`,
           closesInMinutes,
           closesSoon,
@@ -128,6 +131,7 @@
     return {
       isOpen: false,
       primary: "Closed",
+      primaryNote: null,
       secondary,
       closesInMinutes: null,
       closesSoon: false,
@@ -186,7 +190,16 @@
     const headlineEl = el.querySelector("[data-status-headline]");
     const subEl = el.querySelector("[data-status-sub]");
     const hoursEl = el.querySelector("[data-status-hours]");
-    if (headlineEl) headlineEl.textContent = status.primary;
+    if (headlineEl) {
+      headlineEl.textContent = status.primary;
+      if (status.primaryNote) {
+        const note = document.createElement("span");
+        note.className = "status-soft";
+        note.textContent = status.primaryNote;
+        headlineEl.appendChild(document.createTextNode(" "));
+        headlineEl.appendChild(note);
+      }
+    }
     if (subEl) subEl.textContent = status.secondary;
     if (hoursEl) renderLines(hoursEl, buildHoursLines(location));
     el.setAttribute(
