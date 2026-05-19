@@ -254,15 +254,16 @@ the bottom of the page as collapsible questions, present but never forced.
   bean stays the choice that matters most.
 - Accuracy note: do NOT name specific drinks we "don't sell" (e.g., chai); we do sell a chai
   latte. Keep it about what we use, not what we forbid.
-- Outstanding (owner to supply exact copy): tighten this so it does not over-explain the
-  add-ins.
+- Outstanding (owner will supply exact copy): tighten this so it does not over-explain the
+  add-ins. The retired imperative line "Choose your drink. Choose your bean." stays retired
+  (owner: skip / considered satisfied); do not reintroduce it.
 
 - Retired (do not reintroduce): the "How do we make the perfect drink?" question. Also
   retired: a separate philosophy page and any "Read our philosophy" link.
 - Stand-alone rule: every question must make sense collapsed; name the subject, end with "?",
   keep it short.
-- Outstanding: a broader voice/cadence harmonization across all five answers (only objective
-  lexicon / flavor-credit rule-fixes have been applied so far).
+- Cross-answer voice/cadence harmonization is not pursued (owner accepts the per-answer
+  voice). Only objective lexicon / flavor-credit rule-fixes apply.
 
 ### Footer
 - `.footer-simple`: three items only, no headings, no location blocks.
