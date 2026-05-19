@@ -214,7 +214,8 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 | `/locations.html`  | Redirect stub → `/#today`                                       |
 | `/menu.html`       | Redirect stub → `/?menu=full#menu` (opens the full-menu modal)  |
 | `/philosophy.html` | Redirect stub → `/#philosophy`                                  |
-| `/404.html`        | Not-found page, `noindex, follow`, brand-only header            |
+| `/404.html`        | Catch-all: GitHub Pages serves it for any unmatched path; an inline script `location.replace()`s to `/` (or `/#today`, `/?menu=full#menu`, `/#philosophy` when the path's first segment looks like a known section: locations/location/visit/today, menu, philosophy/approach). `noindex, follow`, brand-only header. The static body (Go home / View menu) is the no-JS fallback. |
+| any other path     | Resolves to `404.html` → redirected as above (so `/anything` → home, `/menu` → menu modal, etc.)|
 
 ### Homepage sections (in order)
 
@@ -299,7 +300,7 @@ The site is a single indexable page. The redirect stubs and 404 are `noindex`.
 - **Open Graph**: og:site_name, og:title, og:description, og:type (`website`), og:url (`https://valocoffee.com/`), og:image, og:image:alt, og:locale (en_US). Image: `https://valocoffee.com/assets/images/coffee_look_desktop.jpeg`.
 - **Twitter Card**: summary_large_image with title, description, image, image:alt.
 
-**Redirect stubs (`locations.html`, `menu.html`, `philosophy.html`)**: minimal head — charset, `<meta http-equiv="refresh">`, `<link rel="canonical" href="https://valocoffee.com/">`, `<meta name="robots" content="noindex">`, a short `<title>`. **404**: `noindex, follow`, title `Not Found | Valo Coffee`.
+**Redirect stubs (`locations.html`, `menu.html`, `philosophy.html`)**: minimal head — charset, `<meta http-equiv="refresh">`, `<link rel="canonical" href="https://valocoffee.com/">`, `<meta name="robots" content="noindex">`, a short `<title>`. **404**: `noindex, follow`, title `Not Found | Valo Coffee`, plus an inline catch-all redirect script (any unmatched path → `/`, with the known-section anchor appended when the path's first segment maps to one). The visible body is the no-JS fallback only.
 
 **Required structured data (JSON-LD `application/ld+json`, all on `/`):** one `@graph` containing:
 - **WebSite** and **Organization** (legalName "Gospel Coffee LLC", logo, image, telephone, email, areaServed).

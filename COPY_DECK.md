@@ -327,8 +327,13 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 `location.replace()` fallback. No headlines, no body copy. On arrival, the hash-free nav
 strips the hash so the URL settles at `valocoffee.com/`. Do not turn these back into pages.
 
-`404.html`: brand-only header, `noindex, follow`, title "Not Found | Valo Coffee", a short
-not-found message, "Go home" (`/`) and "View menu" (`/?menu=full#menu`) buttons.
+`404.html`: the site-wide catch-all. GitHub Pages serves it for any unmatched path, and an
+inline script immediately redirects to `/` (or to `/#today`, `/?menu=full#menu`,
+`/#philosophy` when the path's first segment looks like a known section:
+locations/location/visit/today, menu, philosophy/approach), so `valocoffee.com/anything`
+lands on the homepage and section-style paths snap to the section. Brand-only header,
+`noindex, follow`, title "Not Found | Valo Coffee"; the visible "Go home" / "View menu" body
+is the no-JS fallback only.
 
 ---
 

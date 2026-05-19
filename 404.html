@@ -11,6 +11,27 @@
     gtag('js', new Date());
     gtag('config', 'G-KDFXDFD974');
   </script>
+  <script>
+    /* Catch-all: GitHub Pages serves this file for any unmatched path.
+       Send every URL to the homepage. If the path looks like a known
+       section, append the matching anchor so the homepage snaps to it
+       (same targets the legacy .html stubs use). Runs before render so
+       there is no 404 flash for JS visitors. */
+    (function () {
+      var seg = location.pathname
+        .replace(/^\/+|\/+$/g, "")
+        .split("/")[0]
+        .replace(/\.html$/i, "")
+        .toLowerCase();
+      var map = {
+        locations: "#today", location: "#today", visit: "#today", today: "#today",
+        menu: "?menu=full#menu",
+        philosophy: "#philosophy", approach: "#philosophy"
+      };
+      var suffix = Object.prototype.hasOwnProperty.call(map, seg) ? map[seg] : "";
+      location.replace(location.origin + "/" + suffix);
+    })();
+  </script>
   <title>Not Found | Valo Coffee</title>
   <meta name="description" content="The page you were looking for is not here." />
   <meta name="robots" content="noindex, follow" />
