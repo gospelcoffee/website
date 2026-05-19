@@ -136,17 +136,18 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 - Body: Coffee, to us, is any drink where you can clearly taste the natural flavor notes of the coffee bean. Any drink you order from our coffee menu highlights this philosophy.
 
 #### 2. Where do the flavor notes come from?
-- Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor notes. The same is true of coffee. Every varietal carries its own naturally occurring flavor notes. We source beans with relatable and recognizable flavor notes such as strawberry, peach, and peanut butter. The best way to discover how this works is to try our coffee tasting experience at our Valo Lab location.
+- Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor notes. The same is true of coffee. Every varietal carries its own naturally occurring flavor notes. The best way to discover how this works is to try our coffee tasting experience at our Valo Lab location.
 
 #### 3. Where does our coffee come from?
-- Body: **(empty placeholder — owner to supply copy.)** Shipped as a summary-only collapsible; excluded from the FAQ JSON-LD until it has body copy. Deferred here: moving the off-gassing explanation in (revision item 5).
+- Body (two paragraphs): We sample coffees from around the world looking for beans with clear, recognizable flavor notes like strawberry, peach, peanut butter, and apple spice. When we find a coffee with those clear, recognizable flavor notes, we buy it as green coffee and roast it at our offsite facility using production Loring roasters. / After roasting, we vacuum seal the coffee in opaque bags so it can offgas with very little oxygen, away from light and heat. This protects the beans and helps preserve their naturally occurring flavor notes.
+- Note: this delivers the "off-gassing in a sourcing section" intent (revision item 5). The espresso answer still has its own offgas sentence; de-duping is an open owner decision.
 
-#### 4. Why is the menu so simple?
+#### 4. How do we make espresso?
+- Body: We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for balance. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.
+
+#### 5. Why is the menu so simple?
 - Body: The fewer things in your cup, the more clearly you can taste the bean. So we keep things short, starting with our menu. It lists our most popular drinks, but we're happy to make any other drink you might want to order, like a cortado or a cappuccino. Our add-ins are just as short: cocoa, vanilla, honey, and maple. Each one is just as simple. Our cocoa is just cacao, salt, and water. Our honey is just honey. Our maple is 100% pure maple. Our vanilla is pure vanilla extract. And our sweetener list is just as pure and simple. The bean stays the choice that matters most.
 - Accuracy note: do NOT name specific drinks we "don't sell" (e.g., chai). We do sell a chai latte. Keep it about what we use, not what we forbid.
-
-#### 5. How do we make espresso?
-- Body: We've questioned every parameter. Heavier doses for clarity. Colder brew temps for sweetness. Lower pressure for balance. We even brew each shot differently depending on the bean and drink type. We offgas our beans because trapped carbon dioxide from roasting causes the coffee to taste bitter. We have 21 steps to prep a single puck of espresso. Every detail is intentionally tested, and we only keep what proves to be meaningfully better. Each choice lets us highlight the bean's naturally occurring flavor notes so that we can serve you the best cup of coffee we know how to make.
 
 - Retired (do not reintroduce): the "How do we make the perfect drink?" question and its paragraph. Also retired: a separate philosophy page and any "Read our philosophy" link.
 - Stand-alone rule: every question must make sense collapsed — name the subject, end with "?", keep it ~4–7 words.
@@ -207,5 +208,5 @@ One paper-style card, sections in order: Coffee (Drinks + Bean Menu + Optional) 
 - Sit-Down is clearly positioned as the tasting-experience destination.
 - Footer is phone, email, copyright only.
 - Full menu opens in the modal; menu/preview use category labels, never imperatives or scope claims.
-- Our Philosophy is on the homepage with five collapsible questions (the fifth an empty placeholder, excluded from FAQ JSON-LD); no "perfect drink" section.
+- Our Philosophy is on the homepage with five collapsible questions, all populated and mapped 1:1 in the FAQ JSON-LD; no "perfect drink" section.
 - Copy is concise, inviting, elegant, and direct. No prescriptive recommendation language.

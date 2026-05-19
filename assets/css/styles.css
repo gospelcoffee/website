@@ -1041,6 +1041,10 @@ p {
   line-height: 1.55;
 }
 
+.philosophy-body + .philosophy-body {
+  margin-top: var(--space-4);
+}
+
 /* Collapsible philosophy questions */
 .philosophy-detail {
   border-top: 1px solid var(--color-rule-soft);
