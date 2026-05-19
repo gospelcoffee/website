@@ -84,7 +84,7 @@
 
   /* Two-line status. Returns:
    *   { isOpen, primary, secondary, closesInMinutes, closesSoon }
-   * primary  : "Open now" | "Closing soon" | "Closed now"
+   * primary  : "Open now" | "Closing soon" | "Closed"
    * secondary: "Closes at 6 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
    *            | "Opens Wednesday at 7 AM"
    * closesSoon is true when open and closing in <= 30 minutes.
@@ -127,7 +127,7 @@
       : "";
     return {
       isOpen: false,
-      primary: "Closed now",
+      primary: "Closed",
       secondary,
       closesInMinutes: null,
       closesSoon: false,

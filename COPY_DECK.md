@@ -55,7 +55,7 @@ the bottom of the page as collapsible questions, present but never forced.
 - Status is a quiet **two-line** block: a display line over a smaller sub-line.
   - Open: `Open now` / `Closes at 6 PM`
   - Open but closing in 30 minutes or less: `Closing soon` / `Closes at 6 PM`
-  - Closed: `Closed now` / `Opens at 7 AM` (next actual opening: same day `Opens at 7 AM`;
+  - Closed: `Closed` / `Opens at 7 AM` (primary line is just "Closed", no "now"; next actual opening: same day `Opens at 7 AM`;
     next day `Opens tomorrow at 7 AM`; further out `Opens Wednesday at 7 AM`).
 - Weekly hours list, generated from `data/locations.json`:
   - **Curbside (uniform week):** collapses to two lines, `Open daily` / `7 AM to 6 PM` (the
