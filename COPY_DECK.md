@@ -47,7 +47,7 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 ### Flavor-credit voice rule
 - We don't "highlight," "bring out," or "enhance" the flavor. The flavor is already there. Our role is restraint: we don't add anything that would distract. The point of that restraint is the customer's enjoyment. Use verbs about the customer's experience (enjoyed clearly), what the flavor does (comes through, stays clear), and what we don't do (never add). Avoid highlight/bring out/enhance/draw out/accentuate/amplify.
 - **Verbatim lock retired (v0.8.1):** the old "approved-brief verbatim lock" on the Our Philosophy copy no longer applies; the owner has directed the lexicon below and philosophy copy is edited like the rest of the site.
-- **Required lexicon (v0.8.1):** "flavor notes" (never "tasting notes" or "flavor profiles"); "naturally occurring flavor notes" (never "naturally occurring flavors"); "varietal/varietals" (never "variety/varieties"). Still avoid the bare "natural flavor(s)" (FDA ingredient-list term).
+- **Required lexicon (v0.8.1):** "flavor notes" (never "tasting notes" or "flavor profiles"); "naturally occurring flavor notes" (never "naturally occurring flavors"); "variety/varieties" (never "varietal/varietals"). Still avoid the bare "natural flavor(s)" (FDA ingredient-list term).
 
 ---
 
@@ -136,7 +136,7 @@ The page opens light: the hero grounds the visitor in who Valo is and that it is
 - Body: Coffee, to us, is any drink where you can clearly taste the naturally occurring flavor notes of the coffee bean. Every drink you order from our coffee menu follows this philosophy.
 
 #### 2. Where do the flavor notes come from?
-- Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varietals. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor notes. The same is true of coffee. Every varietal carries its own naturally occurring flavor notes. The best way to discover how this works is to try our coffee tasting experience at our Valo Lab location.
+- Body: Coffee is the seed of a coffee cherry. Like any fruit, it comes in many varieties. For example, a Honeycrisp and a Granny Smith naturally have their own unique flavor notes. The same is true of coffee. Every variety carries its own naturally occurring flavor notes. The best way to discover how this works is to try our coffee tasting experience at our Valo Lab location.
 
 #### 3. Where does our coffee come from?
 - Body (two paragraphs): We sample coffees from around the world looking for beans with clear, recognizable flavor notes like strawberry, peach, peanut butter, and apple spice. When we find a coffee with those clear, recognizable flavor notes, we buy it as green coffee and roast it at our offsite facility. / After roasting, we vacuum seal the coffee in opaque bags so it can offgas with very little oxygen, away from light and heat. This protects the beans and helps preserve their naturally occurring flavor notes.
