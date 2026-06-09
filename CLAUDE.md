@@ -339,7 +339,8 @@ Coffee                 Bean Menu                          Optional
    flat white    7        peach           colombia           caramel
    cortado       5        strawberry      honduras           sugar
    black coffee  5        apple spice     colombia           brown sugar
-   espresso      5        decaf           mexico             honey
+   espresso      5        decaf           mexico             raw sugar
+                                                             honey
                                                              maple
                                                              splenda
                                                              stevia
@@ -351,7 +352,7 @@ not coffee
    ube latte                    7
    golden latte                 7
    butterfly lemonade           7
-   hibiscus yuzu                7
+   hibiscus lime                7
 
 Tasting experience (Valo Lab only)
    coffee tasting experience       19
@@ -363,7 +364,7 @@ Coffee beans (half pound bag)
 
 Drink order is fixed: latte, cappuccino, flat white, cortado, black coffee, espresso. The $5 black drink is **black coffee** (not "coffee"). **Cortado is a flat $5** (no range). There are **no "traditional or extra milk" sub-lines** anywhere — milk is decided at the counter/curbside.
 
-Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus yuzu already covers that style).
+Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus lime already covers that style).
 
 Weight conventions:
 - Drinks (latte, cappuccino, flat white, cortado, black coffee, espresso): all bold. No "traditional or extra milk" sub-lines.

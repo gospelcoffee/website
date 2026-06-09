@@ -287,15 +287,15 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,
-  sugar, brown sugar, honey, maple, agave, splenda, stevia.
+  sugar, brown sugar, raw sugar, honey, maple, agave, splenda, stevia.
 - Voice rule: plain noun-phrase category labels only. Never "pick a drink", "choose your
   bean", "pick add-ins".
 
 ### Not coffee
 - Section label: Not coffee.
 - Items (name regular, price bold): cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7,
-  golden latte 7, butterfly lemonade 7, hibiscus yuzu 7.
-- Retired (do not reintroduce): Jamaica. Hibiscus yuzu already covers that style.
+  golden latte 7, butterfly lemonade 7, hibiscus lime 7.
+- Retired (do not reintroduce): Jamaica. Hibiscus lime already covers that style.
 
 ### Tasting experience (Valo Lab only)
 - Section label: Tasting experience.

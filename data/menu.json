@@ -24,7 +24,7 @@
   },
   "optional": {
     "label": "Optional",
-    "items": ["vanilla", "mocha", "caramel", "sugar", "brown sugar", "honey", "maple", "agave", "splenda", "stevia"]
+    "items": ["vanilla", "mocha", "caramel", "sugar", "brown sugar", "raw sugar", "honey", "maple", "agave", "splenda", "stevia"]
   },
   "notCoffee": {
     "label": "Not coffee",
@@ -35,7 +35,7 @@
       { "name": "ube latte", "price": "7" },
       { "name": "golden latte", "price": "7" },
       { "name": "butterfly lemonade", "price": "7" },
-      { "name": "hibiscus yuzu", "price": "7" }
+      { "name": "hibiscus lime", "price": "7" }
     ]
   },
   "tasting": {
