@@ -818,27 +818,20 @@ p {
   font-weight: 600;
 }
 
-/* Two-column list cards (not coffee, beans): two columns on desktop, one on mobile */
+/* Two-column list cards (optional add-ins, not coffee, beans): one shared
+   two-column rule so column 1 and column 2 line up identically across all
+   three sections. Not coffee and beans collapse to one column on mobile
+   (below); the optional add-ins stay two columns. */
+.paper-menu-optional .menu-list,
 .not-coffee-card .menu-list,
 .beans-card .menu-list {
   columns: 2;
   column-gap: var(--space-7);
 }
 
+.paper-menu-optional .menu-row,
 .not-coffee-card .menu-row,
 .beans-card .menu-row {
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-/* Optional list: flow into multiple columns */
-.paper-menu-optional .menu-list {
-  columns: 2;
-  column-gap: var(--space-5);
-}
-
-.paper-menu-optional .menu-row {
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
