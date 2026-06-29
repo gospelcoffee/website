@@ -53,21 +53,21 @@ the bottom of the page as collapsible questions, present but never forced.
 
 ### Status + hours format
 - Status is a quiet **two-line** block: a display line over a smaller sub-line.
-  - Open: `Open now` / `Closes at 6 PM`
-  - Open but closing in 30 minutes or less: `Open` (prominent) + a quiet "Closing soon" note (subtle/grayed, like the sub-line) / `Closes at 6 PM`
+  - Open: `Open now` / `Closes at 2 PM`
+  - Open but closing in 30 minutes or less: `Open` (prominent) + a quiet "Closing soon" note (subtle/grayed, like the sub-line) / `Closes at 2 PM`
   - Closed: `Closed` / `Opens at 7 AM` (primary line is just "Closed", no "now"; next actual opening: same day `Opens at 7 AM`;
     next day `Opens tomorrow at 7 AM`; further out `Opens Wednesday at 7 AM`).
 - Weekly hours list, generated from `data/locations.json`:
-  - **Curbside (uniform week):** collapses to two lines, `Open daily` / `7 AM to 6 PM` (the
+  - **Curbside (uniform week):** collapses to two lines, `Open daily` / `7 AM to 2 PM` (the
     word "to" here is a deliberate exception to the en-dash range format).
-  - **Valo Lab (varied week):** `Mon–Tue: Closed` / `Wed–Fri: 7 AM–10 AM` / `Sat–Sun: 7 AM–2 PM`.
-  - Day/range labels use 3-letter abbreviations and an en-dash with no spaces (`Mon–Sun`,
-    `7 AM–6 PM`). Omit `:00` minutes (`7 AM`, not `7:00 AM`).
+  - **Valo Lab (varied week):** `Mon – Tue: Closed` / `Wed – Fri: 7 AM – 10 AM` / `Sat – Sun: 7 AM – 2 PM`.
+  - Day/range labels use 3-letter abbreviations and an en-dash with spaces (`Mon – Sun`,
+    `7 AM – 2 PM`). Omit `:00` minutes (`7 AM`, not `7:00 AM`).
 
 ### Dashes rule (site copy)
 - Never use en-dash (–) or em-dash (—) anywhere in visitor copy: prose, headlines, eyebrows,
   notes, status text, captions, alt text. Only exceptions: time ranges and number ranges
-  (`$5–10`) and the weekly hours/day-range format above, where the en-dash is required.
+  (`$5 – 10`) and the weekly hours/day-range format above, where the en-dash is required.
 - For pauses or asides, use a comma, colon, period, or rephrase.
 - For separators between a title and a price, use a middot (·) or separate elements.
 
@@ -134,8 +134,8 @@ the bottom of the page as collapsible questions, present but never forced.
 
 #### Card: Valo Curbside (`#curbside`)
 - Location label: Valo Curbside
-- Status fallback: `Open now` / `Closes at 6 PM`
-- Hours fallback: `Open daily` / `7 AM to 6 PM`
+- Status fallback: `Open now` / `Closes at 2 PM`
+- Hours fallback: `Open daily` / `7 AM to 2 PM`
 - Body (canonical): Drive up, stay in your car, and we bring your coffee to you. Specialty
   coffee at drive-thru speeds.
 - Voice note: use "drive-thru" (not "drive-through") and "speeds" (plural). Never "the best
@@ -147,7 +147,7 @@ the bottom of the page as collapsible questions, present but never forced.
 #### Card: Valo Lab (`#resort`)
 - Location label: Valo Lab (never "Valo" alone, never "Valo Resort", never "Valo Sit-Down")
 - Status fallback: `Open now` / `Closes at 10 AM`
-- Hours fallback: `Mon–Tue: Closed` / `Wed–Fri: 7 AM–10 AM` / `Sat–Sun: 7 AM–2 PM`
+- Hours fallback: `Mon – Tue: Closed` / `Wed – Fri: 7 AM – 10 AM` / `Sat – Sun: 7 AM – 2 PM`
 - Body (canonical): Sit down, take in the view. Valo Lab is where we serve the full tasting
   experience and help customers discover the coffee they want.
 - Primary CTA: Get directions (opens Google Maps in a new tab)
@@ -343,7 +343,7 @@ is the no-JS fallback only.
 - Curbside appears first in source order; the Visit modal puts Valo Lab first only when open.
 - No visible street address on the location cards; addresses remain in the JSON-LD.
 - Status is two-line; closing-soon shows `Open` + a quiet "Closing soon" note at ≤30 min to close; Curbside hours read
-  "Open daily" / "7 AM to 6 PM".
+  "Open daily" / "7 AM to 2 PM".
 - Menu: black coffee (not "coffee"), cortado $5, no "traditional or extra milk" sub-lines;
   full menu is one stacked column.
 - Bottom smart CTA is one button ("Visit Valo today" only when a location stays open >1 hour,

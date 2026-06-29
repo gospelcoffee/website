@@ -87,7 +87,7 @@
    * primary     : "Open now" | "Open" | "Closed" (the prominent display word)
    * primaryNote : null, or "Closing soon" (a quiet inline note rendered in the
    *               same subtle style as the secondary line, after `primary`)
-   * secondary   : "Closes at 6 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
+   * secondary   : "Closes at 2 PM" | "Opens at 7 AM" | "Opens tomorrow at 7 AM"
    *               | "Opens Wednesday at 7 AM"
    * closesSoon is true when open and closing in <= 30 minutes.
    */
@@ -154,16 +154,16 @@
     return groups.map((g) => {
       const dayLabel = g.start === g.end
         ? DAY_ABBR[g.start]
-        : `${DAY_ABBR[g.start]}–${DAY_ABBR[g.end]}`;
+        : `${DAY_ABBR[g.start]} – ${DAY_ABBR[g.end]}`;
       const hoursLabel = g.key === "closed"
         ? "Closed"
-        : `${formatTime(g.open)}–${formatTime(g.close)}`;
+        : `${formatTime(g.open)} – ${formatTime(g.close)}`;
       return `${dayLabel}: ${hoursLabel}`;
     });
   }
 
   /* Hours list lines. When every day shares the same open hours, collapse to a
-   * calm two-line summary ("Open daily" / "7 AM to 6 PM"); otherwise the
+   * calm two-line summary ("Open daily" / "7 AM to 2 PM"); otherwise the
    * grouped weekly schedule with the en-dash range format.
    */
   function buildHoursLines(location) {

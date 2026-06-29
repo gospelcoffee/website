@@ -1,14 +1,16 @@
 # Valo Coffee Website — Context, Rules, and Guidelines
 
-Spec version: 0.8
+Spec version: 0.8.2
 
 This file is the source of truth for how the Valo Coffee website should look, sound, and behave. Read it before making changes.
 
 > **v0.7 change:** The site is now a **single-page experience**. The homepage (`/`) contains everything — hero, locations, menu, and philosophy. `locations.html`, `menu.html`, and `philosophy.html` are no longer standalone pages; they are redirect stubs that send visitors to the matching homepage section. The full menu opens in an in-page modal, not a separate page.
 
-> **v0.8 change:** The sit-down location is renamed **Valo Lab** (was "Valo Sit-Down"; the `#resort` element/anchor IDs and `data-location="resort"` are kept for compatibility). Location cards no longer show a street address. Open/closed status is now a **two-line** block (`Open now` / `Closes at 6 PM`, or `Closed` / `Opens at 7 AM`), and Curbside's uniform week collapses to `Open daily` / `7 AM to 6 PM`. The full-menu modal is a single **stacked** column (Coffee → Bean Menu → Optional → Not coffee → Tasting → Coffee beans). Menu fixes: the $5 black drink is **black coffee**, **cortado is $5**, and the "traditional or extra milk" sub-lines are removed. A **bottom smart CTA** opens a new **Visit modal** (`#visit-modal`, reuses the menu-modal chrome) listing both locations. The **Our Approach / philosophy rebuild (revision items 20–27) is intentionally deferred** to a later pass — that section is unchanged except the Valo Lab name in its answer text and FAQ JSON-LD.
+> **v0.8 change:** The sit-down location is renamed **Valo Lab** (was "Valo Sit-Down"; the `#resort` element/anchor IDs and `data-location="resort"` are kept for compatibility). Location cards no longer show a street address. Open/closed status is now a **two-line** block (`Open now` / `Closes at 2 PM`, or `Closed` / `Opens at 7 AM`), and Curbside's uniform week collapses to `Open daily` / `7 AM to 2 PM`. The full-menu modal is a single **stacked** column (Coffee → Bean Menu → Optional → Not coffee → Tasting → Coffee beans). Menu fixes: the $5 black drink is **black coffee**, **cortado is $5**, and the "traditional or extra milk" sub-lines are removed. A **bottom smart CTA** opens a new **Visit modal** (`#visit-modal`, reuses the menu-modal chrome) listing both locations. The **Our Approach / philosophy rebuild (revision items 20 – 27) is intentionally deferred** to a later pass — that section is unchanged except the Valo Lab name in its answer text and FAQ JSON-LD.
 
 > **v0.8.1 change:** The philosophy section is now **"Our Philosophy"** (eyebrow + comment). A required **lexicon** is enforced sitewide: "flavor notes" (never "tasting notes"/"flavor profiles"), "naturally occurring flavor notes" (never "naturally occurring flavors"), "variety/varieties" (never "varietal/varietals"); the earlier approved-brief verbatim lock is retired. The collapsible "Where do the tasting notes come from?" is now "Where do the flavor notes come from?", and a **fifth** collapsible, **"Where does our coffee come from?"**, now carries owner-supplied sourcing/roasting copy (green-coffee buying, offsite Loring roasting, vacuum-sealed offgassing) and **is included in the FAQ JSON-LD**, so the FAQPage again maps **all five** questions 1:1. On-page + FAQ order: What is coffee? → Where do the flavor notes come from? → Where does our coffee come from? → How do we make espresso? → Why is the menu so simple? In the espresso answer, "smoothness" → "balance", and its "We offgas our beans…" sentence was removed so off-gassing lives only in "Where does our coffee come from?". A voice rule-fix pass also corrected "natural flavor notes" → "naturally occurring flavor notes" in "What is coffee?" and removed the discouraged "highlight" verb from "What is coffee?" ("…follows this philosophy") and the espresso answer ("lets the bean's naturally occurring flavor notes come through"), bringing the philosophy copy in line with the "don't take credit for the flavor" rule. Both location descriptions are unified to one canonical wording sourced from `data/locations.json` (`loc.blurb`), rendered identically in the Visit Valo cards and the Visit modal. A closing-soon status (primary line `Open` plus a quiet `.status-soft` "Closing soon" note) now shows when a location is open and closes in 30 minutes or less (`data-status-state="closing-soon"`). Item 5 (off-gassing moved into a sourcing section) is complete: the copy lives in "Where does our coffee come from?" and has been removed from the espresso answer. Still **deferred pending owner copy:** the modern-espresso rebuild (item 6) and tightening "Why is the menu so simple?" (item 8). A broader cross-answer voice/cadence harmonization is **not pursued** (owner considers the per-answer voice acceptable); only objective rule-fixes apply. The accordion/`<details>` format is **kept**.
+
+> **v0.8.2 change:** Valo Curbside hours are now **Mon – Sun, 7 AM – 2 PM** (daily close updated to 2 PM), applied across `data/locations.json`, the hard-coded fallbacks, and the Curbside JSON-LD `openingHoursSpecification`. Range **en-dashes now carry a space on both sides** everywhere (`7 AM – 2 PM`, `Mon – Sun`, `$5 – 10`), reversing the earlier no-space convention: `assets/js/status.js` renders the spaced separator and the hours/day-range format rules in sections 3 and 6 are updated to match. Valo Lab hours are unchanged (only its dash spacing).
 
 ---
 
@@ -98,7 +100,7 @@ Valo should NOT feel: busy, generic, trendy, gimmicky, colorful, app-like, over-
 
 ### Copy rules
 
-- **No en-dashes or em-dashes in site copy.** Never use `–` (en-dash, `&ndash;`) or `—` (em-dash, `&mdash;`) as a punctuation mark in prose, headlines, eyebrows, notes, or any visitor-facing copy. The only exceptions are time ranges (`7 AM – 6 PM`) and number ranges (`$5–10`). For pauses or asides, use a comma, colon, period, or rephrase. For separators between a title and a price, use a middot (`·`, `&middot;`), parentheses, or restructure into separate elements. This rule applies to every site page; spec docs may use dashes in technical prose.
+- **No en-dashes or em-dashes in site copy.** Never use `–` (en-dash, `&ndash;`) or `—` (em-dash, `&mdash;`) as a punctuation mark in prose, headlines, eyebrows, notes, or any visitor-facing copy. The only exceptions are time ranges (`7 AM – 2 PM`) and number ranges (`$5 – 10`). For pauses or asides, use a comma, colon, period, or rephrase. For separators between a title and a price, use a middot (`·`, `&middot;`), parentheses, or restructure into separate elements. This rule applies to every site page; spec docs may use dashes in technical prose.
 - **Don't take credit for the flavor.** Valo does not "highlight," "bring out," or "enhance" the flavors of its ingredients. The flavor is already in the ingredient. Our role is restraint — we don't add anything that would distract from it. The point of that restraint is the *customer's enjoyment*: pure ingredients can be enjoyed clearly. Use verbs that describe the customer's experience (enjoyed clearly, enjoyed purely, experienced cleanly), what the flavor does (comes through, emerges, stays clear), and our restraint (we never add, we don't distract). Avoid verbs that put Valo in the active position of producing flavor (highlight, bring out, enhance, draw out, accentuate, amplify). (The earlier "approved-brief verbatim lock" on the Our Philosophy copy was **retired in v0.8.1** — the owner has directed the lexicon corrections below, so philosophy copy is edited like the rest of the site.)
 - **Required lexicon (v0.8.1).** Use these exact terms in all visitor copy and JSON-LD:
   - **"flavor notes"** — never "tasting notes" or "flavor profiles".
@@ -233,7 +235,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 
 ### Stand-alone rule for the philosophy questions
 
-Because the four questions are collapsed by default, each `<summary>` must make sense on its own without the answer visible. Name the subject in the question — "Why is the menu so simple?" not "Why so simple?". Questions are short (4–7 words) and end with a question mark.
+Because the four questions are collapsed by default, each `<summary>` must make sense on its own without the answer visible. Name the subject in the question — "Why is the menu so simple?" not "Why so simple?". Questions are short (4 – 7 words) and end with a question mark.
 
 ---
 
@@ -242,20 +244,20 @@ Because the four questions are collapsed by default, each `<summary>` must make 
 Each location has independent status. Source of truth: `data/locations.json`. Times are in `America/Phoenix`.
 
 Status format (two lines, generated by `assets/js/status.js`; a display `.status-line` over a quieter `.status-sub`, wrapped in `.today-status`):
-- Currently open: `Open now` / `Closes at 6 PM`
-- Open but closing in **30 minutes or less**: primary line is `Open` (prominent display word) followed by a quiet inline `Closing soon` note rendered in `.status-soft` (the same subtle/grayed treatment as the secondary line, not a literal separator), with `Closes at 6 PM` on the line below. Still `isOpen: true`; `getStatus` returns `primary: "Open"`, `primaryNote: "Closing soon"`.
+- Currently open: `Open now` / `Closes at 2 PM`
+- Open but closing in **30 minutes or less**: primary line is `Open` (prominent display word) followed by a quiet inline `Closing soon` note rendered in `.status-soft` (the same subtle/grayed treatment as the secondary line, not a literal separator), with `Closes at 2 PM` on the line below. Still `isOpen: true`; `getStatus` returns `primary: "Open"`, `primaryNote: "Closing soon"`.
 - Closed (before opening, after close, or a fully closed day): `Closed` / `Opens at 7 AM` (the primary line is just `Closed`, no "now"). The sub-line uses the next actual opening: same day → `Opens at 7 AM`; next day → `Opens tomorrow at 7 AM`; further out → the full weekday name `Opens Wednesday at 7 AM`.
 - `status.js` exposes `window.ValoStatus.getStatus(location)` → `{ isOpen, primary, secondary, closesInMinutes, closesSoon }`, reused by the bottom smart CTA and the Visit modal. `closesSoon` is true when open and `closesInMinutes <= 30`; the card/modal container gets `data-status-state="closing-soon"` in that case (still `open` otherwise). `closesInMinutes > 60` is the separate "stays open more than an hour" test for the CTA label.
 
 Hours-list format (rendered immediately under the status block by `status.js` from `data/locations.json`):
-- **Uniform week (Curbside):** when every day shares the same hours, collapse to exactly two lines — `Open daily` / `7 AM to 6 PM` (the word "to", a deliberate exception to the en-dash range format below).
+- **Uniform week (Curbside):** when every day shares the same hours, collapse to exactly two lines — `Open daily` / `7 AM to 2 PM` (the word "to", a deliberate exception to the en-dash range format below).
 - **Varied week (Valo Lab):** one line per group of consecutive days that share the same hours.
 - Day labels use 3-letter abbreviations: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
-- Range separator inside the day label is an en-dash with no spaces: `Mon–Sun`, `Wed–Fri`.
-- Hour ranges use an en-dash with no spaces, AM/PM on both sides: `7 AM–6 PM`, `7 AM–10 AM`. When minutes are `:00`, omit them (`7 AM`, not `7:00 AM`).
-- Closed days inside the list read `Mon–Tue: Closed`.
-- Example output (Curbside): two lines — `Open daily` / `7 AM to 6 PM`.
-- Example output (Valo Lab): three lines — `Mon–Tue: Closed` / `Wed–Fri: 7 AM–10 AM` / `Sat–Sun: 7 AM–2 PM`.
+- Range separator inside the day label is an en-dash with spaces: `Mon – Sun`, `Wed – Fri`.
+- Hour ranges use an en-dash with spaces, AM/PM on both sides: `7 AM – 2 PM`, `7 AM – 10 AM`. When minutes are `:00`, omit them (`7 AM`, not `7:00 AM`).
+- Closed days inside the list read `Mon – Tue: Closed`.
+- Example output (Curbside): two lines — `Open daily` / `7 AM to 2 PM`.
+- Example output (Valo Lab): three lines — `Mon – Tue: Closed` / `Wed – Fri: 7 AM – 10 AM` / `Sat – Sun: 7 AM – 2 PM`.
 
 The dashes-in-copy rule (no dashes in prose) does not apply inside the hours/day-range format — these are time and number ranges where the en-dash is required.
 
@@ -320,9 +322,9 @@ There are no BreadcrumbList entities — there is no page hierarchy to describe 
 
 ## 9. Locations (factual)
 
-**Valo Curbside** — 1500 AZ-69D, Prescott, AZ. Drive up, stay in your car, and we bring your coffee to you. Hours: **Mon–Sun, 7 AM – 6 PM**.
+**Valo Curbside** — 1500 AZ-69D, Prescott, AZ. Drive up, stay in your car, and we bring your coffee to you. Hours: **Mon – Sun, 7 AM – 2 PM**.
 
-**Valo Lab** (inside the Prescott Resort lobby) — 1500 AZ-69, Prescott, AZ. Sit down, view of Prescott, the full tasting experience lives here. Hours: **Mon–Tue closed, Wed–Fri 7 AM – 10 AM, Sat–Sun 7 AM – 2 PM**. Never call this location "Valo" alone, "Valo Resort", or "Valo Sit-Down" (retired name). See the location naming rule in section 3.
+**Valo Lab** (inside the Prescott Resort lobby) — 1500 AZ-69, Prescott, AZ. Sit down, view of Prescott, the full tasting experience lives here. Hours: **Mon – Tue closed, Wed – Fri 7 AM – 10 AM, Sat – Sun 7 AM – 2 PM**. Never call this location "Valo" alone, "Valo Resort", or "Valo Sit-Down" (retired name). See the location naming rule in section 3.
 
 Timezone: `America/Phoenix`. Hours are authoritative in `data/locations.json`; this section must be kept in sync with that file.
 
@@ -408,7 +410,7 @@ The site is done when:
 9. Single-page experience: hero, Visit Valo, menu, Our Philosophy, footer all on `/`.
 10. Header is the brand mark only — no nav, no hamburger.
 11. Hero is a crossfade carousel that pauses on hover/focus and holds on slide 1 under reduced motion, with no layout shift.
-12. Both locations clearly shown, each with an independent two-line open/closed status (`Open now`/`Closes at …` or `Closed`/`Opens …`), an hours list (Curbside collapses to `Open daily` / `7 AM to 6 PM`), no visible street address, and its own Get directions action.
+12. Both locations clearly shown, each with an independent two-line open/closed status (`Open now`/`Closes at …` or `Closed`/`Opens …`), an hours list (Curbside collapses to `Open daily` / `7 AM to 2 PM`), no visible street address, and its own Get directions action.
 13. The full menu opens in an accessible modal (focus trap, Escape, backdrop close, scroll lock, restored focus) and never as a separate page; it is a single stacked column with no side-by-side major sections.
 14. Full menu has no "pick"/"choose" labels; Coffee is latte 7, cappuccino 7, flat white 7, cortado 5, black coffee 5, espresso 5 (no "traditional or extra milk" sub-lines); Bean Menu labeled; Jamaica absent; tasting note at the top naming Valo Lab only; Coffee beans note refers to Valo Lab.
 15. Menu shows how to choose, never what to order.
