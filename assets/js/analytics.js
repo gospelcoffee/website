@@ -52,7 +52,8 @@
     philosophy_espresso:      { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "espresso" },
     philosophy_coffee_origin: { ux_area: "philosophy",   ux_action: "toggle_question",      ux_detail: "coffee_origin" },
     contact_phone:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "phone" },
-    contact_email:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "email" }
+    contact_email:            { ux_area: "footer",       ux_action: "contact",              ux_detail: "email" },
+    jobs_open:                { ux_area: "footer",       ux_action: "open_jobs",            ux_detail: "footer_link" }
   };
 
   /* Granular event name -> stable rollup name. GA4 Key events match on name,
