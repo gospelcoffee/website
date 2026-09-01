@@ -14,11 +14,11 @@
     "label": "Bean Menu",
     "note": "Each flavor note listed here is naturally occurring in the bean. Nothing has ever been added to the coffee beans.",
     "items": [
-      { "name": "dark & smoky", "origin": "peru", "producer": "Café Selva Norte", "farm": "various smallholders", "region": "Cajamarca", "variety": "Bourbon, Catimor, Caturra, Pache, Typica", "process": "washed", "elevation": "1200 – 1800 m", "certification": "Fairtrade, Organic (NOP)", "lot": "P614006-2", "harvest": "2024/25" },
+      { "name": "dark & smoky", "origin": "peru", "producer": "Café Selva Norte", "region": "Cajamarca", "variety": "Bourbon, Catimor, Caturra, Pache, Typica", "process": "washed", "elevation": "1200 – 1800 m", "certification": "Fairtrade, Organic (NOP)", "lot": "P614006-2", "harvest": "2024/25" },
       { "name": "peanut butter", "origin": "brazil", "producer": "producers of the Cerrado region", "region": "Cerrado, Minas Gerais", "variety": "Yellow Bourbon, Mundo Novo, Obatã", "process": "natural", "elevation": "850 – 1100 m", "lot": "39429", "screen": "15/16", "grade": "SS FC" },
       { "name": "strawberry", "origin": "honduras", "producer": "Roger Dominguez", "farm": "Finca La Cueva", "region": "Marcala, La Paz", "variety": "Parainema", "process": "natural" },
       { "name": "apple spice", "origin": "colombia", "producer": "Diego Bermudez", "farm": "Finca El Paraiso", "region": "Cauca", "variety": "Castillo", "process": "thermal shock fermentation" },
-      { "name": "tropical", "origin": "papua new guinea" },
+      { "name": "tropical", "origin": "papua new guinea", "producer": "Siane Organic Agriculture Cooperative (SOAC)", "region": "Chuave, Chimbu", "variety": "Bourbon, Typica", "process": "washed", "elevation": "1350 m", "certification": "Organic", "lot": "39769" },
       { "name": "decaf", "origin": "mexico" }
     ]
   },

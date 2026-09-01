@@ -103,11 +103,11 @@ preserves the only indexable "peach" token on the site.
 
 Producer metadata (see CLAUDE.md section 10) is incomplete:
 
-- `tropical` (papua new guinea) — no attribution at all.
 - `decaf` (mexico) — no attribution at all.
 - `apple spice` (colombia) — "Castillo variety, thermal shock fermentation" is inferred from
   Finca El Paraiso's documented house method, **not confirmed for this lot**. Verify or replace.
 
 Supplying a supplier lot page resolves each the same way lots `P614006-2` (Covoya, Peru Selva
-Norte) and `39429` (Royal, Brazil Cerrado) did: a few keys in `data/menu.json` plus one
-JSON-LD `description` string per bean. No restructuring needed.
+Norte), `39429` (Royal, Brazil Cerrado) and `39769` (Royal, PNG Organic Siane Chimbu) did: a
+few keys in `data/menu.json` plus one JSON-LD `description` string per bean. No restructuring
+needed.
