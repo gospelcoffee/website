@@ -42,7 +42,7 @@
     "label": "Tasting experience",
     "availability": "Tasting experiences are available at Valo Lab only.",
     "items": [
-      { "name": "coffee tasting experience", "price": "19", "desc": "Four coffees of your choice, served as a pour-over flight, then any full-size drink from the menu." },
+      { "name": "coffee tasting experience", "price": "19", "desc": "Four coffees of your choice, served as a tasting flight, then any full-size drink from the menu." },
       { "name": "not coffee tasting experience", "price": "19", "desc": "Four not coffee lattes of your choice, served as a sample flight, then any full-size drink from the menu." }
     ]
   },

@@ -302,7 +302,7 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 - Availability note at the top (italic, quiet): Tasting experiences are available at Valo
   Lab only.
 - Item 1 — coffee tasting experience · 19 · Four coffees of your choice, served as a
-  pour-over flight, then any full-size drink from the menu.
+  tasting flight, then any full-size drink from the menu.
 - Item 2 — not coffee tasting experience · 19 · Four not coffee lattes of your choice, served
   as a sample flight, then any full-size drink from the menu.
 - Verbiage rule: the two descriptions use identical sentence structure; only the
