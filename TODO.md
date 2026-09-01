@@ -101,13 +101,13 @@ preserves the only indexable "peach" token on the site.
 
 ### Outstanding bean attributions
 
-Producer metadata (see CLAUDE.md section 10) is incomplete:
+Producer metadata (see CLAUDE.md section 10) is complete for five of six beans. One gap:
 
-- `decaf` (mexico) — no attribution at all.
 - `apple spice` (colombia) — "Castillo variety, thermal shock fermentation" is inferred from
   Finca El Paraiso's documented house method, **not confirmed for this lot**. Verify or replace.
 
 Supplying a supplier lot page resolves each the same way lots `P614006-2` (Covoya, Peru Selva
-Norte), `39429` (Royal, Brazil Cerrado) and `39769` (Royal, PNG Organic Siane Chimbu) did: a
+Norte), `39429` (Royal, Brazil Cerrado), `39769` (Royal, PNG Siane Chimbu) and `41050` (Royal,
+Decaf Sumatra Swiss Water) did: a
 few keys in `data/menu.json` plus one JSON-LD `description` string per bean. No restructuring
 needed.

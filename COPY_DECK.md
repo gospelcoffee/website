@@ -168,7 +168,7 @@ the bottom of the page as collapsible questions, present but never forced.
 #### Group: Beans
 - Group label: Beans
 - Items (in order): dark & smoky / peru, peanut butter / brazil, strawberry / honduras,
-  apple spice / colombia, tropical / papua new guinea, decaf / mexico
+  apple spice / colombia, tropical / papua new guinea, decaf / sumatra
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 
@@ -283,7 +283,7 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
   cortado 5, black coffee 5, espresso 5. **No "traditional or extra milk" sub-lines.**
 - Bean Menu (sub-label "Bean Menu"; bean bold, origin regular meta): dark & smoky / peru,
   peanut butter / brazil, strawberry / honduras, apple spice / colombia,
-  tropical / papua new guinea, decaf / mexico.
+  tropical / papua new guinea, decaf / sumatra.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,

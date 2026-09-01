@@ -345,7 +345,7 @@ Coffee                 Bean Menu                          Optional
    flat white    7        strawberry      honduras           caramel
    cortado       5        apple spice     colombia           sugar
    black coffee  5        tropical        papua new guinea   brown sugar
-   espresso      5        decaf           mexico             raw sugar
+   espresso      5        decaf           sumatra            raw sugar
                                                              honey
                                                              maple
                                                              splenda

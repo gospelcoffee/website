@@ -19,7 +19,7 @@
       { "name": "strawberry", "origin": "honduras", "producer": "Roger Dominguez", "farm": "Finca La Cueva", "region": "Marcala, La Paz", "variety": "Parainema", "process": "natural" },
       { "name": "apple spice", "origin": "colombia", "producer": "Diego Bermudez", "farm": "Finca El Paraiso", "region": "Cauca", "variety": "Castillo", "process": "thermal shock fermentation" },
       { "name": "tropical", "origin": "papua new guinea", "producer": "Siane Organic Agriculture Cooperative (SOAC)", "region": "Chuave, Chimbu", "variety": "Bourbon, Typica", "process": "washed", "elevation": "1350 m", "certification": "Organic", "lot": "39769" },
-      { "name": "decaf", "origin": "mexico" }
+      { "name": "decaf", "origin": "sumatra", "producer": "smallholder farmers of Northern Sumatra and Aceh", "region": "Northern Sumatra and Aceh, Indonesia", "variety": "Typica, Catimor", "process": "wet-hulled, Swiss Water decaffeination", "elevation": "1200 – 1700 m", "lot": "41050" }
     ]
   },
   "optional": {
