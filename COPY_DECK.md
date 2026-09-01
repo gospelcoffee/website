@@ -167,8 +167,8 @@ the bottom of the page as collapsible questions, present but never forced.
 
 #### Group: Beans
 - Group label: Beans
-- Items (in order): dark & smoky / colombia, peanut butter / brazil, peach / colombia,
-  strawberry / honduras, apple spice / colombia, decaf / mexico
+- Items (in order): dark & smoky / peru, peanut butter / brazil, strawberry / honduras,
+  apple spice / colombia, tropical / papua new guinea, decaf / mexico
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 
@@ -281,9 +281,9 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 ### Coffee
 - Drink list (name bold, price bold), in order: latte 7, cappuccino 7, flat white 7,
   cortado 5, black coffee 5, espresso 5. **No "traditional or extra milk" sub-lines.**
-- Bean Menu (sub-label "Bean Menu"; bean bold, origin regular meta): dark & smoky / colombia,
-  peanut butter / brazil, peach / colombia, strawberry / honduras, apple spice / colombia,
-  decaf / mexico.
+- Bean Menu (sub-label "Bean Menu"; bean bold, origin regular meta): dark & smoky / peru,
+  peanut butter / brazil, strawberry / honduras, apple spice / colombia,
+  tropical / papua new guinea, decaf / mexico.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,
@@ -314,7 +314,7 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 - Section label: Coffee beans.
 - Unit label: half pound bag (italic, lowercase).
 - Items: all six beans at 22 each, same labels and order as the Bean Menu (dark & smoky,
-  peanut butter, peach, strawberry, apple spice, decaf). Names regular, prices bold.
+  peanut butter, strawberry, apple spice, tropical, decaf). Names regular, prices bold.
 - Footnote (italic, quiet): Available at both locations. For custom grinding and vacuum
   sealing, visit Valo Lab.
 

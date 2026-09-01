@@ -64,3 +64,50 @@ iOS/macOS → an Apple Maps URL, everything else → the existing Google link. N
 
 When copy arrives: wire each into `index.html` on-page `<details>` **and** the matching FAQ
 JSON-LD answer (kept 1:1, same order) **and** `COPY_DECK.md`; then mark done in `CLAUDE.md`.
+
+---
+
+## PARKED — bean roster follow-ups (tracked in CLAUDE.md v0.8.4 note)
+
+### New bean: lemon drop / burundi — confirmed, deliberately NOT on the site
+
+**Status:** lot detail in hand, held back by owner decision. Do not add it to `data/menu.json`,
+the JSON-LD, the homepage preview, or the no-JS fallbacks until the owner says it is live.
+
+- Name: `lemon drop` · Origin: `burundi`
+- Farm: Masha · Region: Gatara, Kayanza · Variety: Bourbon · Process: washed
+- Elevation: 1672 MASL · Microlot
+- Price: assumed 22 (half pound bag), same as every other bean — **confirm before shipping**.
+- Slot in the fixed bean order is undecided. Today's order is dark & smoky, peanut butter,
+  strawberry, apple spice, tropical, decaf (decaf always last).
+- **A seventh bean breaks the "six beans" wording** in `CLAUDE.md` sections 6 and 10 and in
+  `COPY_DECK.md` — those lines must be updated in the same pass. CSS needs no change:
+  `.beans-card .menu-list { columns: 2 }` auto-balances 7 items as 4 + 3.
+- Open question: does lemon drop replace another bean, or does the roster grow to seven?
+
+### Peach / colombia — temporarily unavailable, NOT retired
+
+Removed from all seven live surfaces in v0.8.4. Unlike Jamaica it may return, so it is not on
+the retired list. If it comes back it goes into all seven surfaces at an owner-chosen slot,
+with this attribution:
+
+- Producer: Diego Bermudez · Farm: Finca El Paraiso · Region: Cauca, Colombia
+- Variety and process: **TBC** (not lot-confirmed)
+
+Note the philosophy answer "Where does our coffee come from?" still names peach as an example
+flavor note, in `index.html` (on-page `<details>` and the FAQ JSON-LD, kept 1:1) and
+`COPY_DECK.md`. That is deliberate — it describes sourcing criteria, not current stock — and it
+preserves the only indexable "peach" token on the site.
+
+### Outstanding bean attributions
+
+Producer metadata (see CLAUDE.md section 10) is incomplete:
+
+- `tropical` (papua new guinea) — no attribution at all.
+- `decaf` (mexico) — no attribution at all.
+- `apple spice` (colombia) — "Castillo variety, thermal shock fermentation" is inferred from
+  Finca El Paraiso's documented house method, **not confirmed for this lot**. Verify or replace.
+
+Supplying a supplier lot page resolves each the same way lots `P614006-2` (Covoya, Peru Selva
+Norte) and `39429` (Royal, Brazil Cerrado) did: a few keys in `data/menu.json` plus one
+JSON-LD `description` string per bean. No restructuring needed.
