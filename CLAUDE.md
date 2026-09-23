@@ -1,6 +1,6 @@
 # Valo Coffee Website — Context, Rules, and Guidelines
 
-Spec version: 0.8.5
+Spec version: 0.8.6
 
 This file is the source of truth for how the Valo Coffee website should look, sound, and behave. Read it before making changes.
 
@@ -17,6 +17,8 @@ This file is the source of truth for how the Valo Coffee website should look, so
 > **v0.8.4 change:** The Bean Menu roster changes. **Peach (colombia) is removed** and a new bean, **tropical (papua new guinea)**, takes the fifth slot; separately, **dark & smoky moves from colombia to peru** (Café Selva Norte, Cajamarca, lot P614006-2). The order is now dark & smoky, peanut butter, strawberry, apple spice, tropical, decaf, still six beans with decaf last, applied identically to `data/menu.json` (`beans` and `beansForSale`), both JSON-LD `MenuSection`s (Bean Menu and Coffee beans), the hard-coded homepage preview, and the two static no-JS fallback lists. Peach is **temporarily unavailable, not retired**: unlike Jamaica it may return, so it stays off the retired list and is not re-added without the owner's word. The philosophy answer "Where does our coffee come from?" (on-page and FAQ JSON-LD) still names peach as an example flavor note, deliberately: it describes sourcing criteria rather than current stock. A further bean, **lemon drop (burundi)**, is confirmed with full lot detail but is deliberately **not on the site yet** and is parked in `TODO.md`. This version also introduces **non-rendering producer metadata**: optional `producer`, `farm`, `region`, `variety`, `process`, `certification`, `elevation`, `lot`, `harvest`, `screen` and `grade` keys on `beans.items` in `data/menu.json`, surfaced for search engines only through the JSON-LD MenuItem `description`. See section 10.
 
 > **v0.8.5 change:** Valo is now **modern espresso only**, and the phrase **"pour over" is retired sitewide**. The coffee tasting experience is described as **"served as a tasting flight"** (paired with the not coffee item's "sample flight"), updated in `data/menu.json`, the Tasting experience JSON-LD, the static no-JS fallback and `COPY_DECK.md`. The black coffee JSON-LD description, which read "Pour-over or long black, made with the bean of your choice.", is now simply "Made with the bean of your choice.", matching cappuccino and flat white; the item is still named **black coffee** and has no visible description. Customers are deliberately **not** told the new preparation, so the replacement names no method at all. A new copy rule in section 3 bans non-espresso brew method names; espresso-naming descriptions ("Espresso with steamed milk", "A single or double shot of espresso") stay and are correct. This pass also repairs pre-existing JSON-LD drift: the not coffee tasting description read "Any four drinks from the not coffee menu lattes served in a sample flight", which was garbled and broke the identical-sentence-structure rule, and two tasting descriptions were missing the comma after "your choice". The "How do we make espresso?" rewrite remains **deferred** pending owner copy.
+
+> **v0.8.6 change:** **Lemon drop (burundi)** is live. The Bean Menu grows from six to **seven beans**; lemon drop takes the sixth slot, between tropical and decaf, so the order is dark & smoky, peanut butter, strawberry, apple spice, tropical, lemon drop, decaf, with decaf still last. Applied identically to all seven live surfaces: `data/menu.json` (`beans` and `beansForSale`), both JSON-LD `MenuSection`s (Bean Menu and Coffee beans), the hard-coded homepage preview, and the two static no-JS fallback lists. The half pound bag is 22, the same as every other bean. Producer metadata (section 10) carries the farm (Masha), region (Gatara, Kayanza), Bourbon variety, washed process and elevation (1672 m, internal-only); the lot sheet names **no producer, lot number or certification**, so those keys are omitted rather than guessed. The JSON-LD description is "Burundi. Masha farm, Gatara, Kayanza. Bourbon variety, washed process." Every "six beans" count in this spec and `COPY_DECK.md` is now seven. No CSS change: `.beans-card .menu-list { columns: 2 }` balances seven rows as 4 + 3. `menu.js` is untouched because it renders from the JSON.
 
 ---
 
@@ -231,7 +233,7 @@ Avoid: cluttered counters, syrup bottles as hero, busy cafe scenes, novelty drin
 1. **Header** — the Valo wordmark only, on a clean white bar. No navigation links, no hamburger, no pills. The header is intentionally not a multi-page nav: the page is one scroll and the section CTAs do the moving.
 2. **Hero** — full-bleed carousel (section 4 "Hero carousel") with the dark gradient overlay. Content: headline **"The best coffee in Arizona"** + a quiet uppercase sub **"Open daily"** + two buttons: **"Visit Valo"** (scrolls to `#today`) and **"See the menu"** (scrolls to `#menu`). Premium and quiet, never a marketing-template feel.
 3. **Visit Valo** — anchor `#today` (id kept stable; user-facing eyebrow is "Visit Valo"). The visitor's complete answer for "can I visit, and how do I get there?" Two location cards (`#curbside`, `#resort`), Curbside first in source order. Each card: location name, independent two-line open/closed status, hours list (both generated by `status.js` from `data/locations.json`, with hard-coded fallback text), short positioning blurb, a "Get directions" button (opens Google Maps in a new tab), and a "View menu" button that scrolls to `#menu`. **No visible street address** on the card (the JSON-LD still carries the address for SEO).
-4. **Menu preview** — anchor `#menu`, on the warm paper background (`section-warm`). No eyebrow/heading — the section opens directly with the **Coffee** group so it reads as a menu, not a labeled website section. Two groups: **Coffee** (latte 7, black coffee 5) and **Beans** (the six beans with origins) plus the bean note. Never claim scope. A **"View full menu"** button (`[data-menu-open]`) opens the full-menu modal (section 4) — it does not navigate.
+4. **Menu preview** — anchor `#menu`, on the warm paper background (`section-warm`). No eyebrow/heading — the section opens directly with the **Coffee** group so it reads as a menu, not a labeled website section. Two groups: **Coffee** (latte 7, black coffee 5) and **Beans** (the seven beans with origins) plus the bean note. Never claim scope. A **"View full menu"** button (`[data-menu-open]`) opens the full-menu modal (section 4) — it does not navigate.
 5. **Our Philosophy** — anchor `#philosophy`, the last content section. Eyebrow **"Our Philosophy"**, then the opening lede ("Every drink on our menu is made with pure, raw ingredients. We do not add anything else, so the bean's naturally occurring flavor notes can be enjoyed clearly."), then **five** collapsible `<details class="philosophy-detail">` questions, in order: **What is coffee?** → **Where do the flavor notes come from?** → **Where does our coffee come from?** → **How do we make espresso?** → **Why is the menu so simple?** All start collapsed and use the same small-caps summary styling with a `+` that flips to `−`. All five are populated and mapped 1:1 in the FAQ JSON-LD. There is no separate philosophy page and no "Read our philosophy" link. (Further rebuilds — modern-espresso rewrite, tightening "Why is the menu so simple?" — remain **deferred**; see the v0.8.1 note.)
 6. **Bottom smart CTA** — `#visit-cta`, one centered primary button that opens the Visit modal (see section 4 "Visit modal + bottom smart CTA"). No other buttons in this section.
 7. **Footer** — phone, email, a Jobs link, and copyright only (`.footer-simple`), in that source order: `928-910-6087` / `support@valocoffee.com` / `Jobs` (`https://tinyurl.com/teamvalo`, `target="_blank" rel="noopener"`, `data-ga="jobs_open"`) / `© Valo Coffee`. No location cards, addresses, hours, "Get directions" links, or "Prescott, Arizona" — that information is not duplicated here because the Visit Valo section already carries it in full.
@@ -348,8 +350,8 @@ Coffee                 Bean Menu                          Optional
    flat white    7        strawberry      honduras           caramel
    cortado       5        apple spice     colombia           sugar
    black coffee  5        tropical        papua new guinea   brown sugar
-   espresso      5        decaf           sumatra            raw sugar
-                                                             honey
+   espresso      5        lemon drop      burundi            raw sugar
+                          decaf           sumatra            honey
                                                              maple
                                                              splenda
                                                              stevia
@@ -368,12 +370,12 @@ Tasting experience (Valo Lab only)
    not coffee tasting experience   19
 
 Coffee beans (half pound bag)
-   all six beans                   22
+   all seven beans                 22
 ```
 
 Drink order is fixed: latte, cappuccino, flat white, cortado, black coffee, espresso. The $5 black drink is **black coffee** (not "coffee"). **Cortado is a flat $5** (no range). There are **no "traditional or extra milk" sub-lines** anywhere — milk is decided at the counter/curbside.
 
-Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus lime already covers that style). Peach (colombia) is **temporarily unavailable, not retired** — it is off the menu but may return; do not add it to the retired list and do not re-add it without the owner's word. Lemon drop (burundi) is a future bean parked in `TODO.md` — it must not appear on the site yet.
+Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus lime already covers that style). Peach (colombia) is **temporarily unavailable, not retired** — it is off the menu but may return; do not add it to the retired list and do not re-add it without the owner's word. The fixed order is dark & smoky, peanut butter, strawberry, apple spice, tropical, lemon drop, decaf (seven beans, decaf always last).
 
 Weight conventions:
 - Drinks (latte, cappuccino, flat white, cortado, black coffee, espresso): all bold. No "traditional or extra milk" sub-lines.
@@ -381,7 +383,7 @@ Weight conventions:
 - Optional: regular weight, single flat list (no add-in/sweetener sub-headings).
 - Not coffee / Coffee beans items: regular weight; prices in bold.
 
-The homepage preview is intentionally simpler (Coffee = latte 7 / black coffee 5, plus the six Beans with the bean note) and does not mirror the full layout. Latte and black coffee are our most popular; we make any specialty espresso drink to order. Copy must never claim drink scope.
+The homepage preview is intentionally simpler (Coffee = latte 7 / black coffee 5, plus the seven Beans with the bean note) and does not mirror the full layout. Latte and black coffee are our most popular; we make any specialty espresso drink to order. Copy must never claim drink scope.
 
 ### Bean producer metadata (not visitor-facing)
 

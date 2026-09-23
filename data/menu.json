@@ -19,6 +19,7 @@
       { "name": "strawberry", "origin": "honduras", "producer": "Roger Dominguez", "farm": "Finca La Cueva", "region": "Marcala, La Paz", "variety": "Parainema", "process": "natural" },
       { "name": "apple spice", "origin": "colombia", "producer": "Diego Bermudez", "farm": "Finca El Paraiso", "region": "Cauca", "variety": "Castillo", "process": "thermal shock fermentation" },
       { "name": "tropical", "origin": "papua new guinea", "producer": "Siane Organic Agriculture Cooperative (SOAC)", "region": "Chuave, Chimbu", "variety": "Bourbon, Typica", "process": "washed", "elevation": "1350 m", "certification": "Organic", "lot": "39769" },
+      { "name": "lemon drop", "origin": "burundi", "farm": "Masha", "region": "Gatara, Kayanza", "variety": "Bourbon", "process": "washed", "elevation": "1672 m" },
       { "name": "decaf", "origin": "sumatra", "producer": "smallholder farmers of Northern Sumatra and Aceh", "region": "Northern Sumatra and Aceh, Indonesia", "variety": "Typica, Catimor", "process": "wet-hulled, Swiss Water decaffeination", "elevation": "1200 – 1700 m", "lot": "41050" }
     ]
   },
@@ -55,6 +56,7 @@
       { "name": "strawberry", "price": "22" },
       { "name": "apple spice", "price": "22" },
       { "name": "tropical", "price": "22" },
+      { "name": "lemon drop", "price": "22" },
       { "name": "decaf", "price": "22" }
     ],
     "note": "Available at both locations. For custom grinding and vacuum sealing, visit Valo Lab."

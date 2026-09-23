@@ -69,22 +69,6 @@ JSON-LD answer (kept 1:1, same order) **and** `COPY_DECK.md`; then mark done in 
 
 ## PARKED — bean roster follow-ups (tracked in CLAUDE.md v0.8.4 note)
 
-### New bean: lemon drop / burundi — confirmed, deliberately NOT on the site
-
-**Status:** lot detail in hand, held back by owner decision. Do not add it to `data/menu.json`,
-the JSON-LD, the homepage preview, or the no-JS fallbacks until the owner says it is live.
-
-- Name: `lemon drop` · Origin: `burundi`
-- Farm: Masha · Region: Gatara, Kayanza · Variety: Bourbon · Process: washed
-- Elevation: 1672 MASL · Microlot
-- Price: assumed 22 (half pound bag), same as every other bean — **confirm before shipping**.
-- Slot in the fixed bean order is undecided. Today's order is dark & smoky, peanut butter,
-  strawberry, apple spice, tropical, decaf (decaf always last).
-- **A seventh bean breaks the "six beans" wording** in `CLAUDE.md` sections 6 and 10 and in
-  `COPY_DECK.md` — those lines must be updated in the same pass. CSS needs no change:
-  `.beans-card .menu-list { columns: 2 }` auto-balances 7 items as 4 + 3.
-- Open question: does lemon drop replace another bean, or does the roster grow to seven?
-
 ### Peach / colombia — temporarily unavailable, NOT retired
 
 Removed from all seven live surfaces in v0.8.4. Unlike Jamaica it may return, so it is not on
@@ -101,10 +85,13 @@ preserves the only indexable "peach" token on the site.
 
 ### Outstanding bean attributions
 
-Producer metadata (see CLAUDE.md section 10) is complete for five of six beans. One gap:
+Producer metadata (see CLAUDE.md section 10) is complete for five of seven beans. Two gaps:
 
 - `apple spice` (colombia) — "Castillo variety, thermal shock fermentation" is inferred from
   Finca El Paraiso's documented house method, **not confirmed for this lot**. Verify or replace.
+- `lemon drop` (burundi) — live since v0.8.6 with farm (Masha), region (Gatara, Kayanza),
+  Bourbon variety, washed process and elevation (1672 MASL, microlot). The lot sheet names **no
+  producer, lot number or certification**; add them if the supplier page supplies them.
 
 Supplying a supplier lot page resolves each the same way lots `P614006-2` (Covoya, Peru Selva
 Norte), `39429` (Royal, Brazil Cerrado), `39769` (Royal, PNG Siane Chimbu) and `41050` (Royal,
@@ -143,7 +130,7 @@ fixed. Everything below is off-site and needs account access.
 
 1. **GBP Products / menu entries.** Add each bean with its origin, e.g. `tropical · papua new
    guinea`, `dark & smoky · peru`, `peanut butter · brazil`, `strawberry · honduras`,
-   `apple spice · colombia`, `decaf · sumatra`. This is the field Google matches for
+   `apple spice · colombia`, `lemon drop · burundi`, `decaf · sumatra`. This is the field Google matches for
    product-style local queries and the closest thing to the per-coffee page Firehouse ranks
    with. Update when the roster rotates.
 2. **Audit duplicate and fragmented listings.** Duplicates split ranking signal.
