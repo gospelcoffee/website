@@ -47,7 +47,7 @@ the bottom of the page as collapsible questions, present but never forced.
   flat $5.** There are **no "traditional or extra milk" sub-lines** anywhere (milk is decided
   at the counter / curbside).
 - The homepage preview is intentionally simpler: Coffee = latte 7 / black coffee 5, plus the
-  six Beans with the bean note.
+  seven Beans with the bean note.
 - Latte and black coffee are our most popular. We can make any specialty espresso drink to
   order. Never claim drink scope ("just two drinks", "only six drinks").
 
@@ -168,7 +168,7 @@ the bottom of the page as collapsible questions, present but never forced.
 #### Group: Beans
 - Group label: Beans
 - Items (in order): dark & smoky / peru, peanut butter / brazil, strawberry / honduras,
-  apple spice / colombia, tropical / papua new guinea, decaf / sumatra
+  apple spice / colombia, tropical / papua new guinea, lemon drop / burundi, decaf / sumatra
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 
@@ -283,7 +283,7 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
   cortado 5, black coffee 5, espresso 5. **No "traditional or extra milk" sub-lines.**
 - Bean Menu (sub-label "Bean Menu"; bean bold, origin regular meta): dark & smoky / peru,
   peanut butter / brazil, strawberry / honduras, apple spice / colombia,
-  tropical / papua new guinea, decaf / sumatra.
+  tropical / papua new guinea, lemon drop / burundi, decaf / sumatra.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,
@@ -313,8 +313,9 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 ### Coffee beans
 - Section label: Coffee beans.
 - Unit label: half pound bag (italic, lowercase).
-- Items: all six beans at 22 each, same labels and order as the Bean Menu (dark & smoky,
-  peanut butter, strawberry, apple spice, tropical, decaf). Names regular, prices bold.
+- Items: all seven beans at 22 each, same labels and order as the Bean Menu (dark & smoky,
+  peanut butter, strawberry, apple spice, tropical, lemon drop, decaf). Names regular,
+  prices bold.
 - Footnote (italic, quiet): Available at both locations. For custom grinding and vacuum
   sealing, visit Valo Lab.
 
