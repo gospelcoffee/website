@@ -266,8 +266,9 @@ the bottom of the page as collapsible questions, present but never forced.
   voice). Only objective lexicon / flavor-credit rule-fixes apply.
 
 ### Footer
-- `.footer-simple`: three items only, no headings, no location blocks.
-- Phone: 928-910-6087 · Email: support@valocoffee.com · Copyright: © Valo Coffee
+- `.footer-simple`: five items only, no headings, no location blocks.
+- Phone: 928-910-6087 · Email: support@valocoffee.com · Jobs · Team · Copyright: © Valo Coffee
+- Jobs opens `https://hiring.valocoffee.com/careers` and Team opens `https://team.valocoffee.com/`, both in a new tab with `rel="noopener"`. Both inherit the existing footer-link styling.
 - Do not reintroduce location names, addresses, hours, "Get directions" links, or "Prescott,
   Arizona" in the footer; the Visit Valo section already carries that.
 
@@ -356,5 +357,5 @@ is the no-JS fallback only.
   or "smoothness". No discouraged flavor-credit verbs ("highlight" etc.) in visitor copy.
 - No en-dash/em-dash in visitor prose (only the time/number/hours-range exceptions).
 - In-page links scroll without putting `#section` in the URL.
-- Footer is phone, email, copyright only.
+- Footer is phone, email, Jobs, Team, copyright only.
 - Copy is concise, inviting, elegant, and direct. No prescriptive recommendation language.
