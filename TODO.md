@@ -69,23 +69,22 @@ JSON-LD answer (kept 1:1, same order) **and** `COPY_DECK.md`; then mark done in 
 
 ## PARKED — bean roster follow-ups (tracked in CLAUDE.md v0.8.4 note)
 
-### Peach / colombia — temporarily unavailable, NOT retired
+### Peach / colombia — restored 2026-10-23
 
-Removed from all seven live surfaces in v0.8.4. Unlike Jamaica it may return, so it is not on
-the retired list. If it comes back it goes into all seven surfaces at an owner-chosen slot,
-with this attribution:
+Restored by owner request in its original third position, after peanut butter, across all
+seven menu surfaces, with half-pound bags at 22. Producer: Diego Bermudez; farm: Finca El
+Paraiso; region: Cauca, Colombia. Variety and process remain unconfirmed and are omitted.
 
-- Producer: Diego Bermudez · Farm: Finca El Paraiso · Region: Cauca, Colombia
-- Variety and process: **TBC** (not lot-confirmed)
+### Light & fruity / ethiopia — bag-only from 2026-10-23
 
-Note the philosophy answer "Where does our coffee come from?" still names peach as an example
-flavor note, in `index.html` (on-page `<details>` and the FAQ JSON-LD, kept 1:1) and
-`COPY_DECK.md`. That is deliberate — it describes sourcing criteria, not current stock — and it
-preserves the only indexable "peach" token on the site.
+Owner approved half-pound bags at 22, immediately before decaf. Present only in
+`beansForSale`, Coffee beans JSON-LD and the static bag list. Do not add it to the drink
+Bean Menu or homepage Beans preview until requested. Only the Ethiopia origin is confirmed;
+producer, farm, variety and process are not supplied.
 
 ### Outstanding bean attributions
 
-Producer metadata (see CLAUDE.md section 10) is complete for five of seven beans. Two gaps:
+Producer metadata (see CLAUDE.md section 10) is retained for the existing beans. Outstanding sourcing details:
 
 - `apple spice` (colombia) — "Castillo variety, thermal shock fermentation" is inferred from
   Finca El Paraiso's documented house method, **not confirmed for this lot**. Verify or replace.

@@ -16,6 +16,7 @@
     "items": [
       { "name": "dark & smoky", "origin": "peru", "producer": "Café Selva Norte", "region": "Cajamarca", "variety": "Bourbon, Catimor, Caturra, Pache, Typica", "process": "washed", "elevation": "1200 – 1800 m", "certification": "Fairtrade, Organic (NOP)", "lot": "P614006-2", "harvest": "2024/25" },
       { "name": "peanut butter", "origin": "brazil", "producer": "producers of the Cerrado region", "region": "Cerrado, Minas Gerais", "variety": "Yellow Bourbon, Mundo Novo, Obatã", "process": "natural", "elevation": "850 – 1100 m", "lot": "39429", "screen": "15/16", "grade": "SS FC" },
+      { "name": "peach", "origin": "colombia", "producer": "Diego Bermudez", "farm": "Finca El Paraiso", "region": "Cauca" },
       { "name": "strawberry", "origin": "honduras", "producer": "Roger Dominguez", "farm": "Finca La Cueva", "region": "Marcala, La Paz", "variety": "Parainema", "process": "natural" },
       { "name": "apple spice", "origin": "colombia", "producer": "Diego Bermudez", "farm": "Finca El Paraiso", "region": "Cauca", "variety": "Castillo", "process": "thermal shock fermentation" },
       { "name": "tropical", "origin": "papua new guinea", "producer": "Siane Organic Agriculture Cooperative (SOAC)", "region": "Chuave, Chimbu", "variety": "Bourbon, Typica", "process": "washed", "elevation": "1350 m", "certification": "Organic", "lot": "39769" },
@@ -53,10 +54,12 @@
     "items": [
       { "name": "dark & smoky", "price": "22" },
       { "name": "peanut butter", "price": "22" },
+      { "name": "peach", "price": "22" },
       { "name": "strawberry", "price": "22" },
       { "name": "apple spice", "price": "22" },
       { "name": "tropical", "price": "22" },
       { "name": "lemon drop", "price": "22" },
+      { "name": "light & fruity", "origin": "ethiopia", "price": "22" },
       { "name": "decaf", "price": "22" }
     ],
     "note": "Available at both locations. For custom grinding and vacuum sealing, visit Valo Lab."
