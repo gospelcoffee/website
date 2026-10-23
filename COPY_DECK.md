@@ -288,7 +288,7 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,
-  sugar, brown sugar, raw sugar, honey, maple, agave, splenda, stevia.
+  sugar, brown sugar, raw sugar, honey, maple, agave, splenda, stevia, monkfruit.
 - Voice rule: plain noun-phrase category labels only. Never "pick a drink", "choose your
   bean", "pick add-ins".
 

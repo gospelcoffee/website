@@ -357,6 +357,7 @@ Coffee                 Bean Menu                          Optional
                           decaf           sumatra            maple
                                                              splenda
                                                              stevia
+                                                             monkfruit
 
 not coffee
    cocoa latte                  5

@@ -26,7 +26,7 @@
   },
   "optional": {
     "label": "Optional",
-    "items": ["vanilla", "mocha", "caramel", "sugar", "brown sugar", "raw sugar", "honey", "maple", "agave", "splenda", "stevia"]
+    "items": ["vanilla", "mocha", "caramel", "sugar", "brown sugar", "raw sugar", "honey", "maple", "agave", "splenda", "stevia", "monkfruit"]
   },
   "notCoffee": {
     "label": "Not coffee",
