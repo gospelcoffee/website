@@ -1,6 +1,6 @@
 # Valo Coffee Website — Context, Rules, and Guidelines
 
-Spec version: 0.8.7
+Spec version: 0.8.8
 
 This file is the source of truth for how the Valo Coffee website should look, sound, and behave. Read it before making changes.
 
@@ -21,6 +21,9 @@ This file is the source of truth for how the Valo Coffee website should look, so
 > **v0.8.6 change:** **Lemon drop (burundi)** is live. The Bean Menu grows from six to **seven beans**; lemon drop takes the sixth slot, between tropical and decaf, so the order is dark & smoky, peanut butter, strawberry, apple spice, tropical, lemon drop, decaf, with decaf still last. Applied identically to all seven live surfaces: `data/menu.json` (`beans` and `beansForSale`), both JSON-LD `MenuSection`s (Bean Menu and Coffee beans), the hard-coded homepage preview, and the two static no-JS fallback lists. The half pound bag is 22, the same as every other bean. Producer metadata (section 10) carries the farm (Masha), region (Gatara, Kayanza), Bourbon variety, washed process and elevation (1672 m, internal-only); the lot sheet names **no producer, lot number or certification**, so those keys are omitted rather than guessed. The JSON-LD description is "Burundi. Masha farm, Gatara, Kayanza. Bourbon variety, washed process." Every "six beans" count in this spec and `COPY_DECK.md` is now seven. No CSS change: `.beans-card .menu-list { columns: 2 }` balances seven rows as 4 + 3. `menu.js` is untouched because it renders from the JSON.
 
 > **v0.8.7 change (2026-10-23):** The owner restored **peach (colombia)** in its original third position, after peanut butter, across all seven menu surfaces. There are now **eight drink beans** and **nine half-pound bags**. **Light & fruity (ethiopia)** is **bag-only at 22**: include it in `beansForSale`, the Coffee beans JSON-LD and the static bag list, immediately before decaf; keep it off `beans`, the Bean Menu JSON-LD, the homepage Beans preview and the static drink Bean Menu until the owner requests drink availability. Peach sourcing carries Diego Bermudez, Finca El Paraiso, Cauca; variety and process remain unconfirmed and omitted. Light & fruity has owner-confirmed origin only, with no guessed producer metadata. Earlier roster notes are historical.
+
+
+> **v0.8.8 change (2026-10-25):** The owner added **cherry (guatemala)** to the Coffee beans section only, at the existing **22 per half-pound bag**. There are still **eight drink beans**, now with **ten bags**. Cherry follows light & fruity and precedes decaf in `beansForSale`, the Coffee beans JSON-LD and the static bag list. Keep cherry off `beans`, the Bean Menu JSON-LD, the homepage Beans preview and the static drink Bean Menu until the owner requests drink availability. Origin is owner-confirmed; no additional producer metadata is asserted.
 
 ---
 
@@ -373,12 +376,12 @@ Tasting experience (Valo Lab only)
    not coffee tasting experience   19
 
 Coffee beans (half pound bag)
-   eight drink beans + light & fruity (ethiopia)   22
+   eight drink beans + light & fruity (ethiopia) + cherry (guatemala)   22
 ```
 
 Drink order is fixed: latte, cappuccino, flat white, cortado, black coffee, espresso. The $5 black drink is **black coffee** (not "coffee"). **Cortado is a flat $5** (no range). There are **no "traditional or extra milk" sub-lines** anywhere — milk is decided at the counter/curbside.
 
-Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus lime already covers that style). Peach (colombia) is restored by owner request. The fixed drink-bean order is dark & smoky, peanut butter, peach, strawberry, apple spice, tropical, lemon drop, decaf (eight beans, decaf always last). The bag list follows that order with light & fruity (ethiopia) inserted immediately before decaf, for nine bags at 22 each. Light & fruity is bag-only: never add it to the drink Bean Menu or homepage Beans preview without the owner's word.
+Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus lime already covers that style). Peach (colombia) is restored by owner request. The fixed drink-bean order is dark & smoky, peanut butter, peach, strawberry, apple spice, tropical, lemon drop, decaf (eight beans, decaf always last). The bag list follows that order with light & fruity (ethiopia), then cherry (guatemala), inserted immediately before decaf, for ten bags at 22 each. Light & fruity and cherry are bag-only: never add them to the drink Bean Menu or homepage Beans preview without the owner's word.
 
 Weight conventions:
 - Drinks (latte, cappuccino, flat white, cortado, black coffee, espresso): all bold. No "traditional or extra milk" sub-lines.

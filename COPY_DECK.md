@@ -314,10 +314,10 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 ### Coffee beans
 - Section label: Coffee beans.
 - Unit label: half pound bag (italic, lowercase).
-- Items: nine half-pound bags at 22 each (dark & smoky,
-  peanut butter, peach, strawberry, apple spice, tropical, lemon drop, light & fruity, decaf). Names regular,
-  prices bold. Light & fruity (Ethiopia) is bag-only and must stay off the drink Bean Menu
-  and homepage Beans preview until the owner requests it.
+- Items: ten half-pound bags at 22 each (dark & smoky,
+  peanut butter, peach, strawberry, apple spice, tropical, lemon drop, light & fruity, cherry, decaf). Names regular,
+  prices bold. Light & fruity (Ethiopia) and cherry (Guatemala) are bag-only and must stay off the drink Bean Menu
+  and homepage Beans preview until the owner requests drink availability.
 - Footnote (italic, quiet): Available at both locations. For custom grinding and vacuum
   sealing, visit Valo Lab.
 

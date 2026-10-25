@@ -60,6 +60,7 @@
       { "name": "tropical", "price": "22" },
       { "name": "lemon drop", "price": "22" },
       { "name": "light & fruity", "origin": "ethiopia", "price": "22" },
+      { "name": "cherry", "origin": "guatemala", "price": "22" },
       { "name": "decaf", "price": "22" }
     ],
     "note": "Available at both locations. For custom grinding and vacuum sealing, visit Valo Lab."
