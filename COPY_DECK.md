@@ -47,7 +47,7 @@ the bottom of the page as collapsible questions, present but never forced.
   flat $5.** There are **no "traditional or extra milk" sub-lines** anywhere (milk is decided
   at the counter / curbside).
 - The homepage preview is intentionally simpler: Coffee = latte 7 / black coffee 5, plus the
-  eight drink beans with the bean note.
+  nine drink beans with the bean note.
 - Latte and black coffee are our most popular. We can make any specialty espresso drink to
   order. Never claim drink scope ("just two drinks", "only six drinks").
 
@@ -168,7 +168,7 @@ the bottom of the page as collapsible questions, present but never forced.
 #### Group: Beans
 - Group label: Beans
 - Items (in order): dark & smoky / peru, peanut butter / brazil, peach / colombia, strawberry / honduras,
-  apple spice / colombia, tropical / papua new guinea, lemon drop / burundi, decaf / sumatra
+  apple spice / colombia, tropical / papua new guinea, lemon drop / burundi, cherry / guatemala, decaf / sumatra
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 
@@ -284,7 +284,7 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
   cortado 5, black coffee 5, espresso 5. **No "traditional or extra milk" sub-lines.**
 - Bean Menu (sub-label "Bean Menu"; bean bold, origin regular meta): dark & smoky / peru,
   peanut butter / brazil, peach / colombia, strawberry / honduras, apple spice / colombia,
-  tropical / papua new guinea, lemon drop / burundi, decaf / sumatra.
+  tropical / papua new guinea, lemon drop / burundi, cherry / guatemala, decaf / sumatra.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,
@@ -316,8 +316,8 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 - Unit label: half pound bag (italic, lowercase).
 - Items: ten half-pound bags at 22 each (dark & smoky,
   peanut butter, peach, strawberry, apple spice, tropical, lemon drop, light & fruity, cherry, decaf). Names regular,
-  prices bold. Light & fruity (Ethiopia) and cherry (Guatemala) are bag-only and must stay off the drink Bean Menu
-  and homepage Beans preview until the owner requests drink availability.
+  prices bold. Cherry (Guatemala) is also available on the drink Bean Menu and homepage Beans preview.
+  Light & fruity (Ethiopia) remains bag-only until the owner requests drink availability.
 - Footnote (italic, quiet): Available at both locations. For custom grinding and vacuum
   sealing, visit Valo Lab.
 

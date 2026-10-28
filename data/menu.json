@@ -21,6 +21,7 @@
       { "name": "apple spice", "origin": "colombia", "producer": "Diego Bermudez", "farm": "Finca El Paraiso", "region": "Cauca", "variety": "Castillo", "process": "thermal shock fermentation" },
       { "name": "tropical", "origin": "papua new guinea", "producer": "Siane Organic Agriculture Cooperative (SOAC)", "region": "Chuave, Chimbu", "variety": "Bourbon, Typica", "process": "washed", "elevation": "1350 m", "certification": "Organic", "lot": "39769" },
       { "name": "lemon drop", "origin": "burundi", "farm": "Masha", "region": "Gatara, Kayanza", "variety": "Bourbon", "process": "washed", "elevation": "1672 m" },
+      { "name": "cherry", "origin": "guatemala" },
       { "name": "decaf", "origin": "sumatra", "producer": "smallholder farmers of Northern Sumatra and Aceh", "region": "Northern Sumatra and Aceh, Indonesia", "variety": "Typica, Catimor", "process": "wet-hulled, Swiss Water decaffeination", "elevation": "1200 – 1700 m", "lot": "41050" }
     ]
   },
