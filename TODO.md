@@ -75,12 +75,11 @@ Restored by owner request in its original third position, after peanut butter, a
 seven menu surfaces, with half-pound bags at 22. Producer: Diego Bermudez; farm: Finca El
 Paraiso; region: Cauca, Colombia. Variety and process remain unconfirmed and are omitted.
 
-### Light & fruity / ethiopia — bag-only from 2026-10-23
+### Light & fruity / ethiopia — drinks enabled 2026-11-02
 
-Owner approved half-pound bags at 22, immediately before decaf. Present only in
-`beansForSale`, Coffee beans JSON-LD and the static bag list. Do not add it to the drink
-Bean Menu or homepage Beans preview until requested. Only the Ethiopia origin is confirmed;
-producer, farm, variety and process are not supplied.
+Owner approved drink availability in addition to the existing half-pound bags at 22.
+Present across all seven menu surfaces, immediately before cherry with decaf last.
+Only the Ethiopia origin is confirmed; producer, farm, variety and process are not supplied.
 
 ### Outstanding bean attributions
 
