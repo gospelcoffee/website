@@ -280,7 +280,7 @@ Hours-list format (rendered immediately under the status block by `status.js` fr
 The dashes-in-copy rule (no dashes in prose) does not apply inside the hours/day-range format — these are time and number ranges where the en-dash is required.
 
 ### Static JSON
-Hours live in `data/locations.json`. JS reads it client-side and renders status text. Each location card also ships hard-coded fallback status + hours so the section works with JS off.
+Hours live in `data/locations.json`. A location's optional `specialHours` entry for a local date (YYYY-MM-DD) overrides its weekly hours that day. The status and hours list update at the next minute without a reload. When both locations share the same special hours, the hero displays them as well. Each location card ships static regular hours for the fallback. Mirror dated exceptions in the location's JSON-LD `specialOpeningHoursSpecification`.
 
 ### Future
 A GitHub Action may later sync `data/locations.json` from Google Maps hours. **Never expose Google API keys in browser JS** — keys live in GitHub repository secrets, the Action writes the static JSON, the public site only reads it.
@@ -344,6 +344,8 @@ There are no BreadcrumbList entities — there is no page hierarchy to describe 
 
 **Valo Lab** (inside the Prescott Resort lobby) — 1500 AZ-69, Prescott, AZ. Sit down, view of Prescott, the full tasting experience lives here. Hours: **Mon – Tue closed, Wed – Fri 7 AM – 10 AM, Sat – Sun 7 AM – 2 PM**. Never call this location "Valo" alone, "Valo Resort", or "Valo Sit-Down" (retired name). See the location naming rule in section 3.
 
+**Thanksgiving, Nov 26, 2026:** both locations are open 7 AM – 10 AM.
+
 Timezone: `America/Phoenix`. Hours are authoritative in `data/locations.json`; this section must be kept in sync with that file.
 
 ---
@@ -358,7 +360,7 @@ Coffee                 Bean Menu                          Optional
    cappuccino    7        peanut butter   brazil             mocha
    flat white    7        peach           colombia           caramel
    cortado       5        strawberry      honduras           sugar
-   black coffee  5        apple spice     colombia           brown sugar
+   black coffee  5        apple spice     colombia           salted brown
    espresso      5        tropical        papua new guinea   raw sugar
                           lemon drop      burundi            honey
                           light & fruity  ethiopia           maple
@@ -375,7 +377,7 @@ not coffee
    ube latte                    7
    golden latte                 7
    butterfly lemonade           7
-   hibiscus lime                7
+   hibiscus grapefruit          7
 
 Tasting experience (Valo Lab only)
    coffee tasting experience       19
@@ -387,7 +389,7 @@ Coffee beans (half pound bag)
 
 Drink order is fixed: latte, cappuccino, flat white, cortado, black coffee, espresso. The $5 black drink is **black coffee** (not "coffee"). **Cortado is a flat $5** (no range). There are **no "traditional or extra milk" sub-lines** anywhere — milk is decided at the counter/curbside.
 
-Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired (do not reintroduce; hibiscus lime already covers that style). Peach (colombia) is restored by owner request. The fixed drink-bean order is dark & smoky, peanut butter, peach, strawberry, apple spice, tropical, lemon drop, light & fruity, cherry, decaf (ten beans, decaf always last). The bag list follows the same order, for ten bags at 22 each. Cherry (guatemala) and light & fruity (ethiopia) are available for drinks and bags.
+Bean ordering is fixed — do not re-rank. No defaults. No "recommended." Jamaica is retired. Peach (colombia) is restored by owner request. The fixed drink-bean order is dark & smoky, peanut butter, peach, strawberry, apple spice, tropical, lemon drop, light & fruity, cherry, decaf (ten beans, decaf always last). The bag list follows the same order, for ten bags at 22 each. Cherry (guatemala) and light & fruity (ethiopia) are available for drinks and bags.
 
 Weight conventions:
 - Drinks (latte, cappuccino, flat white, cortado, black coffee, espresso): all bold. No "traditional or extra milk" sub-lines.

@@ -37,30 +37,25 @@
     return locations.find((l) => l.id === id);
   }
 
-  function updateCta() {
+  function updateCta(now) {
     // "Visit Valo today" only if a location is open and stays open > 1 hour.
     const openLong = locations.some((loc) => {
-      const s = window.ValoStatus.getStatus(loc);
+      const s = window.ValoStatus.getStatus(loc, now);
       return s.isOpen && s.closesInMinutes !== null && s.closesInMinutes > 60;
     });
     cta.textContent = openLong ? "Visit Valo today" : "Visit Valo";
   }
 
   function locCard(loc) {
-    const s = window.ValoStatus.getStatus(loc);
-    const hours = window.ValoStatus
-      .buildHoursLines(loc)
-      .map((line) => `<li>${esc(line)}</li>`)
-      .join("");
     const cta = CTA[loc.id] || "Visit Valo";
     return `
-      <section class="visit-loc" data-status-state="${s.isOpen ? (s.closesSoon ? "closing-soon" : "open") : "closed"}">
+      <section class="visit-loc" data-location="${esc(loc.id)}">
         <span class="today-name">${esc(loc.name)}</span>
         <div class="today-status">
-          <p class="status-line">${esc(s.primary)}${s.primaryNote ? ` <span class="status-soft">${esc(s.primaryNote)}</span>` : ""}</p>
-          <p class="status-sub">${esc(s.secondary)}</p>
+          <p class="status-line" data-status-headline></p>
+          <p class="status-sub" data-status-sub></p>
         </div>
-        <ul class="today-hours">${hours}</ul>
+        <ul class="today-hours" data-status-hours></ul>
         <p class="today-blurb">${esc(loc.blurb)}</p>
         <div class="button-row">
           <a class="button" href="${esc(loc.directionsUrl)}" target="_blank" rel="noopener" data-ga="visit_directions_${esc(loc.id)}">${esc(cta)}</a>
@@ -73,12 +68,16 @@
     const resort = byId("resort");
     if (!curbside || !resort) return;
     // Valo Lab first only when it is open; otherwise Curbside first.
-    const labOpen = window.ValoStatus.getStatus(resort).isOpen;
+    const now = new Date();
+    const labOpen = window.ValoStatus.getStatus(resort, now).isOpen;
     const order = labOpen ? [resort, curbside] : [curbside, resort];
     body.innerHTML =
       '<article class="menu-card menu-card-warm visit-card-stack">' +
       order.map(locCard).join("") +
       "</article>";
+    body.querySelectorAll("[data-location]").forEach((block) => {
+      window.ValoStatus.updateBlock(block, byId(block.dataset.location), now);
+    });
   }
 
   function openModal(e) {
@@ -132,6 +131,7 @@
     .then((data) => {
       locations = data.locations;
       updateCta();
+      document.addEventListener("valo:status-refresh", (event) => updateCta(event.detail));
       cta.addEventListener("click", openModal);
       closers.forEach((b) => b.addEventListener("click", closeModal));
     })

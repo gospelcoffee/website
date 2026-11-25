@@ -26,6 +26,8 @@
     Saturday: "Sat",
   };
 
+  const DAY_MS = 24 * 60 * 60 * 1000;
+
   function pad(n) { return String(n).padStart(2, "0"); }
 
   function formatTime(hhmm) {
@@ -36,12 +38,10 @@
     return m === 0 ? `${h12} ${period}` : `${h12}:${pad(m)} ${period}`;
   }
 
-  function nowInTz(tz) {
-    const now = new Date();
+  function nowInTz(tz, now) {
     const parts = new Intl.DateTimeFormat("en-US", {
       timeZone: tz,
-      hour12: false,
-      weekday: "short",
+      hourCycle: "h23",
       year: "numeric",
       month: "2-digit",
       day: "2-digit",
@@ -49,12 +49,10 @@
       minute: "2-digit",
     }).formatToParts(now);
     const get = (t) => parts.find((p) => p.type === t)?.value;
-    const weekdayShort = get("weekday");
-    const weekdayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
     return {
-      dayIndex: weekdayMap[weekdayShort],
-      hour: parseInt(get("hour"), 10),
-      minute: parseInt(get("minute"), 10),
+      // Store the local calendar date at UTC midnight for date-only arithmetic.
+      date: Date.UTC(Number(get("year")), Number(get("month")) - 1, Number(get("day"))),
+      minuteOfDay: Number(get("hour")) * 60 + Number(get("minute")),
     };
   }
 
@@ -63,17 +61,24 @@
     return h * 60 + m;
   }
 
-  function hoursForDay(location, dayIndex) {
-    const dayName = DAY_NAMES[dayIndex];
-    return location.hours.find((h) => h.day === dayName);
+  function specialHoursForDate(location, date) {
+    return location.specialHours?.[date.toISOString().slice(0, 10)];
   }
 
-  function nextOpenDay(location, fromDayIndex) {
-    for (let i = 1; i <= 7; i++) {
-      const next = (fromDayIndex + i) % 7;
-      const day = hoursForDay(location, next);
-      if (day && day.open) {
-        return { day, daysAway: i };
+  function hoursForDate(location, date) {
+    return specialHoursForDate(location, date) ??
+      location.hours.find((h) => h.day === DAY_NAMES[date.getUTCDay()]);
+  }
+
+  function nextOpenDay(location, fromDate) {
+    // A dated closure can hide an opening for up to another full week.
+    const searchDays = 7 * (1 + Object.keys(location.specialHours ?? {}).length);
+    for (let daysAway = 1; daysAway <= searchDays; daysAway++) {
+      const date = new Date(fromDate + daysAway * DAY_MS);
+      const hours = hoursForDate(location, date);
+      if (hours?.open && hours.close) {
+        const dayLabel = daysAway === 1 ? "tomorrow" : DAY_NAMES[date.getUTCDay()];
+        return { time: hours.open, dayLabel };
       }
     }
     return null;
@@ -91,10 +96,9 @@
    *               | "Opens Wednesday at 7 AM"
    * closesSoon is true when open and closing in <= 30 minutes.
    */
-  function getStatus(location) {
-    const { dayIndex, hour, minute } = nowInTz(location.timezone);
-    const nowMin = hour * 60 + minute;
-    const today = hoursForDay(location, dayIndex);
+  function getStatus(location, now = new Date()) {
+    const { date, minuteOfDay: nowMin } = nowInTz(location.timezone, now);
+    const today = hoursForDate(location, new Date(date));
 
     if (today && today.open && today.close) {
       const openMin = minutes(today.open);
@@ -114,16 +118,10 @@
     }
 
     let openLabel = null;
-    if (today && today.open && nowMin < minutes(today.open)) {
+    if (today?.open && today.close && nowMin < minutes(today.open)) {
       openLabel = { time: today.open, dayLabel: "" }; // later today
     } else {
-      const next = nextOpenDay(location, dayIndex);
-      if (next) {
-        openLabel = {
-          time: next.day.open,
-          dayLabel: next.daysAway === 1 ? "tomorrow" : next.day.day,
-        };
-      }
+      openLabel = nextOpenDay(location, date);
     }
     const secondary = openLabel
       ? `Opens ${openLabel.dayLabel ? openLabel.dayLabel + " " : ""}at ${formatTime(openLabel.time)}`
@@ -166,7 +164,19 @@
    * calm two-line summary ("Open daily" / "7 AM to 2 PM"); otherwise the
    * grouped weekly schedule with the en-dash range format.
    */
-  function buildHoursLines(location) {
+  function specialHoursLine(location, now) {
+    const { date } = nowInTz(location.timezone, now);
+    const hours = specialHoursForDate(location, new Date(date));
+    if (!hours) return null;
+    const range = hours.open && hours.close
+      ? `${formatTime(hours.open)} – ${formatTime(hours.close)}`
+      : "Closed";
+    return `${hours.label}: ${range}`;
+  }
+
+  function buildHoursLines(location, now = new Date()) {
+    const special = specialHoursLine(location, now);
+    if (special) return [special];
     const first = location.hours[0];
     const uniform = first && first.open && first.close &&
       location.hours.every((d) => d.open === first.open && d.close === first.close);
@@ -177,6 +187,8 @@
   }
 
   function renderLines(el, lines) {
+    if (el.children.length === lines.length &&
+        lines.every((line, index) => el.children[index].textContent === line)) return;
     el.textContent = "";
     for (const line of lines) {
       const li = document.createElement("li");
@@ -185,12 +197,15 @@
     }
   }
 
-  function updateBlock(el, location) {
-    const status = getStatus(location);
+  function updateBlock(el, location, now = new Date()) {
+    const status = getStatus(location, now);
     const headlineEl = el.querySelector("[data-status-headline]");
     const subEl = el.querySelector("[data-status-sub]");
     const hoursEl = el.querySelector("[data-status-hours]");
-    if (headlineEl) {
+    const headline = status.primaryNote
+      ? `${status.primary} ${status.primaryNote}`
+      : status.primary;
+    if (headlineEl && headlineEl.textContent !== headline) {
       headlineEl.textContent = status.primary;
       if (status.primaryNote) {
         const note = document.createElement("span");
@@ -200,21 +215,28 @@
         headlineEl.appendChild(note);
       }
     }
-    if (subEl) subEl.textContent = status.secondary;
-    if (hoursEl) renderLines(hoursEl, buildHoursLines(location));
+    if (subEl && subEl.textContent !== status.secondary) subEl.textContent = status.secondary;
+    if (hoursEl) renderLines(hoursEl, buildHoursLines(location, now));
     el.setAttribute(
       "data-status-state",
       status.isOpen ? (status.closesSoon ? "closing-soon" : "open") : "closed"
     );
   }
 
-  function init(data) {
+  function refresh(data) {
+    const now = new Date();
     const blocks = document.querySelectorAll("[data-location]");
     blocks.forEach((el) => {
       const id = el.getAttribute("data-location");
       const location = data.locations.find((l) => l.id === id);
-      if (location) updateBlock(el, location);
+      if (location) updateBlock(el, location, now);
     });
+    const hero = document.querySelector("[data-hero-hours]");
+    if (hero) {
+      const [first, ...others] = data.locations.map((location) => specialHoursLine(location, now));
+      hero.textContent = first && others.every((line) => line === first) ? first : "Open daily";
+    }
+    document.dispatchEvent(new CustomEvent("valo:status-refresh", { detail: now }));
   }
 
   function dataPath() {
@@ -229,7 +251,16 @@
     .then((r) => (r.ok ? r.json() : Promise.reject(new Error("status fetch failed"))));
 
   dataPromise
-    .then(init)
+    .then((data) => {
+      function tick() {
+        refresh(data);
+        window.setTimeout(tick, 60000 - (Date.now() % 60000));
+      }
+      tick();
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) refresh(data);
+      });
+    })
     .catch(() => { /* leave hard-coded fallback in place */ });
 
   // Shared API for the Visit modal + bottom smart CTA (see visit.js).
@@ -237,6 +268,7 @@
     load: () => dataPromise,
     getStatus,
     buildHoursLines,
+    updateBlock,
     formatTime,
   };
 })();

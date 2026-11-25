@@ -61,6 +61,7 @@ the bottom of the page as collapsible questions, present but never forced.
   - **Curbside (uniform week):** collapses to two lines, `Open daily` / `7 AM to 2 PM` (the
     word "to" here is a deliberate exception to the en-dash range format).
   - **Valo Lab (varied week):** `Mon – Tue: Closed` / `Wed – Fri: 7 AM – 10 AM` / `Sat – Sun: 7 AM – 2 PM`.
+  - On Nov 26, 2026, the hero and both locations' hours show `Thanksgiving hours: 7 AM – 10 AM`.
   - Day/range labels use 3-letter abbreviations and an en-dash with spaces (`Mon – Sun`,
     `7 AM – 2 PM`). Omit `:00` minutes (`7 AM`, not `7:00 AM`).
 
@@ -288,15 +289,15 @@ Menu + Optional) → Not coffee → Tasting experience → Coffee beans.
 - Bean note: Each flavor note listed here is naturally occurring in the bean. Nothing has
   ever been added to the coffee beans.
 - Optional (sub-label "Optional"; single flat list, regular weight): vanilla, mocha, caramel,
-  sugar, brown sugar, raw sugar, honey, maple, agave, splenda, stevia, monkfruit.
+  sugar, salted brown, raw sugar, honey, maple, agave, splenda, stevia, monkfruit.
 - Voice rule: plain noun-phrase category labels only. Never "pick a drink", "choose your
   bean", "pick add-ins".
 
 ### Not coffee
 - Section label: Not coffee.
 - Items (name regular, price bold): cocoa latte 5, chai latte 7, matcha latte 7, ube latte 7,
-  golden latte 7, butterfly lemonade 7, hibiscus lime 7.
-- Retired (do not reintroduce): Jamaica. Hibiscus lime already covers that style.
+  golden latte 7, butterfly lemonade 7, hibiscus grapefruit 7.
+- Retired (do not reintroduce): Jamaica.
 
 ### Tasting experience (Valo Lab only)
 - Section label: Tasting experience.
